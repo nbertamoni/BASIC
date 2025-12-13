@@ -1,0 +1,146 @@
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-11_20-30-25/39-openroad-globalrouting/DigitalSine.odb'…
+Reading design constraints file at '/nix/store/sfc122jplczjy5i6pd5radwb3k94mh33-python3.12-librelane-3.0.0.dev45/lib/python3.12/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[INFO] Setting load to: 0.006
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.15
+[INFO] Setting timing derate to: 5%
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: TopMetal2 and clock max routing layer to TopMetal2. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: TopMetal2
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.4200  line-2-Via Pitch: 0.3650
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.4200  line-2-Via Pitch: 0.6200
+[INFO GRT-0088] Layer TopMetal1 Track-Pitch = 2.2800  line-2-Via Pitch: 3.4100
+[INFO GRT-0088] Layer TopMetal2 Track-Pitch = 4.0000  line-2-Via Pitch: 3.9500
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 4 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 9
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical         2153          1292          39.99%
+Metal3     Horizontal       2364          1439          39.13%
+Metal4     Vertical         2153          1292          39.99%
+Metal5     Horizontal       1664          1036          37.74%
+TopMetal1    Vertical          199           126          36.68%
+TopMetal2    Horizontal        162           120          25.93%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 1328
+[INFO GRT-0198] Via related Steiner nodes: 13
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1647
+[INFO GRT-0112] Final usage 3D: 5706
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2            1292           363           28.10%             0 /  0 /  0
+Metal3            1439           348           24.18%             0 /  0 /  0
+Metal4            1292            36            2.79%             0 /  0 /  0
+Metal5            1036            18            1.74%             0 /  0 /  0
+TopMetal1            126             0            0.00%             0 /  0 /  0
+TopMetal2            120             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             5305           765           14.42%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 8309 um
+[INFO GRT-0014] Routed nets: 254
+[INFO GRT-0006] Repairing antennas, iteration 1.
+[INFO GRT-0012] Found 0 antenna violations.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL            4528.5 u
+legalized HPWL           4676.0 u
+delta HPWL                    3 %
+
+[INFO DPL-0020] Mirrored 116 instances
+[INFO DPL-0021] HPWL before            4676.0 u
+[INFO DPL-0022] HPWL after             4528.5 u
+[INFO DPL-0023] HPWL delta               -3.2 %
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: TopMetal2
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.4200  line-2-Via Pitch: 0.3650
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.4200  line-2-Via Pitch: 0.6200
+[INFO GRT-0088] Layer TopMetal1 Track-Pitch = 2.2800  line-2-Via Pitch: 3.4100
+[INFO GRT-0088] Layer TopMetal2 Track-Pitch = 4.0000  line-2-Via Pitch: 3.9500
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 4 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 9
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical         2153          1292          39.99%
+Metal3     Horizontal       2364          1439          39.13%
+Metal4     Vertical         2153          1292          39.99%
+Metal5     Horizontal       1664          1036          37.74%
+TopMetal1    Vertical          199           126          36.68%
+TopMetal2    Horizontal        162           120          25.93%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 1328
+[INFO GRT-0198] Via related Steiner nodes: 13
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1647
+[INFO GRT-0112] Final usage 3D: 5706
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2            1292           363           28.10%             0 /  0 /  0
+Metal3            1439           348           24.18%             0 /  0 /  0
+Metal4            1292            36            2.79%             0 /  0 /  0
+Metal5            1036            18            1.74%             0 /  0 /  0
+TopMetal1            126             0            0.00%             0 /  0 /  0
+TopMetal2            120             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             5305           765           14.42%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 8309 um
+[INFO GRT-0014] Routed nets: 254
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Clock buffer                              3      70.76
+  Timing Repair Buffer                     72     930.79
+  Inverter                                 15      87.09
+  Clock inverter                            1       5.44
+  Sequential cell                           9     448.16
+  Multi-Input combinational cell          153    1422.49
+  Total                                   253    2964.73
+Writing OpenROAD database to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-11_20-30-25/42-openroad-repairantennas/1-diodeinsertion/DigitalSine.odb'…
+Writing layout to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-11_20-30-25/42-openroad-repairantennas/1-diodeinsertion/DigitalSine.def'…

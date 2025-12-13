@@ -1,0 +1,77 @@
+Reading timing models for corner nom_fast_1p32V_m40C…
+Reading timing library for the 'nom_fast_1p32V_m40C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_fast_1p32V_m40C.lib'…
+Reading timing models for corner nom_slow_1p08V_125C…
+Reading timing library for the 'nom_slow_1p08V_125C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib'…
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/28-openroad-globalplacement/DigitalSine.odb'…
+Reading design constraints file at '/nix/store/sfc122jplczjy5i6pd5radwb3k94mh33-python3.12-librelane-3.0.0.dev45/lib/python3.12/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 1
+[INFO] Setting input delay to: 1
+[INFO] Setting load to: 0.006
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.15
+[INFO] Setting timing derate to: 5%
+[INFO RSZ-0027] Inserted 1 input buffers.
+[INFO RSZ-0028] Inserted 35 output buffers.
++ repair_design -verbose -max_wire_length 0 -slew_margin 20 -cap_margin 20
+[INFO RSZ-0058] Using max wire length 5028um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       240
+       10 |     +0.0% |       0 |       0 |             0 |       230
+       20 |     +0.0% |       0 |       0 |             0 |       220
+       30 |     +0.0% |       0 |       0 |             0 |       210
+       40 |     +0.0% |       0 |       0 |             0 |       200
+       50 |     +0.0% |       0 |       0 |             0 |       190
+       60 |     +0.0% |       0 |       0 |             0 |       180
+       70 |     +0.0% |       0 |       0 |             0 |       170
+       80 |     -0.1% |       1 |       0 |             0 |       160
+       90 |     -0.1% |       1 |       0 |             0 |       150
+      100 |     -0.1% |       1 |       0 |             0 |       140
+      110 |     -0.1% |       1 |       0 |             0 |       130
+      120 |     -0.1% |       1 |       0 |             0 |       120
+      130 |     -0.3% |       2 |       0 |             0 |       110
+      140 |     +0.1% |       3 |       0 |             0 |       100
+      150 |     -0.1% |       5 |       0 |             0 |        90
+      160 |     -0.1% |       7 |       0 |             0 |        80
+      170 |     +0.2% |      11 |       0 |             0 |        70
+      180 |     +0.1% |      15 |       0 |             0 |        60
+      190 |     +2.1% |      21 |       0 |             0 |        50
+      200 |     +2.1% |      21 |       0 |             0 |        40
+      210 |     +4.0% |      27 |       0 |             0 |        30
+      220 |     +5.0% |      34 |       0 |             0 |        20
+      230 |     +5.2% |      37 |       0 |             0 |        10
+      240 |     +5.4% |      40 |       0 |             0 |         0
+    final |     +5.4% |      40 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 40 instances.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement       1097.5 u
+average displacement        4.6 u
+max displacement           37.8 u
+original HPWL            4006.5 u
+legalized HPWL           5140.7 u
+delta HPWL                   28 %
+
+[INFO DPL-0020] Mirrored 128 instances
+[INFO DPL-0021] HPWL before            5140.7 u
+[INFO DPL-0022] HPWL after             5000.0 u
+[INFO DPL-0023] HPWL delta               -2.7 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Timing Repair Buffer                     61     745.72
+  Inverter                                 15      85.28
+  Sequential cell                           9     446.34
+  Multi-Input combinational cell          153    1426.12
+  Total                                   238    2703.46
+Writing OpenROAD database to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/32-openroad-repairdesignpostgpl/DigitalSine.odb'…
+Writing netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/32-openroad-repairdesignpostgpl/DigitalSine.nl.v'…
+Writing powered netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/32-openroad-repairdesignpostgpl/DigitalSine.pnl.v'…
+Writing layout to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/32-openroad-repairdesignpostgpl/DigitalSine.def'…
+Writing timing constraints to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-12_17-50-16/32-openroad-repairdesignpostgpl/DigitalSine.sdc'…
