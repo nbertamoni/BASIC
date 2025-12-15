@@ -32,7 +32,7 @@ set DATA_OUT [all_outputs]
 # IO timing budgets (placeholder interface timing)
 #----------------------------
 # Apply to all inputs first...
-set_input_delay  -max 2.0 -clock [get_clocks clk] [all_inputs]
+set_input_delay  -max 1.0 -clock [get_clocks clk] [all_inputs]
 set_input_delay  -min 0.0 -clock [get_clocks clk] [all_inputs]
 
 # ...then neutralize clock/reset so they are not treated as data inputs
@@ -42,7 +42,7 @@ set_input_delay  -max 0.0 -clock [get_clocks clk] [get_ports rst]
 set_input_delay  -min 0.0 -clock [get_clocks clk] [get_ports rst]
 
 # Outputs
-set_output_delay -max 2.0 -clock [get_clocks clk] [all_outputs]
+set_output_delay -max 1.0 -clock [get_clocks clk] [all_outputs]
 set_output_delay -min 0.0 -clock [get_clocks clk] [all_outputs]
 
 

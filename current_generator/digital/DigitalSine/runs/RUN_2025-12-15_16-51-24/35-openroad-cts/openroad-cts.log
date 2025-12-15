@@ -1,0 +1,119 @@
+Reading timing models for corner nom_fast_1p32V_m40C…
+Reading timing library for the 'nom_fast_1p32V_m40C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_fast_1p32V_m40C.lib'…
+Reading timing models for corner nom_slow_1p08V_125C…
+Reading timing library for the 'nom_slow_1p08V_125C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib'…
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/34-openroad-detailedplacement/DigitalSine.odb'…
+Reading design constraints file at '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/cons.sdc'…
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Configuring cts characterization…
++ configure_cts_characterization 
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk
+[INFO] Running Clock Tree Synthesis…
++ clock_tree_synthesis -buf_list sg13g2_buf_8 sg13g2_buf_4 sg13g2_buf_2 sg13g2_buf_1 -root_buf sg13g2_buf_8 -sink_clustering_enable
+[INFO CTS-0050] Root buffer is sg13g2_buf_8.
+[INFO CTS-0051] Sink buffer is sg13g2_buf_2.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sg13g2_buf_1
+                    sg13g2_buf_2
+                    sg13g2_buf_4
+                    sg13g2_buf_8
+[INFO CTS-0049] Characterization buffer is sg13g2_buf_8.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 9 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 4 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 9.
+[INFO CTS-0029]  Register sinks will be clustered in groups of up to 8 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 18900  dbu (18 um).
+[INFO CTS-0023]  Original sink region: [(12480, 16800), (58560, 39435)].
+[INFO CTS-0024]  Normalized sink region: [(0.660317, 0.888889), (3.09841, 2.08651)].
+[INFO CTS-0025]     Width:  2.4381.
+[INFO CTS-0026]     Height: 1.1976.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 5
+    Sub-region size: 1.2190 X 1.1976
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 8.
+[INFO CTS-0035]  Number of sinks covered: 9.
+[INFO CTS-0018]     Created 3 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 3 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 4:1, 5:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 10
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 101.02 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 1
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 5028um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Clock buffer                              3      70.76
+  Timing Repair Buffer                     62     812.85
+  Inverter                                 15      85.28
+  Clock inverter                            1       5.44
+  Sequential cell                           9     446.34
+  Multi-Input combinational cell          153    1426.12
+  Total                                   243    2846.79
+Writing OpenROAD database to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.odb'…
+Writing netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.nl.v'…
+Writing powered netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.pnl.v'…
+Writing layout to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.def'…
+Writing timing constraints to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.sdc'…
+[INFO] Legalizing…
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement        109.2 u
+average displacement        0.4 u
+max displacement           10.5 u
+original HPWL            5018.5 u
+legalized HPWL           5267.2 u
+delta HPWL                    5 %
+
+[INFO DPL-0020] Mirrored 113 instances
+[INFO DPL-0021] HPWL before            5267.2 u
+[INFO DPL-0022] HPWL after             5141.0 u
+[INFO DPL-0023] HPWL delta               -2.4 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Clock buffer                              3      70.76
+  Timing Repair Buffer                     62     812.85
+  Inverter                                 15      85.28
+  Clock inverter                            1       5.44
+  Sequential cell                           9     446.34
+  Multi-Input combinational cell          153    1426.12
+  Total                                   243    2846.79
+Writing OpenROAD database to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.odb'…
+Writing netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.nl.v'…
+Writing powered netlist to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.pnl.v'…
+Writing layout to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.def'…
+Writing timing constraints to '/home/designer/shared/Bioimpedance-ASIC-for-skin-cancer-detection/current_generator/digital/DigitalSine/runs/RUN_2025-12-15_16-51-24/35-openroad-cts/DigitalSine.sdc'…
+%OL_CREATE_REPORT cts.rpt
+Total number of Clock Roots: 1.
+Total number of Buffers Inserted: 3.
+Total number of Clock Subnets: 3.
+Total number of Sinks: 9.
+Cells used:
+  sg13g2_buf_8: 3
+Dummys used:
+  sg13g2_inv_1: 1
+%OL_END_REPORT
