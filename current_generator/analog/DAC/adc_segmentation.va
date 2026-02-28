@@ -1,0 +1,59 @@
+`include "disciplines.vams"
+`include "constants.vams"
+
+module adc_segmentation(vin, gnd, out0, out10, out11, out1, out2, out12, out3, out13, out4, out14, out5, out15, out6, out16, out17, out7, out8, out9);
+
+    input vin;
+    inout gnd;
+    output out0, out10, out11, out1, out2, out12, out3, out13, out4, out14, out5, out15, out6, out16, out17, out7, out8, out9;
+
+    electrical vin, gnd;
+    electrical out0, out10, out11, out1, out2, out12, out3, out13, out4, out14, out5, out15, out6, out16, out17, out7, out8, out9;
+
+    // Usando APENAS variáveis Reais para evitar o bug silencioso do compilador
+    real c_total;
+    real c_rem;
+    real c_rem_bit1;
+    real c_rem_bit0;
+
+    analog begin
+        // Calcula o código como um número float (0.0 até 128.0)
+        c_total = V(vin, gnd) / 0.0125;
+
+        // --------------------------------------------------------
+        // MSBs (Termométricos) - Lógica feita com 'If' de números reais
+        // --------------------------------------------------------
+        if (c_total >= 8.0)   V(out3, gnd)  <+ 1.6; else V(out3, gnd)  <+ 0.0;
+        if (c_total >= 16.0)  V(out4, gnd)  <+ 1.6; else V(out4, gnd)  <+ 0.0;
+        if (c_total >= 24.0)  V(out5, gnd)  <+ 1.6; else V(out5, gnd)  <+ 0.0;
+        if (c_total >= 32.0)  V(out6, gnd)  <+ 1.6; else V(out6, gnd)  <+ 0.0;
+        if (c_total >= 40.0)  V(out7, gnd)  <+ 1.6; else V(out7, gnd)  <+ 0.0;
+        if (c_total >= 48.0)  V(out8, gnd)  <+ 1.6; else V(out8, gnd)  <+ 0.0;
+        if (c_total >= 56.0)  V(out9, gnd)  <+ 1.6; else V(out9, gnd)  <+ 0.0;
+        if (c_total >= 64.0)  V(out10, gnd) <+ 1.6; else V(out10, gnd) <+ 0.0;
+        if (c_total >= 72.0)  V(out11, gnd) <+ 1.6; else V(out11, gnd) <+ 0.0;
+        if (c_total >= 80.0)  V(out12, gnd) <+ 1.6; else V(out12, gnd) <+ 0.0;
+        if (c_total >= 88.0)  V(out13, gnd) <+ 1.6; else V(out13, gnd) <+ 0.0;
+        if (c_total >= 96.0)  V(out14, gnd) <+ 1.6; else V(out14, gnd) <+ 0.0;
+        if (c_total >= 104.0) V(out15, gnd) <+ 1.6; else V(out15, gnd) <+ 0.0;
+        if (c_total >= 112.0) V(out16, gnd) <+ 1.6; else V(out16, gnd) <+ 0.0;
+        if (c_total >= 120.0) V(out17, gnd) <+ 1.6; else V(out17, gnd) <+ 0.0;
+
+        // --------------------------------------------------------
+        // LSBs (Binários/Sequenciais) - Simulação de "Modulo" usando Floats
+        // --------------------------------------------------------
+        // Pega apenas o resto da divisão por 8 (0.0 a 7.99)
+        c_rem = c_total - (floor(c_total / 8.0) * 8.0);
+        
+        // Avalia o Bit 2 (Peso 4)
+        if (c_rem >= 4.0) V(out2, gnd) <+ 1.6; else V(out2, gnd) <+ 0.0;
+
+        // Tira o peso 4 para avaliar o Bit 1 (Peso 2)
+        c_rem_bit1 = c_rem - (floor(c_rem / 4.0) * 4.0);
+        if (c_rem_bit1 >= 2.0) V(out1, gnd) <+ 1.6; else V(out1, gnd) <+ 0.0;
+
+        // Tira o peso 2 para avaliar o Bit 0 (Peso 1)
+        c_rem_bit0 = c_rem_bit1 - (floor(c_rem_bit1 / 2.0) * 2.0);
+        if (c_rem_bit0 >= 1.0) V(out0, gnd) <+ 1.6; else V(out0, gnd) <+ 0.0;
+    end
+endmodule
