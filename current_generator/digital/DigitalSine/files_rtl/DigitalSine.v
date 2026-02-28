@@ -4,8 +4,7 @@ module DigitalSine (
 	input	clk,
 	output	sign,
 	output	signB,
-//	output	[6:0]	sine_7bit,
-	output	[32:0]	sine_out
+	output	[17:0]	sine_out
 );
 				
 	wire	 max, zero, dir;
@@ -16,7 +15,6 @@ module DigitalSine (
 		.dir(dir),
 		.max(max),
 		.zero(zero),
-//		.sine_7bit(sine_7bit),
 		.sine_out(sine_out)
 	);
 
@@ -31,4 +29,3 @@ module DigitalSine (
 	);
 
 endmodule
-

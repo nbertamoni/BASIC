@@ -5,13 +5,13 @@ module datapath (
 	input	dir,
 	output	max,
 	output	zero,
-	output	[32:0] sine_out
+	output	[17:0] sine_out
 );
 	// Internal signals
 	wire [6:0]	adder_in;
 	wire [6:0]	reg_in;
 	wire [6:0]	reg_out;
-	wire [32:0]	decoder_out;
+	wire [17:0]	decoder_out;
 	
 	// Register component
 	register REG(
@@ -46,4 +46,3 @@ module datapath (
 	assign sine_out = ~decoder_out;
 
 endmodule
-
