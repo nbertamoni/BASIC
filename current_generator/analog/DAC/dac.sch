@@ -28,11 +28,10 @@ N 1030 -770 1080 -770 {lab=DATA}
 N 1030 -800 1080 -800 {lab=enb}
 N 1030 -740 1080 -740 {lab=ISUM}
 N 330 -510 450 -510 {lab=VS_cm}
-N 450 -150 450 -60 {lab=ISUM}
-N 450 -270 450 -210 {lab=#net1}
 N 150 -510 250 -510 {lab=DATA}
 N 450 -300 570 -300 {lab=AVDD}
 N 330 -300 410 -300 {lab=VBIAS}
+N 450 -270 450 -160 {lab=#net1}
 C {sg13g2_pr/sg13_lv_pmos.sym} 430 -300 0 0 {name=M1
 l=3u
 w=0.72u
@@ -41,7 +40,7 @@ m=4
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {lab_wire.sym} 450 -90 3 0 {name=p1 sig_type=std_logic lab=ISUM}
+C {lab_wire.sym} 450 -190 3 0 {name=p1 sig_type=std_logic lab=ISUM}
 C {lab_wire.sym} 570 -300 2 0 {name=p3 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 390 -300 0 0 {name=p6 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 200 -510 0 0 {name=p9 sig_type=std_logic lab=DATA}
@@ -74,4 +73,3 @@ C {iopin.sym} 1030 -800 2 0 {name=p25 lab=enb}
 C {iopin.sym} 1030 -770 2 0 {name=p26 lab=DATA}
 C {iopin.sym} 1030 -740 2 0 {name=p27 lab=ISUM}
 C {sg13g2_stdcells/sg13g2_inv_1.sym} 290 -510 0 0 {name=x2 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
-C {vsource.sym} 450 -180 0 0 {name=V5 value=0 savecurrent=false}
