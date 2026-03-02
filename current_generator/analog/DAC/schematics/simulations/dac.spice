@@ -1,0 +1,8 @@
+** sch_path: /home/designer/shared/current_generator/analog/DAC/dac.sch
+.subckt dac AVDD AVSS VBIAS enb DATA ISUM
+*.PININFO AVDD:B AVSS:B VBIAS:B enb:B DATA:B ISUM:B
+M1 ISUM VBIAS VS_cm AVDD sg13_lv_pmos w=0.72u l=3u ng=1 m=4
+M2 VBIAS enb AVDD AVDD sg13_lv_pmos w=0.360u l=2u ng=1 m=4
+M3 AVDD AVDD AVDD AVDD sg13_lv_pmos w=0.360u l=2u ng=1 m=4
+x2 VS_cm DATA AVDD AVSS sg13g2_inv_1
+.ends
