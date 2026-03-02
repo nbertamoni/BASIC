@@ -36,7 +36,7 @@ module IHP_GuardRing
   # Formula: 2*ACTIV_ENC_CONT + n*CONT_W + (n-1)*CONT_SPACE
   CONT_RING_WIDTHS = {
     1 => 0.31,   # 
-    2 => 0.65,   # 
+    2 => 0.65,   #  
     3 => 1.00,   # 
     4 => 1.32,   # 
   }.freeze
