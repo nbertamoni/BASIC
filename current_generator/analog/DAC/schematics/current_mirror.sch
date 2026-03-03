@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N 200 -500 200 -470 {lab=IREF}
 N 200 -250 200 -200 {lab=AVSS}
@@ -189,6 +188,12 @@ N 960 -570 960 -470 {lab=IOUT}
 N 1220 -570 1220 -470 {lab=IOUT}
 N 1470 -570 1470 -470 {lab=IOUT}
 N 390 -590 390 -470 {lab=IOUT}
+N 680 -1140 680 -1110 {lab=AVDD}
+N 680 -1140 850 -1140 {lab=AVDD}
+N 850 -1140 850 -1090 {lab=AVDD}
+N 680 -1010 680 -980 {lab=#net33}
+N 680 -980 850 -980 {lab=#net33}
+N 850 -1030 850 -980 {lab=#net33}
 C {sg13g2_pr/sg13_lv_nmos.sym} 180 -280 0 0 {name=M3
 l=2u
 w=2u
@@ -251,8 +256,6 @@ C {lab_wire.sym} 3500 -560 0 0 {name=p66 sig_type=std_logic lab=IOUT}
 C {lab_wire.sym} 3760 -550 0 0 {name=p67 sig_type=std_logic lab=IOUT}
 C {lab_wire.sym} 4020 -550 0 0 {name=p68 sig_type=std_logic lab=IOUT}
 C {lab_wire.sym} 4270 -560 0 0 {name=p69 sig_type=std_logic lab=IOUT}
-C {sg13g2_stdcells/sg13g2_nand2_2.sym} 680 -1060 0 0 {name=x1 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
-C {sg13g2_stdcells/sg13g2_inv_1.sym} 850 -1060 0 0 {name=x2 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
 C {sg13g2_pr/sg13_lv_nmos.sym} 1150 -1060 0 0 {name=M35
 l=2u
 w=2u
@@ -616,3 +619,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 4310 -190 0 1 {name=p143 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 4210 -190 0 0 {name=p144 sig_type=std_logic lab=SEL_IOUT}
+C {inverter.sym} 840 -1060 0 0 {name=x20}
+C {nand.sym} 680 -1060 0 0 {name=x21}
+C {lab_wire.sym} 760 -1140 0 0 {name=p145 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 770 -980 0 0 {name=p146 sig_type=std_logic lab=AVSS}

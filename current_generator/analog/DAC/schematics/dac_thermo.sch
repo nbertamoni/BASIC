@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N 450 -510 450 -330 {lab=VS_cm}
 N 810 -560 810 -520 {lab=AVDD}
@@ -32,6 +31,9 @@ N -40 -510 110 -510 {lab=DATA}
 N 450 -300 570 -300 {lab=AVDD}
 N 330 -300 410 -300 {lab=VBIAS}
 N 450 -270 450 -210 {lab=#net1}
+N 140 -560 140 -540 {lab=AVDD}
+N 140 -480 140 -450 {lab=AVSS}
+N 130 -450 140 -450 {lab=AVSS}
 C {sg13g2_pr/sg13_lv_pmos.sym} 430 -300 0 0 {name=M1
 l=3u
 w=0.72u
@@ -72,5 +74,7 @@ C {iopin.sym} 1030 -800 2 0 {name=p25 lab=enb}
 C {iopin.sym} 1030 -770 2 0 {name=p26 lab=DATA}
 C {iopin.sym} 1030 -740 2 0 {name=p27 lab=ISUM}
 C {lab_wire.sym} 840 -360 2 0 {name=p7 sig_type=std_logic lab=AVDD}
-C {sg13g2_stdcells/sg13g2_inv_1.sym} 150 -510 0 0 {name=x1 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
 C {vsource.sym} 450 -180 0 0 {name=V5 value=0 savecurrent=false}
+C {inverter.sym} 130 -510 0 0 {name=x20}
+C {lab_wire.sym} 140 -560 1 0 {name=p2 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 130 -450 0 0 {name=p146 sig_type=std_logic lab=AVSS}
