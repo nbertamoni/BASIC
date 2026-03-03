@@ -31,7 +31,7 @@ N 330 -510 450 -510 {lab=VS_cm}
 N 150 -510 250 -510 {lab=DATA}
 N 450 -300 570 -300 {lab=AVDD}
 N 330 -300 410 -300 {lab=VBIAS}
-N 450 -270 450 -160 {lab=#net1}
+N 450 -270 450 -160 {lab=ISUM}
 C {sg13g2_pr/sg13_lv_pmos.sym} 430 -300 0 0 {name=M1
 l=3u
 w=0.72u
@@ -45,8 +45,8 @@ C {lab_wire.sym} 570 -300 2 0 {name=p3 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 390 -300 0 0 {name=p6 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 200 -510 0 0 {name=p9 sig_type=std_logic lab=DATA}
 C {sg13g2_pr/sg13_lv_pmos.sym} 790 -490 0 0 {name=M2
-l=2u
-w=0.360u
+l=3u
+w=0.72u
 ng=1
 m=4
 model=sg13_lv_pmos
@@ -58,8 +58,8 @@ C {lab_wire.sym} 810 -440 3 0 {name=p12 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 450 -420 3 0 {name=p13 sig_type=std_logic lab=VS_cm}
 C {lab_wire.sym} 750 -490 0 0 {name=p14 sig_type=std_logic lab=enb}
 C {sg13g2_pr/sg13_lv_pmos.sym} 880 -290 0 0 {name=M3
-l=2u
-w=0.360u
+l=3u
+w=0.72u
 ng=1
 m=4
 model=sg13_lv_pmos
