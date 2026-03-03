@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N 450 -470 600 -470 {lab=#net1}
 N 450 -250 600 -250 {lab=#net2}
@@ -20,11 +19,23 @@ N 290 -700 340 -700 {lab=inb}
 N 290 -670 340 -670 {lab=a}
 N 290 -640 340 -640 {lab=b}
 N 290 -610 340 -610 {lab=sign}
-N 290 -580 340 -580 {lab=b}
-C {sg13g2_stdcells/sg13g2_inv_1.sym} 640 -470 0 0 {name=x2 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
-C {sg13g2_stdcells/sg13g2_nand2_2.sym} 390 -250 0 0 {name=x1 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
-C {sg13g2_stdcells/sg13g2_nand2_2.sym} 390 -470 0 0 {name=x3 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
-C {sg13g2_stdcells/sg13g2_inv_1.sym} 640 -250 0 0 {name=x4 VDD=AVDD VSS=AVSS prefix=sg13g2_ }
+N 290 -580 340 -580 {lab=signb}
+N 390 -540 390 -520 {lab=AVDD}
+N 390 -420 390 -400 {lab=AVSS}
+N 640 -520 640 -500 {lab=AVDD}
+N 640 -440 640 -420 {lab=AVSS}
+N 390 -320 390 -300 {lab=AVDD}
+N 390 -200 390 -180 {lab=AVSS}
+N 360 -540 390 -540 {lab=AVDD}
+N 360 -400 390 -400 {lab=AVSS}
+N 610 -520 640 -520 {lab=AVDD}
+N 610 -420 640 -420 {lab=AVSS}
+N 640 -300 640 -280 {lab=AVDD}
+N 640 -220 640 -200 {lab=#net3}
+N 370 -180 390 -180 {lab=AVSS}
+N 370 -320 390 -320 {lab=AVDD}
+N 620 -300 640 -300 {lab=AVDD}
+N 620 -200 640 -200 {lab=#net3}
 C {iopin.sym} 300 -790 0 1 {name=p85 lab=AVDD}
 C {iopin.sym} 300 -760 0 1 {name=p86 lab=AVSS}
 C {lab_wire.sym} 300 -230 0 0 {name=p92 sig_type=std_logic lab=a}
@@ -39,3 +50,15 @@ C {iopin.sym} 300 -670 0 1 {name=p8 lab=a}
 C {iopin.sym} 300 -640 0 1 {name=p9 lab=b}
 C {iopin.sym} 300 -610 0 1 {name=p10 lab=sign}
 C {iopin.sym} 300 -580 0 1 {name=p11 lab=signb}
+C {nand.sym} 390 -470 0 0 {name=x5}
+C {inverter.sym} 630 -470 0 0 {name=x6}
+C {nand.sym} 390 -250 0 0 {name=x3}
+C {inverter.sym} 630 -250 0 0 {name=x1}
+C {lab_wire.sym} 610 -520 0 0 {name=p12 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 610 -420 0 0 {name=p13 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 360 -540 0 0 {name=p14 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 360 -400 0 0 {name=p15 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 370 -320 0 0 {name=p16 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 370 -180 0 0 {name=p17 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 620 -300 0 0 {name=p18 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 620 -200 0 0 {name=p19 sig_type=std_logic lab=AVSS}
