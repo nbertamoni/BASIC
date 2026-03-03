@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+P 4 1 -430 -740 {}
 N 450 -510 450 -330 {lab=VS_cm}
 N 810 -560 810 -520 {lab=AVDD}
 N 810 -490 850 -490 {lab=AVDD}
@@ -25,29 +26,29 @@ N 1030 -830 1080 -830 {lab=VBIAS}
 N 1030 -770 1080 -770 {lab=DATA}
 N 1030 -800 1080 -800 {lab=enb}
 N 1030 -740 1080 -740 {lab=ISUM}
-N 450 -270 450 -170 {lab=ISUM}
-N 180 -510 450 -510 {lab=VS_cm}
-N -40 -510 110 -510 {lab=DATA}
+N 330 -510 450 -510 {lab=VS_cm}
+N 150 -510 250 -510 {lab=DATA}
 N 450 -300 570 -300 {lab=AVDD}
 N 330 -300 410 -300 {lab=VBIAS}
-N 140 -560 140 -540 {lab=AVDD}
-N 140 -480 140 -450 {lab=AVSS}
-N 130 -450 140 -450 {lab=AVSS}
+N 450 -270 450 -160 {lab=ISUM}
+N 290 -560 290 -540 {lab=AVDD}
+N 290 -480 290 -450 {lab=AVSS}
+N 280 -450 290 -450 {lab=AVSS}
 C {sg13g2_pr/sg13_lv_pmos.sym} 430 -300 0 0 {name=M1
 l=3u
 w=0.72u
 ng=1
-m=32
+m=4
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {lab_wire.sym} 450 -200 3 0 {name=p1 sig_type=std_logic lab=ISUM}
-C {lab_wire.sym} 560 -300 2 0 {name=p3 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 450 -190 3 0 {name=p1 sig_type=std_logic lab=ISUM}
+C {lab_wire.sym} 570 -300 2 0 {name=p3 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 390 -300 0 0 {name=p6 sig_type=std_logic lab=VBIAS}
-C {lab_wire.sym} 40 -510 0 0 {name=p9 sig_type=std_logic lab=DATA}
+C {lab_wire.sym} 200 -510 0 0 {name=p9 sig_type=std_logic lab=DATA}
 C {sg13g2_pr/sg13_lv_pmos.sym} 790 -490 0 0 {name=M2
-l=2u
-w=0.360u
+l=3u
+w=0.72u
 ng=1
 m=4
 model=sg13_lv_pmos
@@ -59,20 +60,20 @@ C {lab_wire.sym} 810 -440 3 0 {name=p12 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 450 -420 3 0 {name=p13 sig_type=std_logic lab=VS_cm}
 C {lab_wire.sym} 750 -490 0 0 {name=p14 sig_type=std_logic lab=enb}
 C {sg13g2_pr/sg13_lv_pmos.sym} 880 -290 0 0 {name=M3
-l=2u
-w=0.360u
+l=3u
+w=0.72u
 ng=1
 m=4
 model=sg13_lv_pmos
 spiceprefix=X
 }
+C {lab_wire.sym} 840 -360 2 0 {name=p15 sig_type=std_logic lab=AVDD}
 C {iopin.sym} 1030 -890 2 0 {name=p22 lab=AVDD}
 C {iopin.sym} 1030 -860 2 0 {name=p23 lab=AVSS}
 C {iopin.sym} 1030 -830 2 0 {name=p24 lab=VBIAS}
 C {iopin.sym} 1030 -800 2 0 {name=p25 lab=enb}
 C {iopin.sym} 1030 -770 2 0 {name=p26 lab=DATA}
 C {iopin.sym} 1030 -740 2 0 {name=p27 lab=ISUM}
-C {lab_wire.sym} 840 -360 2 0 {name=p7 sig_type=std_logic lab=AVDD}
-C {inverter.sym} 130 -510 0 0 {name=x20}
-C {lab_wire.sym} 140 -560 1 0 {name=p2 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 130 -450 0 0 {name=p146 sig_type=std_logic lab=AVSS}
+C {inverter.sym} 280 -510 0 0 {name=x20}
+C {lab_wire.sym} 290 -560 1 0 {name=p2 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 280 -450 0 0 {name=p146 sig_type=std_logic lab=AVSS}
