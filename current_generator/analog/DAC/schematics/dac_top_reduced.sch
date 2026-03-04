@@ -24,8 +24,8 @@ N 1110 -370 1170 -370 {lab=sign}
 N 1110 -350 1170 -350 {lab=sign_b}
 N 960 -280 960 -250 {lab=AVSS}
 N 960 -480 960 -440 {lab=AVDD}
-N 760 -370 810 -370 {lab=i_sign}
-N 760 -350 810 -350 {lab=i_signb}
+N 760 -390 810 -390 {lab=i_sign}
+N 760 -370 810 -370 {lab=i_signb}
 N 860 -1000 860 -810 {lab=VBIAS}
 N 1550 -550 1610 -550 {lab=sign}
 N 1550 -530 1610 -530 {lab=sign_b}
@@ -45,7 +45,11 @@ N 950 -1400 1000 -1400 {lab=CC_N}
 N 950 -1540 1000 -1540 {lab=DATA[17:0]}
 N 950 -1470 1000 -1470 {lab=i_signb}
 N 1580 -1100 1630 -1100 {lab=DATA[17:0]}
-N 950 -1370 1000 -1370 {lab=CC_N}
+N 950 -1370 1000 -1370 {lab=VBIAS}
+N 950 -1340 1000 -1340 {lab=a}
+N 950 -1310 1000 -1310 {lab=b}
+N 760 -350 810 -350 {lab=a}
+N 760 -330 810 -330 {lab=i_signb}
 C {lab_wire.sym} 780 -1000 0 0 {name=p13 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 930 -1010 0 0 {name=p18 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 930 -1230 0 0 {name=p19 sig_type=std_logic lab=AVDD}
@@ -66,8 +70,8 @@ C {lab_wire.sym} 1160 -370 0 1 {name=p30 sig_type=std_logic lab=sign}
 C {lab_wire.sym} 1160 -350 0 1 {name=p31 sig_type=std_logic lab=sign_b}
 C {lab_wire.sym} 960 -260 0 0 {name=p32 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 960 -460 0 0 {name=p33 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 780 -350 0 0 {name=p34 sig_type=std_logic lab=i_signb}
-C {lab_wire.sym} 780 -370 0 0 {name=p35 sig_type=std_logic lab=i_sign}
+C {lab_wire.sym} 780 -370 0 0 {name=p34 sig_type=std_logic lab=i_signb}
+C {lab_wire.sym} 780 -390 0 0 {name=p35 sig_type=std_logic lab=i_sign}
 C {lab_wire.sym} 1940 -560 0 1 {name=p68 sig_type=std_logic lab=CC_P}
 C {dsw.sym} 1760 -550 0 0 {name=x9}
 C {lab_wire.sym} 1940 -540 0 1 {name=p107 sig_type=std_logic lab=CC_N}
@@ -87,3 +91,7 @@ C {dac.sym} 930 -1120 0 0 {name=x2[7:0]}
 C {iopin.sym} 950 -1470 2 0 {name=p1 lab=i_signb}
 C {lab_wire.sym} 1610 -1100 0 1 {name=p2 sig_type=std_logic lab=DATA[17:0]}
 C {iopin.sym} 950 -1370 2 0 {name=p4 lab=VBIAS}
+C {iopin.sym} 950 -1340 2 0 {name=p5 lab=a}
+C {iopin.sym} 950 -1310 2 0 {name=p8 lab=b}
+C {lab_wire.sym} 780 -330 0 0 {name=p10 sig_type=std_logic lab=b}
+C {lab_wire.sym} 780 -350 0 0 {name=p11 sig_type=std_logic lab=a}
