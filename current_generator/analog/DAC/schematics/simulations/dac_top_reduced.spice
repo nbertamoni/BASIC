@@ -1,0 +1,218 @@
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/dac_top_reduced.sch
+**.subckt dac_top_reduced AVDD AVSS en IBIAS SEL in a b vop vom
+*+ DATA[17],DATA[16],DATA[15],DATA[14],DATA[13],DATA[12],DATA[11],DATA[10],DATA[9],DATA[8],DATA[7],DATA[6],DATA[5],DATA[4],DATA[3],DATA[2],DATA[1],DATA[0]
+*.iopin AVDD
+*.iopin AVSS
+*.iopin en
+*.iopin IBIAS
+*.iopin SEL
+*.iopin in
+*.iopin a
+*.iopin b
+*.iopin vop
+*.iopin vom
+*.iopin
+*+ DATA[17],DATA[16],DATA[15],DATA[14],DATA[13],DATA[12],DATA[11],DATA[10],DATA[9],DATA[8],DATA[7],DATA[6],DATA[5],DATA[4],DATA[3],DATA[2],DATA[1],DATA[0]
+x8 AVDD AVSS en_bb en_b SEL IBIAS VBIAS current_mirror
+x4 en_b en AVDD AVSS sg13g2_inv_1
+x5 en_bb en_b AVDD AVSS sg13g2_inv_1
+x10 inb in AVDD AVSS sg13g2_inv_1
+x6 AVDD AVSS in inb a b sign sign_b non_overlap
+x9 sign sign_b ISUM AVSS vop vom dsw
+x1[17] AVDD AVSS VBIAS en_bb DATA[17] ISUM dac
+x1[16] AVDD AVSS VBIAS en_bb DATA[16] ISUM dac
+x1[15] AVDD AVSS VBIAS en_bb DATA[15] ISUM dac
+x1[14] AVDD AVSS VBIAS en_bb DATA[14] ISUM dac
+x1[13] AVDD AVSS VBIAS en_bb DATA[13] ISUM dac
+x1[12] AVDD AVSS VBIAS en_bb DATA[12] ISUM dac
+x1[11] AVDD AVSS VBIAS en_bb DATA[11] ISUM dac
+x1[10] AVDD AVSS VBIAS en_bb DATA[10] ISUM dac
+x1[9] AVDD AVSS VBIAS en_bb DATA[9] ISUM dac
+x1[8] AVDD AVSS VBIAS en_bb DATA[8] ISUM dac
+x1[7] AVDD AVSS VBIAS en_bb DATA[7] ISUM dac
+x1[6] AVDD AVSS VBIAS en_bb DATA[6] ISUM dac
+x1[5] AVDD AVSS VBIAS en_bb DATA[5] ISUM dac
+x1[4] AVDD AVSS VBIAS en_bb DATA[4] ISUM dac
+x1[3] AVDD AVSS VBIAS en_bb DATA[3] ISUM dac
+x1[2] AVDD AVSS VBIAS en_bb DATA[2] ISUM dac
+x1[1] AVDD AVSS VBIAS en_bb DATA[1] ISUM dac
+x1[0] AVDD AVSS VBIAS en_bb DATA[0] ISUM dac
+XC1 AVDD VBIAS cap_cmim w=18e-6 l=18e-6 m=80
+x2[7] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[6] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[5] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[4] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[3] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[2] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[1] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+x2[0] AVDD AVSS VBIAS en_bb AVSS VBIAS dac
+**.ends
+
+* expanding   symbol:  current_mirror.sym # of pins=7
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror.sch
+.subckt current_mirror AVDD AVSS EN ENB SEL IREF IOUT
+*.iopin AVDD
+*.iopin AVSS
+*.iopin EN
+*.iopin ENB
+*.iopin SEL
+*.iopin IREF
+*.iopin IOUT
+XM3 net15 EN AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+XM4 net16 EN AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+XM8 net1 SEL_IOUT net18 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM35 IREF ENB AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+x3 IOUT net16 IREF AVSS current_mirror_nmos
+x4 IREF net15 IREF AVSS current_mirror_nmos
+x5 IOUT net17 IREF AVSS current_mirror_nmos
+x6 IOUT net1 IREF AVSS current_mirror_nmos
+x7 IOUT net2 IREF AVSS current_mirror_nmos
+x8 IOUT net3 IREF AVSS current_mirror_nmos
+x9 IOUT net4 IREF AVSS current_mirror_nmos
+x10 IOUT net5 IREF AVSS current_mirror_nmos
+x11 IOUT net6 IREF AVSS current_mirror_nmos
+x12 IOUT net7 IREF AVSS current_mirror_nmos
+x13 IOUT net8 IREF AVSS current_mirror_nmos
+x14 IOUT net9 IREF AVSS current_mirror_nmos
+x15 IOUT net10 IREF AVSS current_mirror_nmos
+x16 IOUT net11 IREF AVSS current_mirror_nmos
+x17 IOUT net12 IREF AVSS current_mirror_nmos
+x18 IOUT net13 IREF AVSS current_mirror_nmos
+x19 IOUT net14 IREF AVSS current_mirror_nmos
+XM2 net18 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM1 net17 SEL_IOUT net19 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM6 net19 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM5 net2 SEL_IOUT net20 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM7 net20 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM9 net3 SEL_IOUT net21 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM10 net21 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM11 net4 SEL_IOUT net22 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM12 net22 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM13 net5 SEL_IOUT net23 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM14 net23 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM15 net6 SEL_IOUT net24 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM16 net24 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM17 net7 SEL_IOUT net25 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM18 net25 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM19 net8 SEL_IOUT net26 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM20 net26 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM21 net9 SEL_IOUT net27 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM22 net27 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM23 net10 SEL_IOUT net28 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM24 net28 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM25 net11 SEL_IOUT net29 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM26 net29 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM27 net12 SEL_IOUT net30 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM28 net30 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM29 net13 SEL_IOUT net31 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM30 net31 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM31 net14 SEL_IOUT net32 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM32 net32 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+x20 SELB SEL_IOUT AVDD AVSS inverter
+x21 AVDD AVSS EN SEL SELB nand
+.ends
+
+
+* expanding   symbol:  non_overlap.sym # of pins=8
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/non_overlap.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/non_overlap.sch
+.subckt non_overlap AVDD AVSS in inb a b sign signb
+*.iopin AVDD
+*.iopin AVSS
+*.iopin in
+*.iopin inb
+*.iopin a
+*.iopin b
+*.iopin sign
+*.iopin signb
+x5 AVDD AVSS in b net1 nand
+x6 net1 sign AVDD AVSS inverter
+x3 AVDD AVSS inb a net2 nand
+x1 net2 signb AVDD AVSS inverter
+.ends
+
+
+* expanding   symbol:  dsw.sym # of pins=6
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/dsw.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/dsw.sch
+.subckt dsw SIGN SIGNB IN AVSS VOP VOM
+*.iopin SIGN
+*.iopin SIGNB
+*.iopin IN
+*.iopin AVSS
+*.iopin VOP
+*.iopin VOM
+XM1 IN SIGN VOM AVSS sg13_lv_nmos w=3u l=0.13u ng=1 m=2
+XM2 VOM SIGNB AVSS AVSS sg13_lv_nmos w=3u l=0.13u ng=1 m=2
+XM3 IN SIGNB VOP AVSS sg13_lv_nmos w=3u l=0.13u ng=1 m=2
+XM4 VOP SIGN AVSS AVSS sg13_lv_nmos w=3u l=0.13u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  dac.sym # of pins=6
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/dac.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/dac.sch
+.subckt dac AVDD AVSS VBIAS enb DATA ISUM
+*.iopin AVDD
+*.iopin AVSS
+*.iopin VBIAS
+*.iopin enb
+*.iopin DATA
+*.iopin ISUM
+XM4 ISUM VBIAS VS_cm AVDD sg13_lv_pmos w=0.72u l=3u ng=1 m=4
+XM5 VBIAS enb AVDD AVDD sg13_lv_pmos w=0.360u l=2u ng=1 m=4
+x1 DATA VS_cm AVDD AVSS inverter
+.ends
+
+
+* expanding   symbol:  current_mirror_nmos.sym # of pins=4
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror_nmos.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror_nmos.sch
+.subckt current_mirror_nmos D S G B
+*.iopin D
+*.iopin S
+*.iopin G
+*.iopin B
+XM2 D G net1 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM5 net1 G net9 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM6 net9 G net8 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM9 net8 G net2 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM11 net2 G net4 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM13 net4 G net3 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM15 net3 G net6 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM17 net6 G net5 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM19 net5 G net7 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM1 net7 G S B sg13_lv_nmos w=2u l=2u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/inverter.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/inverter.sch
+.subckt inverter A Y VDD VSS
+*.opin Y
+*.ipin A
+*.iopin VDD
+*.iopin VSS
+XMN0 Y A VSS VSS sg13_lv_nmos w=740.00n l=130.00n ng=1 m=1
+XMP0 Y A VDD VDD sg13_lv_pmos w=1.12u l=130.00n ng=1 m=1
+.ends
+
+
+* expanding   symbol:  nand.sym # of pins=5
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/nand.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/nand.sch
+.subckt nand VDD VSS A B Y
+*.opin Y
+*.ipin A
+*.iopin VDD
+*.iopin VSS
+*.ipin B
+XMN0 net1 B VSS VSS sg13_lv_nmos w=1.44u l=130.00n ng=2 m=1
+XMP0 Y B VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2 m=1
+XMN1 Y A net1 VSS sg13_lv_nmos w=1.44u l=130.00n ng=2 m=1
+XMP1 Y A VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2 m=1
+.ends
+
+.end
