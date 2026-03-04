@@ -43,10 +43,9 @@ N 950 -1500 1000 -1500 {lab=i_sign}
 N 950 -1430 1000 -1430 {lab=CC_P}
 N 950 -1400 1000 -1400 {lab=CC_N}
 N 950 -1540 1000 -1540 {lab=DATA[17:0]}
-N 690 -1200 690 -1140 {lab=VBIAS}
-N 690 -1300 690 -1260 {lab=AVDD}
 N 950 -1470 1000 -1470 {lab=i_signb}
 N 1580 -1100 1630 -1100 {lab=DATA[17:0]}
+N 950 -1370 1000 -1370 {lab=CC_N}
 C {lab_wire.sym} 780 -1000 0 0 {name=p13 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 930 -1010 0 0 {name=p18 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 930 -1230 0 0 {name=p19 sig_type=std_logic lab=AVDD}
@@ -84,13 +83,7 @@ C {iopin.sym} 950 -1500 2 0 {name=p3 lab=i_sign}
 C {iopin.sym} 950 -1430 2 0 {name=p6 lab=CC_P}
 C {iopin.sym} 950 -1400 2 0 {name=p7 lab=CC_N}
 C {iopin.sym} 950 -1540 0 1 {name=p9 lab=DATA[17:0]}
-C {sg13g2_pr/cap_cmim.sym} 690 -1230 0 0 {name=C1
-model=cap_cmim
-w=18e-6
-l=18e-6
-m=80
-spiceprefix=X}
-C {lab_wire.sym} 690 -1290 0 0 {name=p25 sig_type=std_logic lab=AVDD}
 C {dac.sym} 930 -1120 0 0 {name=x2[7:0]}
 C {iopin.sym} 950 -1470 2 0 {name=p1 lab=i_signb}
 C {lab_wire.sym} 1610 -1100 0 1 {name=p2 sig_type=std_logic lab=DATA[17:0]}
+C {iopin.sym} 950 -1370 2 0 {name=p4 lab=VBIAS}
