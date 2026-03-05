@@ -122,7 +122,6 @@ C {devices/launcher.sym} 1050 -1310 0 0 {name=h5
 descr="load waves Ctrl + left click"
 tclcommand="xschem raw_read $netlist_dir/FDDA_TB.raw tran"
 }
-C {FDDA.sym} 1460 -430 0 0 {name=x1}
 C {vsource.sym} 1250 -300 0 0 {name=V2 value=2 savecurrent=false}
 C {gnd.sym} 1250 -240 0 0 {name=l1 lab=GND}
 C {gnd.sym} 1520 -340 0 0 {name=l2 lab=GND}
@@ -140,3 +139,4 @@ C {vsource.sym} 970 -340 0 0 {name=V4 value=3.3 savecurrent=false}
 C {lab_pin.sym} 970 -400 0 0 {name=p10 sig_type=std_logic lab=VDD}
 C {vsource.sym} 1200 -400 0 0 {name=V5 value="SIN(0 0.01 1000k)" savecurrent=false}
 C {gnd.sym} 1720 -130 0 0 {name=l3 lab=GND}
+C {/home/designer/shared/readout_circuit/analog/INA/FDDA/schematic/FDDA.sym} 1460 -430 0 0 {name=x1}
