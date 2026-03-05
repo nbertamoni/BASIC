@@ -55,16 +55,16 @@ BASIC/
 │		├───────INA/
 │		│	│
 │		│	└──────FDDA/	
-│		│		│ 
-│		│		├── schematic/
-│		│		│     └── FDDA.sch
-│		│		│	# ... others.sch 
-│		│		│
-│		│		├── layout/
-│		│		│     └── FDDA.gds
-│		│		│	# ... others.sch 
-│		│		│
-│		│		└── testbench/
+│		│		    │ 
+│		│		    ├── schematic/
+│		│		    │     └── FDDA.sch
+│		│		    │       # ... others.sch 
+│		│		    │
+│		│		    ├── layout/
+│		│		    │     └── FDDA.gds
+│		│		    │	    # ... others.sch 
+│		│		    │
+│		│		    └── testbench/
 │		│            		└── tb_FDDA.sch      
 │		│
 │	 	│
@@ -88,7 +88,6 @@ BASIC/
 
 Each circuit block should follow this structure:
 
-```
 block_name/
 ├── schematic/
 ├── layout/
@@ -202,8 +201,11 @@ These files should already be ignored by `.gitignore`.
 # 8. General Good Practices
 
 • Pull frequently from `develop`
+
 • Avoid committing generated files
+
 • Keep commits small and descriptive
+
 • Always test your changes before opening a pull request
 
 ---
