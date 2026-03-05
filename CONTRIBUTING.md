@@ -52,20 +52,20 @@ BASIC/
 │	│
 │	└──analog/
 │		│
-│		├───INA/
-│		│    │
-│		│    └FDDA/	
-│		│	│ 
-│		│	├── schematic/
-│		│	│     └── FDDA.sch
-│		│	│	# ... others.sch 
+│		├───────INA/
 │		│	│
-│		│	├── layout/
-│		│	│     └── FDDA.gds
-│		│	│	# ... others.sch 
-│		│	│
-│		│	└── testbench/
-│		│            └── tb_FDDA.sch      
+│		│	└──────FDDA/	
+│		│		│ 
+│		│		├── schematic/
+│		│		│     └── FDDA.sch
+│		│		│	# ... others.sch 
+│		│		│
+│		│		├── layout/
+│		│		│     └── FDDA.gds
+│		│		│	# ... others.sch 
+│		│		│
+│		│		└── testbench/
+│		│            		└── tb_FDDA.sch      
 │		│
 │	 	│
 │		├───peak_detector/
@@ -92,8 +92,7 @@ Each circuit block should follow this structure:
 block_name/
 ├── schematic/
 ├── layout/
-├── testbench/
-└── sim/
+└── testbench/
 ```
 
 ---
