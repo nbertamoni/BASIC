@@ -1,0 +1,458 @@
+* NGSPICE file created from DigitalSine.ext - technology: ihp-sg13g2
+
+* Black-box entry subcircuit for sg13g2_fill_1 abstract view
+.subckt sg13g2_fill_1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_xnor2_1 abstract view
+.subckt sg13g2_xnor2_1 Y A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_inv_2 abstract view
+.subckt sg13g2_inv_2 Y A VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_inv_1 abstract view
+.subckt sg13g2_inv_1 VDD Y A VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_buf_1 abstract view
+.subckt sg13g2_buf_1 A X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_decap_8 abstract view
+.subckt sg13g2_decap_8 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_fill_2 abstract view
+.subckt sg13g2_fill_2 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_a21oi_1 abstract view
+.subckt sg13g2_a21oi_1 VSS VDD A1 A2 Y B1
+.ends
+
+* Black-box entry subcircuit for sg13g2_dfrbpq_1 abstract view
+.subckt sg13g2_dfrbpq_1 RESET_B VSS VDD D Q CLK
+.ends
+
+* Black-box entry subcircuit for sg13g2_nand2_1 abstract view
+.subckt sg13g2_nand2_1 Y A B VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_xor2_1 abstract view
+.subckt sg13g2_xor2_1 B A X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_o21ai_1 abstract view
+.subckt sg13g2_o21ai_1 B1 VDD Y VSS A1 A2
+.ends
+
+* Black-box entry subcircuit for sg13g2_nor2_1 abstract view
+.subckt sg13g2_nor2_1 A B Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_buf_8 abstract view
+.subckt sg13g2_buf_8 A X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_nor3_1 abstract view
+.subckt sg13g2_nor3_1 A B C Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_nor2b_1 abstract view
+.subckt sg13g2_nor2b_1 A B_N Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_and3_1 abstract view
+.subckt sg13g2_and3_1 X A B C VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_nand2b_1 abstract view
+.subckt sg13g2_nand2b_1 Y B A_N VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_nand3_1 abstract view
+.subckt sg13g2_nand3_1 B C A Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_and2_1 abstract view
+.subckt sg13g2_and2_1 A B X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_a22oi_1 abstract view
+.subckt sg13g2_a22oi_1 Y B1 B2 A2 A1 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_buf_2 abstract view
+.subckt sg13g2_buf_2 A X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_a221oi_1 abstract view
+.subckt sg13g2_a221oi_1 VDD VSS B2 C1 B1 A1 Y A2
+.ends
+
+* Black-box entry subcircuit for sg13g2_nor2_2 abstract view
+.subckt sg13g2_nor2_2 A B Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_decap_4 abstract view
+.subckt sg13g2_decap_4 VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_dfrbpq_2 abstract view
+.subckt sg13g2_dfrbpq_2 RESET_B VSS VDD D Q CLK
+.ends
+
+* Black-box entry subcircuit for sg13g2_a21o_1 abstract view
+.subckt sg13g2_a21o_1 A2 A1 B1 X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_mux2_1 abstract view
+.subckt sg13g2_mux2_1 A0 A1 S X VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_dlygate4sd3_1 abstract view
+.subckt sg13g2_dlygate4sd3_1 A VDD VSS X
+.ends
+
+* Black-box entry subcircuit for sg13g2_nor4_1 abstract view
+.subckt sg13g2_nor4_1 A B C D Y VDD VSS
+.ends
+
+* Black-box entry subcircuit for sg13g2_nand3b_1 abstract view
+.subckt sg13g2_nand3b_1 B C Y VDD VSS A_N
+.ends
+
+* Black-box entry subcircuit for sg13g2_nand4_1 abstract view
+.subckt sg13g2_nand4_1 B C A Y VDD VSS D
+.ends
+
+* Black-box entry subcircuit for sg13g2_or2_1 abstract view
+.subckt sg13g2_or2_1 VSS VDD X B A
+.ends
+
+.subckt DigitalSine DVDD DVSS clk rst sign signB sine_out[0] sine_out[10] sine_out[11]
++ sine_out[12] sine_out[13] sine_out[14] sine_out[15] sine_out[16] sine_out[17] sine_out[1]
++ sine_out[2] sine_out[3] sine_out[4] sine_out[5] sine_out[6] sine_out[7] sine_out[8]
++ sine_out[9]
+XFILLER_6_118 DVDD DVSS sg13g2_fill_1
+X_200_ _029_ _015_ _026_ DVDD DVSS sg13g2_xnor2_1
+X_131_ _085_ net66 DVDD DVSS sg13g2_inv_2
+X_277_ DVDD _002_ net22 DVSS sg13g2_inv_1
+Xoutput20 net20 sine_out[8] DVDD DVSS sg13g2_buf_1
+XFILLER_11_0 DVDD DVSS sg13g2_decap_8
+Xoutput7 net7 sine_out[12] DVDD DVSS sg13g2_buf_1
+XFILLER_12_77 DVDD DVSS sg13g2_fill_2
+X_276_ DVDD _001_ net22 DVSS sg13g2_inv_1
+X_130_ _084_ net62 DVDD DVSS sg13g2_inv_2
+X_259_ DVSS DVDD net56 _077_ net21 net54 sg13g2_a21oi_1
+Xoutput21 net21 sine_out[9] DVDD DVSS sg13g2_buf_1
+Xoutput8 net8 sine_out[13] DVDD DVSS sg13g2_buf_1
+Xoutput10 net10 sine_out[15] DVDD DVSS sg13g2_buf_1
+X_292_ _008_ DVSS DVDD CTRL.P0 CTRL.S0 clknet_1_1__leaf_clk sg13g2_dfrbpq_1
+XFILLER_3_14 DVDD DVSS sg13g2_fill_2
+X_189_ _018_ _012_ _017_ DVDD DVSS sg13g2_nand2_1
+X_258_ DVSS DVDD net59 _078_ net20 net51 sg13g2_a21oi_1
+X_275_ _099_ _098_ DPATH.SUM.fa_4.S DVDD DVSS sg13g2_xor2_1
+XFILLER_1_0 DVDD DVSS sg13g2_decap_8
+X_291_ _007_ DVSS DVDD CTRL.P1 net2 clknet_1_1__leaf_clk sg13g2_dfrbpq_1
+Xoutput11 net11 sine_out[16] DVDD DVSS sg13g2_buf_1
+Xoutput9 net9 sine_out[14] DVDD DVSS sg13g2_buf_1
+XFILLER_12_79 DVDD DVSS sg13g2_fill_1
+X_274_ _097_ _096_ DPATH.SUM.fa_3.S DVDD DVSS sg13g2_xor2_1
+X_188_ DVSS DVDD _015_ _016_ _017_ _011_ sg13g2_a21oi_1
+X_257_ DVSS DVDD net59 _065_ net19 net51 sg13g2_a21oi_1
+Xoutput12 net12 sine_out[17] DVDD DVSS sg13g2_buf_1
+XFILLER_1_81 DVDD DVSS sg13g2_fill_2
+XFILLER_12_36 DVDD DVSS sg13g2_fill_1
+XFILLER_10_118 DVDD DVSS sg13g2_fill_1
+X_290_ _006_ DVSS DVDD DPATH.SUM.fa_6.S DPATH.SUM.fa_6.A clknet_1_0__leaf_clk sg13g2_dfrbpq_1
+XFILLER_3_16 DVDD DVSS sg13g2_fill_1
+X_187_ _016_ net66 _126_ DVDD DVSS sg13g2_nand2_1
+XFILLER_9_59 DVDD DVSS sg13g2_fill_2
+X_256_ DVSS DVDD net59 _106_ net18 net51 sg13g2_a21oi_1
+X_273_ _095_ _094_ DPATH.SUM.fa_2.S DVDD DVSS sg13g2_xor2_1
+Xclkload0 DVDD clkload0/Y clknet_1_1__leaf_clk DVSS sg13g2_inv_1
+X_239_ _065_ DVDD _066_ DVSS net66 net71 sg13g2_o21ai_1
+Xoutput13 net13 sine_out[1] DVDD DVSS sg13g2_buf_1
+XFILLER_13_7 DVDD DVSS sg13g2_decap_8
+XFILLER_10_80 DVDD DVSS sg13g2_fill_1
+X_272_ DPATH.SUM.fa_1.S net72 _093_ DVDD DVSS sg13g2_xnor2_1
+X_186_ net64 _014_ _015_ DVDD DVSS sg13g2_nor2_1
+XFILLER_13_80 DVDD DVSS sg13g2_fill_1
+Xfanout70 DPATH.SUM.fa_1.A net70 DVDD DVSS sg13g2_buf_8
+X_255_ net59 _103_ _078_ net17 DVDD DVSS sg13g2_nor3_1
+XFILLER_10_70 DVDD DVSS sg13g2_fill_2
+X_238_ _118_ net64 _065_ DVDD DVSS sg13g2_nor2b_1
+X_169_ _117_ net71 _111_ DVDD DVSS sg13g2_nand2_1
+Xoutput14 net14 sine_out[2] DVDD DVSS sg13g2_buf_1
+XFILLER_7_82 DVDD DVSS sg13g2_fill_2
+X_185_ net67 net69 _014_ DVDD DVSS sg13g2_nor2b_1
+Xfanout71 DPATH.SUM.Cout0 net71 DVDD DVSS sg13g2_buf_8
+X_271_ _038_ DVDD net12 DVSS net58 _106_ sg13g2_o21ai_1
+X_254_ _078_ net63 net71 _111_ DVDD DVSS sg13g2_and3_1
+XFILLER_3_7 DVDD DVSS sg13g2_decap_8
+Xfanout60 net61 net60 DVDD DVSS sg13g2_buf_8
+X_168_ _108_ _116_ CTRL.P0 DVDD DVSS sg13g2_nor2_1
+X_237_ _064_ _032_ net64 DVDD DVSS sg13g2_nand2b_1
+Xoutput15 net15 sine_out[3] DVDD DVSS sg13g2_buf_1
+X_270_ DVSS DVDD _081_ _082_ net11 _038_ sg13g2_a21oi_1
+Xfanout72 DPATH.SUM.Cout0 net72 DVDD DVSS sg13g2_buf_8
+X_184_ _013_ net57 net61 DVDD DVSS sg13g2_nand2b_1
+X_253_ net59 net51 _065_ net16 DVDD DVSS sg13g2_nor3_1
+Xfanout61 DPATH.SUM.fa_4.A net61 DVDD DVSS sg13g2_buf_8
+X_236_ _063_ net64 _062_ DVDD DVSS sg13g2_xnor2_1
+X_219_ net69 net72 _084_ _047_ DVDD DVSS sg13g2_nand3_1
+X_167_ DVSS DVDD net55 _115_ _116_ net53 sg13g2_a21oi_1
+XFILLER_11_7 DVDD DVSS sg13g2_decap_8
+Xoutput16 net16 sine_out[4] DVDD DVSS sg13g2_buf_1
+Xclkbuf_0_clk clk clknet_0_clk DVDD DVSS sg13g2_buf_8
+X_235_ _014_ _035_ _061_ _062_ DVDD DVSS sg13g2_nor3_1
+X_183_ net59 net57 _012_ DVDD DVSS sg13g2_nor2b_1
+Xfanout51 _103_ net51 DVDD DVSS sg13g2_buf_8
+X_166_ net71 _110_ _113_ _115_ DVDD DVSS sg13g2_nor3_1
+X_252_ net51 _077_ net15 DVDD DVSS sg13g2_nor2_1
+Xfanout62 net63 net62 DVDD DVSS sg13g2_buf_8
+X_218_ net57 net59 _046_ DVDD DVSS sg13g2_nor2b_1
+Xoutput17 net17 sine_out[5] DVDD DVSS sg13g2_buf_1
+X_149_ _100_ _088_ DPATH.SUM.fa_5.S DVDD DVSS sg13g2_xor2_1
+X_182_ net64 _010_ _011_ DVDD DVSS sg13g2_and2_1
+X_251_ _077_ _022_ _039_ DVDD DVSS sg13g2_nand2_1
+Xfanout52 CTRL.S0 net52 DVDD DVSS sg13g2_buf_8
+Xfanout63 net65 net63 DVDD DVSS sg13g2_buf_8
+X_217_ _044_ _010_ _045_ DVDD DVSS sg13g2_xor2_1
+X_234_ net60 _085_ _126_ _061_ DVDD DVSS sg13g2_nor3_1
+XFILLER_1_7 DVDD DVSS sg13g2_decap_8
+X_148_ DVSS DVDD _098_ _099_ _100_ _089_ sg13g2_a21oi_1
+X_165_ DVDD _114_ _113_ DVSS sg13g2_inv_1
+Xoutput18 net18 sine_out[6] DVDD DVSS sg13g2_buf_1
+Xfanout64 net65 net64 DVDD DVSS sg13g2_buf_8
+X_233_ DVSS DVDD _056_ _060_ net13 _051_ sg13g2_a21oi_1
+X_181_ _010_ _125_ net67 _118_ net71 DVDD DVSS sg13g2_a22oi_1
+X_250_ _076_ DVDD net14 DVSS net51 _063_ sg13g2_o21ai_1
+Xfanout53 CTRL.S0 net53 DVDD DVSS sg13g2_buf_2
+X_164_ _113_ net62 _111_ DVDD DVSS sg13g2_nand2_1
+X_216_ _044_ net65 _019_ DVDD DVSS sg13g2_nand2_1
+XFILLER_10_64 DVDD DVSS sg13g2_fill_1
+X_147_ net58 net52 _099_ DVDD DVSS sg13g2_xor2_1
+Xoutput19 net19 sine_out[7] DVDD DVSS sg13g2_buf_1
+XFILLER_7_43 DVDD DVSS sg13g2_fill_2
+X_180_ DVDD DVSS _127_ net57 _126_ _123_ _009_ _124_ sg13g2_a221oi_1
+Xfanout54 net55 net54 DVDD DVSS sg13g2_buf_8
+Xfanout65 DPATH.SUM.fa_3.A net65 DVDD DVSS sg13g2_buf_2
+XFILLER_4_11 DVDD DVSS sg13g2_fill_1
+X_163_ _112_ net66 net69 DVDD DVSS sg13g2_nand2_1
+XFILLER_10_21 DVDD DVSS sg13g2_decap_8
+X_232_ _083_ _054_ _059_ _060_ DVDD DVSS sg13g2_nor3_1
+X_129_ DVDD net3 net23 DVSS sg13g2_inv_1
+X_215_ _043_ _027_ _112_ _021_ net64 DVDD DVSS sg13g2_a22oi_1
+X_146_ _090_ DVDD _098_ DVSS _096_ _097_ sg13g2_o21ai_1
+XFILLER_8_116 DVDD DVSS sg13g2_fill_2
+XFILLER_13_21 DVDD DVSS sg13g2_decap_8
+X_162_ _085_ _086_ _111_ DVDD DVSS sg13g2_nor2_2
+X_231_ DVSS DVDD _022_ _057_ _059_ _058_ sg13g2_a21oi_1
+Xfanout66 net68 net66 DVDD DVSS sg13g2_buf_8
+XFILLER_6_0 DVDD DVSS sg13g2_decap_8
+Xfanout55 DPATH.SUM.fa_6.A net55 DVDD DVSS sg13g2_buf_8
+Xfanout22 net1 net22 DVDD DVSS sg13g2_buf_2
+X_214_ DVSS DVDD _018_ _025_ net4 _042_ sg13g2_a21oi_1
+Xinput1 rst net1 DVDD DVSS sg13g2_buf_1
+X_145_ _097_ net52 net63 DVDD DVSS sg13g2_xnor2_1
+X_128_ DVDD _083_ net54 DVSS sg13g2_inv_1
+Xfanout67 net68 net67 DVDD DVSS sg13g2_buf_1
+Xfanout56 DPATH.SUM.fa_5.A net56 DVDD DVSS sg13g2_buf_8
+XFILLER_4_35 DVDD DVSS sg13g2_fill_1
+X_230_ _058_ net57 _036_ DVDD DVSS sg13g2_nand2_1
+XFILLER_1_14 DVDD DVSS sg13g2_decap_4
+X_161_ _110_ net56 net61 DVDD DVSS sg13g2_nand2_1
+X_213_ _041_ DVDD _042_ DVSS net57 _031_ sg13g2_o21ai_1
+X_144_ DVSS DVDD _094_ _095_ _096_ _091_ sg13g2_a21oi_1
+XFILLER_14_0 DVDD DVSS sg13g2_decap_8
+XFILLER_8_118 DVDD DVSS sg13g2_fill_1
+XFILLER_4_25 DVDD DVSS sg13g2_fill_1
+XFILLER_13_78 DVDD DVSS sg13g2_fill_2
+XFILLER_5_90 DVDD DVSS sg13g2_fill_2
+Xfanout68 DPATH.SUM.fa_2.A net68 DVDD DVSS sg13g2_buf_8
+Xfanout57 DPATH.SUM.fa_5.A net57 DVDD DVSS sg13g2_buf_8
+X_212_ _038_ _040_ _033_ _041_ DVDD DVSS sg13g2_nand3_1
+X_143_ net68 net53 _095_ DVDD DVSS sg13g2_xor2_1
+X_289_ _005_ DVSS DVDD DPATH.SUM.fa_5.S DPATH.SUM.fa_5.A clknet_1_0__leaf_clk sg13g2_dfrbpq_2
+X_160_ net56 net58 _109_ DVDD DVSS sg13g2_and2_1
+Xfanout69 net70 net69 DVDD DVSS sg13g2_buf_8
+Xfanout58 net61 net58 DVDD DVSS sg13g2_buf_8
+X_288_ _004_ DVSS DVDD DPATH.SUM.fa_4.S DPATH.SUM.fa_4.A clknet_1_0__leaf_clk sg13g2_dfrbpq_1
+X_211_ DVSS DVDD _086_ _039_ _040_ _037_ sg13g2_a21oi_1
+XFILLER_10_58 DVDD DVSS sg13g2_fill_1
+XFILLER_10_14 DVDD DVSS sg13g2_decap_8
+X_142_ _092_ DVDD _094_ DVSS DPATH.SUM.ha_0.S _093_ sg13g2_o21ai_1
+XFILLER_4_0 DVDD DVSS sg13g2_decap_8
+XFILLER_13_47 DVDD DVSS sg13g2_fill_1
+XFILLER_13_14 DVDD DVSS sg13g2_decap_8
+Xfanout59 net60 net59 DVDD DVSS sg13g2_buf_2
+X_141_ _093_ net53 net70 DVDD DVSS sg13g2_xnor2_1
+X_210_ net61 net62 _039_ DVDD DVSS sg13g2_nor2_1
+X_287_ _003_ DVSS DVDD DPATH.SUM.fa_3.S DPATH.SUM.fa_3.A clknet_1_0__leaf_clk sg13g2_dfrbpq_1
+XFILLER_12_0 DVDD DVSS sg13g2_decap_4
+X_286_ _002_ DVSS DVDD DPATH.SUM.fa_2.S DPATH.SUM.fa_2.A clknet_1_0__leaf_clk sg13g2_dfrbpq_1
+XFILLER_1_18 DVDD DVSS sg13g2_fill_1
+X_140_ _092_ net52 net70 DVDD DVSS sg13g2_nand2_1
+X_269_ net58 net55 _082_ DVDD DVSS sg13g2_and2_1
+XFILLER_4_103 DVDD DVSS sg13g2_fill_2
+X_285_ _001_ DVSS DVDD DPATH.SUM.fa_1.S DPATH.SUM.fa_1.A clknet_1_1__leaf_clk sg13g2_dfrbpq_1
+X_199_ net60 DVDD _028_ DVSS _011_ _027_ sg13g2_o21ai_1
+XFILLER_11_60 DVDD DVSS sg13g2_fill_2
+X_268_ _113_ _104_ _083_ net10 DVDD DVSS sg13g2_a21o_1
+XFILLER_2_0 DVDD DVSS sg13g2_decap_8
+XFILLER_8_61 DVDD DVSS sg13g2_fill_1
+XFILLER_13_28 DVDD DVSS sg13g2_decap_8
+X_284_ _000_ DVSS DVDD DPATH.SUM.ha_0.S DPATH.SUM.Cout0 clknet_1_1__leaf_clk sg13g2_dfrbpq_2
+XFILLER_6_7 DVDD DVSS sg13g2_fill_2
+X_198_ net65 _026_ _027_ DVDD DVSS sg13g2_nor2_1
+X_267_ net54 DVDD net9 DVSS net56 _077_ sg13g2_o21ai_1
+XFILLER_8_40 DVDD DVSS sg13g2_fill_2
+Xclkbuf_1_0__f_clk clknet_0_clk clknet_1_0__leaf_clk DVDD DVSS sg13g2_buf_8
+XFILLER_14_83 DVDD DVSS sg13g2_decap_8
+X_283_ DVDD _008_ net1 DVSS sg13g2_inv_1
+XFILLER_10_0 DVDD DVSS sg13g2_decap_8
+X_197_ net72 net68 _026_ DVDD DVSS sg13g2_xor2_1
+X_249_ _070_ _075_ net55 _076_ DVDD DVSS sg13g2_mux2_1
+X_266_ DVSS DVDD _109_ _114_ net8 net54 sg13g2_a21oi_1
+XFILLER_14_7 DVDD DVSS sg13g2_decap_8
+XFILLER_7_103 DVDD DVSS sg13g2_fill_2
+Xhold1 net2 DVDD DVSS net23 sg13g2_dlygate4sd3_1
+XFILLER_12_4 DVDD DVSS sg13g2_fill_2
+XFILLER_5_53 DVDD DVSS sg13g2_fill_1
+XFILLER_14_73 DVDD DVSS sg13g2_fill_1
+X_282_ DVDD _007_ net22 DVSS sg13g2_inv_1
+X_196_ net55 _115_ _009_ _024_ _025_ DVDD DVSS sg13g2_nor4_1
+X_265_ DVSS DVDD _109_ _081_ net7 net54 sg13g2_a21oi_1
+XFILLER_11_85 DVDD DVSS sg13g2_fill_2
+X_248_ DVDD DVSS _046_ _072_ _074_ _104_ _075_ _071_ sg13g2_a221oi_1
+XFILLER_0_0 DVDD DVSS sg13g2_decap_8
+X_179_ net58 _113_ _127_ DVDD DVSS sg13g2_and2_1
+XFILLER_8_42 DVDD DVSS sg13g2_fill_1
+XFILLER_14_52 DVDD DVSS sg13g2_fill_2
+X_281_ DVDD _006_ net22 DVSS sg13g2_inv_1
+XFILLER_11_97 DVDD DVSS sg13g2_fill_2
+X_247_ _073_ DVDD _074_ DVSS _085_ _047_ sg13g2_o21ai_1
+X_195_ _110_ _021_ _023_ _024_ DVDD DVSS sg13g2_nor3_1
+XFILLER_4_7 DVDD DVSS sg13g2_decap_4
+X_264_ _081_ _117_ net62 DVDD DVSS sg13g2_nand2b_1
+X_178_ net72 net70 _126_ DVDD DVSS sg13g2_xor2_1
+XFILLER_7_105 DVDD DVSS sg13g2_fill_1
+XFILLER_5_99 DVDD DVSS sg13g2_fill_2
+XFILLER_14_42 DVDD DVSS sg13g2_fill_2
+X_194_ _084_ _022_ _023_ DVDD DVSS sg13g2_nor2_1
+X_280_ DVDD _005_ net22 DVSS sg13g2_inv_1
+X_263_ net54 _080_ net6 DVDD DVSS sg13g2_nor2_1
+X_177_ _125_ net70 net72 DVDD DVSS sg13g2_xnor2_1
+XFILLER_11_21 DVDD DVSS sg13g2_decap_8
+X_246_ _022_ DVDD _073_ DVSS net62 _118_ sg13g2_o21ai_1
+XFILLER_8_55 DVDD DVSS sg13g2_fill_1
+X_229_ DVSS DVDD _084_ net66 _057_ net60 sg13g2_a21oi_1
+XFILLER_14_21 DVDD DVSS sg13g2_decap_8
+XFILLER_5_78 DVDD DVSS sg13g2_fill_1
+X_193_ net66 DVDD _022_ DVSS net69 net71 sg13g2_o21ai_1
+X_262_ DVSS DVDD _105_ _120_ _080_ _110_ sg13g2_a21oi_1
+X_159_ CTRL.P1 net3 _108_ DVDD DVSS sg13g2_xnor2_1
+X_228_ _056_ _046_ _055_ DVDD DVSS sg13g2_nand2b_1
+XFILLER_8_89 DVDD DVSS sg13g2_fill_2
+X_245_ _105_ _013_ _023_ _072_ DVDD DVSS sg13g2_nor3_1
+XFILLER_8_67 DVDD DVSS sg13g2_fill_2
+X_176_ DVSS DVDD net63 net70 _124_ net60 sg13g2_a21oi_1
+XFILLER_5_46 DVDD DVSS sg13g2_fill_2
+XFILLER_14_66 DVDD DVSS sg13g2_fill_2
+X_192_ DVSS DVDD net71 _118_ _021_ _020_ sg13g2_a21oi_1
+X_261_ net5 net51 _079_ DVDD DVSS sg13g2_nand2_1
+XFILLER_11_67 DVDD DVSS sg13g2_fill_1
+XFILLER_9_0 DVDD DVSS sg13g2_decap_4
+X_244_ _034_ _064_ _112_ _071_ DVDD DVSS sg13g2_nand3_1
+XFILLER_2_14 DVDD DVSS sg13g2_decap_4
+XFILLER_2_7 DVDD DVSS sg13g2_decap_8
+X_175_ _123_ _084_ _122_ DVDD DVSS sg13g2_nand2_1
+X_227_ _055_ _052_ _016_ _032_ net64 DVDD DVSS sg13g2_a22oi_1
+X_158_ net61 net51 _107_ _108_ DVDD DVSS sg13g2_nor3_1
+Xclkbuf_1_1__f_clk clknet_0_clk clknet_1_1__leaf_clk DVDD DVSS sg13g2_buf_8
+X_191_ _019_ DVDD _020_ DVSS DPATH.SUM.Cout0 _119_ sg13g2_o21ai_1
+X_260_ _083_ _066_ _079_ DVDD DVSS net58 sg13g2_nand3b_1
+X_243_ _070_ _069_ _109_ _067_ _012_ DVDD DVSS sg13g2_a22oi_1
+X_157_ _086_ DPATH.SUM.Cout0 net53 _107_ DVDD DVSS _105_ sg13g2_nand4_1
+X_174_ _120_ _121_ _122_ DVDD DVSS sg13g2_nor2_1
+X_226_ _053_ _104_ _054_ DVDD DVSS sg13g2_nor2b_1
+X_209_ net56 net54 _038_ DVDD DVSS sg13g2_and2_1
+XFILLER_14_35 DVDD DVSS sg13g2_decap_8
+XFILLER_10_7 DVDD DVSS sg13g2_decap_4
+X_190_ _019_ net67 net72 DVDD DVSS sg13g2_nand2_1
+XFILLER_11_14 DVDD DVSS sg13g2_decap_8
+X_242_ _119_ net64 _068_ _069_ DVDD DVSS sg13g2_a21o_1
+X_173_ DPATH.SUM.ha_0.S _119_ _121_ DVDD DVSS sg13g2_nor2_1
+XFILLER_12_90 DVDD DVSS sg13g2_fill_1
+X_225_ _053_ _126_ _052_ _122_ net63 DVDD DVSS sg13g2_a22oi_1
+X_156_ DVSS DVDD _106_ net66 net63 sg13g2_or2_1
+XFILLER_14_14 DVDD DVSS sg13g2_decap_8
+X_208_ DVSS DVDD net62 _034_ _037_ _036_ sg13g2_a21oi_1
+X_139_ net53 net68 _091_ DVDD DVSS sg13g2_and2_1
+XFILLER_8_49 DVDD DVSS sg13g2_fill_1
+X_241_ _047_ DVDD _068_ DVSS _106_ _120_ sg13g2_o21ai_1
+XFILLER_7_0 DVDD DVSS sg13g2_fill_1
+X_224_ net62 _118_ _052_ DVDD DVSS sg13g2_nor2_1
+X_172_ net69 net71 _120_ DVDD DVSS sg13g2_nor2_1
+XFILLER_0_7 DVDD DVSS sg13g2_fill_2
+X_155_ net63 net66 _105_ DVDD DVSS sg13g2_nor2_1
+X_207_ DVSS DVDD net60 _106_ _036_ _035_ sg13g2_a21oi_1
+XFILLER_0_117 DVDD DVSS sg13g2_fill_2
+X_138_ _090_ net52 net63 DVDD DVSS sg13g2_nand2_1
+X_240_ _064_ DVDD _067_ DVSS _111_ _066_ sg13g2_o21ai_1
+X_171_ _119_ net68 net70 DVDD DVSS sg13g2_xnor2_1
+XFILLER_2_18 DVDD DVSS sg13g2_fill_2
+X_223_ DVSS DVDD _109_ _045_ _051_ _050_ sg13g2_a21oi_1
+XFILLER_3_61 DVDD DVSS sg13g2_fill_2
+X_154_ net56 net58 _104_ DVDD DVSS sg13g2_nor2_2
+X_206_ _035_ net60 net69 net72 DVDD DVSS sg13g2_and3_1
+XFILLER_9_82 DVDD DVSS sg13g2_fill_2
+X_137_ net52 net58 _089_ DVDD DVSS sg13g2_and2_1
+XFILLER_6_72 DVDD DVSS sg13g2_fill_2
+X_170_ net67 net69 _118_ DVDD DVSS sg13g2_nor2_2
+XFILLER_11_28 DVDD DVSS sg13g2_fill_1
+XFILLER_0_9 DVDD DVSS sg13g2_fill_1
+X_222_ _049_ DVDD _050_ DVSS _013_ _043_ sg13g2_o21ai_1
+X_153_ DVSS DVDD _103_ net55 net57 sg13g2_or2_1
+X_205_ _034_ DPATH.SUM.ha_0.S _118_ DVDD DVSS sg13g2_nand2_1
+X_136_ _088_ net52 net56 DVDD DVSS sg13g2_xnor2_1
+XFILLER_14_28 DVDD DVSS sg13g2_decap_8
+Xoutput2 net2 sign DVDD DVSS sg13g2_buf_2
+X_221_ DVDD DVSS _104_ net55 _048_ _020_ _049_ _046_ sg13g2_a221oi_1
+X_152_ DPATH.SUM.fa_6.S _101_ _102_ DVDD DVSS sg13g2_xnor2_1
+XFILLER_5_0 DVDD DVSS sg13g2_fill_2
+X_204_ net62 _032_ _033_ DVDD DVSS net59 sg13g2_nand3b_1
+XFILLER_9_84 DVDD DVSS sg13g2_fill_1
+X_135_ _087_ net52 net56 DVDD DVSS sg13g2_nand2_1
+XFILLER_6_52 DVDD DVSS sg13g2_fill_2
+XFILLER_6_30 DVDD DVSS sg13g2_fill_1
+Xoutput3 net3 signB DVDD DVSS sg13g2_buf_2
+XFILLER_3_42 DVDD DVSS sg13g2_fill_1
+X_220_ _048_ _026_ _047_ DVDD DVSS sg13g2_nand2_1
+X_134_ DVDD _000_ net22 DVSS sg13g2_inv_1
+X_203_ _032_ _022_ _118_ DVDD DVSS sg13g2_nand2b_1
+X_151_ _102_ net52 net54 DVDD DVSS sg13g2_xnor2_1
+Xoutput4 net4 sine_out[0] DVDD DVSS sg13g2_buf_1
+XFILLER_14_109 DVDD DVSS sg13g2_fill_1
+XFILLER_13_0 DVDD DVSS sg13g2_decap_8
+XFILLER_6_116 DVDD DVSS sg13g2_fill_2
+X_279_ DVDD _004_ net22 DVSS sg13g2_inv_1
+X_150_ _087_ DVDD _101_ DVSS _088_ _100_ sg13g2_o21ai_1
+XFILLER_5_2 DVDD DVSS sg13g2_fill_1
+X_202_ _031_ _028_ _030_ DVDD DVSS sg13g2_nand2b_1
+X_133_ DPATH.SUM.ha_0.S net72 DVDD DVSS sg13g2_inv_2
+XFILLER_0_88 DVDD DVSS sg13g2_fill_2
+Xoutput5 net5 sine_out[10] DVDD DVSS sg13g2_buf_1
+XFILLER_9_114 DVDD DVSS sg13g2_fill_1
+X_201_ net55 DVDD _030_ DVSS net60 _029_ sg13g2_o21ai_1
+XFILLER_12_64 DVDD DVSS sg13g2_fill_2
+X_132_ _086_ net69 DVDD DVSS sg13g2_inv_2
+X_278_ DVDD _003_ net22 DVSS sg13g2_inv_1
+XFILLER_3_0 DVDD DVSS sg13g2_decap_8
+Xoutput6 net6 sine_out[11] DVDD DVSS sg13g2_buf_1
+.ends
+

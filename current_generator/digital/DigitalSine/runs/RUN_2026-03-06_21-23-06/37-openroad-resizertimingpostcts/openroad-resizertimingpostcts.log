@@ -1,0 +1,54 @@
+Reading timing models for corner nom_fast_1p32V_m40C…
+Reading timing library for the 'nom_fast_1p32V_m40C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_fast_1p32V_m40C.lib'…
+Reading timing models for corner nom_slow_1p08V_125C…
+Reading timing library for the 'nom_slow_1p08V_125C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib'…
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/opt/pdks/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/35-openroad-cts/DigitalSine.odb'…
+Reading design constraints file at '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/cons.sdc'…
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
++ repair_timing -verbose -setup -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -max_buffer_percent 50
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
++ repair_timing -verbose -hold -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -hold_margin 0.1000000000000000055511151231257827021181583404541015625 -max_buffer_percent 50
+[INFO RSZ-0046] Found 1 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |   0.059 |   0.000 | _291_/D
+    final |       0 |       1 |            0 |    +0.6% |   0.100 |   0.000 | _284_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 1 hold buffers.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement        204.8 u
+average displacement        1.0 u
+max displacement           46.1 u
+original HPWL            4586.8 u
+legalized HPWL           4886.5 u
+delta HPWL                    7 %
+
+[INFO DPL-0020] Mirrored 78 instances
+[INFO DPL-0021] HPWL before            4886.5 u
+[INFO DPL-0022] HPWL after             4792.7 u
+[INFO DPL-0023] HPWL delta               -1.9 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Clock buffer                              3      70.76
+  Timing Repair Buffer                     45     640.48
+  Inverter                                 16      94.35
+  Clock inverter                            1       5.44
+  Sequential cell                           9     444.53
+  Multi-Input combinational cell          140    1391.64
+  Total                                   214    2647.21
+Writing OpenROAD database to '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/37-openroad-resizertimingpostcts/DigitalSine.odb'…
+Writing netlist to '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/37-openroad-resizertimingpostcts/DigitalSine.nl.v'…
+Writing powered netlist to '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/37-openroad-resizertimingpostcts/DigitalSine.pnl.v'…
+Writing layout to '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/37-openroad-resizertimingpostcts/DigitalSine.def'…
+Writing timing constraints to '/home/designer/shared/BASIC/current_generator/digital/DigitalSine/runs/RUN_2026-03-06_21-23-06/37-openroad-resizertimingpostcts/DigitalSine.sdc'…
