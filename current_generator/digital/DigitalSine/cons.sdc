@@ -49,7 +49,10 @@ set_output_delay -min 0.0 -clock [get_clocks clk] [all_outputs]
 
 #output load mosfet gates
 # 50 fF analog input load per output pin
-set_load 0.08 $DATA_OUT
+set_load 0.03 [get_ports sign]
+set_load 0.03 [get_ports signB]
+
+set_load 0.01 [get_ports sine_out]
 
 
 ########################################################################
