@@ -1,0 +1,701 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN DigitalSine ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 68885 87605 ) ;
+ROW ROW_0 CoreSite 5760 15120 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_1 CoreSite 5760 18900 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_2 CoreSite 5760 22680 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_3 CoreSite 5760 26460 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_4 CoreSite 5760 30240 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_5 CoreSite 5760 34020 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_6 CoreSite 5760 37800 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_7 CoreSite 5760 41580 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_8 CoreSite 5760 45360 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_9 CoreSite 5760 49140 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_10 CoreSite 5760 52920 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_11 CoreSite 5760 56700 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_12 CoreSite 5760 60480 N DO 119 BY 1 STEP 480 0 ;
+ROW ROW_13 CoreSite 5760 64260 FS DO 119 BY 1 STEP 480 0 ;
+ROW ROW_14 CoreSite 5760 68040 N DO 119 BY 1 STEP 480 0 ;
+TRACKS X 480 DO 143 STEP 480 LAYER Metal1 ;
+TRACKS Y 420 DO 208 STEP 420 LAYER Metal1 ;
+TRACKS X 480 DO 143 STEP 480 LAYER Metal2 ;
+TRACKS Y 420 DO 208 STEP 420 LAYER Metal2 ;
+TRACKS X 480 DO 143 STEP 480 LAYER Metal3 ;
+TRACKS Y 420 DO 208 STEP 420 LAYER Metal3 ;
+TRACKS X 480 DO 143 STEP 480 LAYER Metal4 ;
+TRACKS Y 420 DO 208 STEP 420 LAYER Metal4 ;
+TRACKS X 480 DO 143 STEP 480 LAYER Metal5 ;
+TRACKS Y 420 DO 208 STEP 420 LAYER Metal5 ;
+TRACKS X 1640 DO 30 STEP 2280 LAYER TopMetal1 ;
+TRACKS Y 1640 DO 38 STEP 2280 LAYER TopMetal1 ;
+TRACKS X 2000 DO 17 STEP 4000 LAYER TopMetal2 ;
+TRACKS Y 2000 DO 22 STEP 4000 LAYER TopMetal2 ;
+VIAS 7 ;
+    - via1_2_2200_440_1_5_410_410 + VIARULE via1Array + CUTSIZE 190 190  + LAYERS Metal1 Via1 Metal2  + CUTSPACING 220 220  + ENCLOSURE 50 125 5 50  + ROWCOL 1 5  ;
+    - via2_3_2200_440_1_5_410_410 + VIARULE via2Array + CUTSIZE 190 190  + LAYERS Metal2 Via2 Metal3  + CUTSPACING 220 220  + ENCLOSURE 5 50 50 5  + ROWCOL 1 5  ;
+    - via3_4_2200_440_1_5_410_410 + VIARULE via3Array + CUTSIZE 190 190  + LAYERS Metal3 Via3 Metal4  + CUTSPACING 220 220  + ENCLOSURE 50 5 185 50  + ROWCOL 1 5  ;
+    - via4_5_3000_3000_6_6_480_480 + VIARULE via4Array + CUTSIZE 190 190  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 290 290  + ENCLOSURE 205 50 50 205  + ROWCOL 6 6  ;
+    - via4_5_3000_2200_4_6_480_480 + VIARULE via4Array + CUTSIZE 190 190  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 290 290  + ENCLOSURE 205 50 50 285  + ROWCOL 4 6  ;
+    - via4_5_2200_3000_6_4_480_480 + VIARULE via4Array + CUTSIZE 190 190  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 290 290  + ENCLOSURE 285 50 50 205  + ROWCOL 6 4  ;
+    - via4_5_2200_2200_4_4_480_480 + VIARULE via4Array + CUTSIZE 190 190  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 290 290  + ENCLOSURE 285 50 50 285  + ROWCOL 4 4  ;
+END VIAS
+COMPONENTS 213 ;
+    - _128_ sg13g2_inv_1 + PLACED ( 48960 22680 ) FN ;
+    - _129_ sg13g2_inv_1 + PLACED ( 56640 68040 ) FN ;
+    - _130_ sg13g2_inv_2 + PLACED ( 41760 26460 ) S ;
+    - _131_ sg13g2_inv_2 + PLACED ( 42240 52920 ) FN ;
+    - _132_ sg13g2_inv_2 + PLACED ( 19200 52920 ) FN ;
+    - _133_ sg13g2_inv_2 + PLACED ( 7680 49140 ) S ;
+    - _134_ sg13g2_inv_1 + PLACED ( 11040 52920 ) N ;
+    - _135_ sg13g2_nand2_1 + PLACED ( 31200 22680 ) N ;
+    - _136_ sg13g2_xnor2_1 + PLACED ( 45120 22680 ) FN ;
+    - _137_ sg13g2_and2_1 + PLACED ( 25440 15120 ) FN ;
+    - _138_ sg13g2_nand2_1 + PLACED ( 24000 26460 ) S ;
+    - _139_ sg13g2_and2_1 + PLACED ( 17760 37800 ) FN ;
+    - _140_ sg13g2_nand2_1 + PLACED ( 6240 41580 ) FS ;
+    - _141_ sg13g2_xnor2_1 + PLACED ( 12000 41580 ) S ;
+    - _142_ sg13g2_o21ai_1 + PLACED ( 11520 37800 ) N ;
+    - _143_ sg13g2_xor2_1 + PLACED ( 13920 37800 ) N ;
+    - _144_ sg13g2_a21oi_1 + PLACED ( 15360 30240 ) FN ;
+    - _145_ sg13g2_xnor2_1 + PLACED ( 17760 26460 ) FS ;
+    - _146_ sg13g2_o21ai_1 + PLACED ( 21600 26460 ) FS ;
+    - _147_ sg13g2_xor2_1 + PLACED ( 19200 18900 ) FS ;
+    - _148_ sg13g2_a21oi_1 + PLACED ( 16800 18900 ) S ;
+    - _149_ sg13g2_xor2_1 + PLACED ( 41280 22680 ) N ;
+    - _150_ sg13g2_o21ai_1 + PLACED ( 36000 18900 ) S ;
+    - _151_ sg13g2_xnor2_1 + PLACED ( 37920 26460 ) FS ;
+    - _152_ sg13g2_xnor2_1 + PLACED ( 42240 15120 ) N ;
+    - _153_ sg13g2_or2_1 + PLACED ( 59040 37800 ) FN ;
+    - _154_ sg13g2_nor2_2 + PLACED ( 45120 30240 ) FN ;
+    - _155_ sg13g2_nor2_1 + PLACED ( 23040 30240 ) N ;
+    - _156_ sg13g2_or2_1 + PLACED ( 41280 37800 ) N ;
+    - _157_ sg13g2_nand4_1 + PLACED ( 26400 45360 ) N ;
+    - _158_ sg13g2_nor3_1 + PLACED ( 29760 45360 ) FN ;
+    - _159_ sg13g2_xnor2_1 + PLACED ( 52800 68040 ) FN ;
+    - _160_ sg13g2_and2_1 + PLACED ( 45600 26460 ) S ;
+    - _161_ sg13g2_nand2_1 + PLACED ( 26880 30240 ) N ;
+    - _162_ sg13g2_nor2_2 + PLACED ( 39840 49140 ) S ;
+    - _163_ sg13g2_nand2_1 + PLACED ( 44640 56700 ) FS ;
+    - _164_ sg13g2_nand2_1 + PLACED ( 43680 26460 ) S ;
+    - _165_ sg13g2_inv_1 + PLACED ( 37440 30240 ) N ;
+    - _166_ sg13g2_nor3_1 + PLACED ( 34080 34020 ) S ;
+    - _167_ sg13g2_a21oi_1 + PLACED ( 28800 34020 ) FS ;
+    - _168_ sg13g2_nor2_1 + PLACED ( 19680 56700 ) S ;
+    - _169_ sg13g2_nand2_1 + PLACED ( 53280 41580 ) S ;
+    - _170_ sg13g2_nor2_2 + PLACED ( 33600 60480 ) FN ;
+    - _171_ sg13g2_xnor2_1 + PLACED ( 23040 49140 ) FS ;
+    - _172_ sg13g2_nor2_1 + PLACED ( 20640 37800 ) N ;
+    - _173_ sg13g2_nor2_1 + PLACED ( 20640 30240 ) N ;
+    - _174_ sg13g2_nor2_1 + PLACED ( 15840 41580 ) FS ;
+    - _175_ sg13g2_nand2_1 + PLACED ( 33120 22680 ) N ;
+    - _176_ sg13g2_a21oi_1 + PLACED ( 27360 41580 ) S ;
+    - _177_ sg13g2_xnor2_1 + PLACED ( 23520 60480 ) N ;
+    - _178_ sg13g2_xor2_1 + PLACED ( 26880 49140 ) FS ;
+    - _179_ sg13g2_and2_1 + PLACED ( 28800 30240 ) N ;
+    - _180_ sg13g2_a221oi_1 + PLACED ( 31680 37800 ) FN ;
+    - _181_ sg13g2_a22oi_1 + PLACED ( 31680 56700 ) FS ;
+    - _182_ sg13g2_and2_1 + PLACED ( 38400 68040 ) N ;
+    - _183_ sg13g2_nor2b_1 + PLACED ( 56640 45360 ) FN ;
+    - _184_ sg13g2_nand2b_1 + PLACED ( 34080 52920 ) N ;
+    - _185_ sg13g2_nor2b_1 + PLACED ( 35040 68040 ) FN ;
+    - _186_ sg13g2_nor2_1 + PLACED ( 41280 68040 ) FN ;
+    - _187_ sg13g2_nand2_1 + PLACED ( 44640 52920 ) N ;
+    - _188_ sg13g2_a21oi_1 + PLACED ( 46560 60480 ) N ;
+    - _189_ sg13g2_nand2_1 + PLACED ( 55200 56700 ) FS ;
+    - _190_ sg13g2_nand2_1 + PLACED ( 26880 68040 ) N ;
+    - _191_ sg13g2_o21ai_1 + PLACED ( 29280 56700 ) FS ;
+    - _192_ sg13g2_a21oi_1 + PLACED ( 35520 56700 ) S ;
+    - _193_ sg13g2_o21ai_1 + PLACED ( 38880 45360 ) N ;
+    - _194_ sg13g2_nor2_1 + PLACED ( 38400 37800 ) N ;
+    - _195_ sg13g2_nor3_1 + PLACED ( 32160 41580 ) FS ;
+    - _196_ sg13g2_nor4_1 + PLACED ( 35520 37800 ) N ;
+    - _197_ sg13g2_xor2_1 + PLACED ( 24480 64260 ) FS ;
+    - _198_ sg13g2_nor2_1 + PLACED ( 28800 64260 ) FS ;
+    - _199_ sg13g2_o21ai_1 + PLACED ( 43200 68040 ) N ;
+    - _200_ sg13g2_xnor2_1 + PLACED ( 44640 64260 ) FS ;
+    - _201_ sg13g2_o21ai_1 + PLACED ( 53280 60480 ) N ;
+    - _202_ sg13g2_nand2b_1 + PLACED ( 55680 60480 ) N ;
+    - _203_ sg13g2_nand2b_1 + PLACED ( 46080 45360 ) N ;
+    - _204_ sg13g2_nand3b_1 + PLACED ( 49440 49140 ) FS ;
+    - _205_ sg13g2_nand2_1 + PLACED ( 22560 37800 ) FN ;
+    - _206_ sg13g2_and3_1 + PLACED ( 31680 68040 ) N ;
+    - _207_ sg13g2_a21oi_1 + PLACED ( 36960 52920 ) FN ;
+    - _208_ sg13g2_a21oi_1 + PLACED ( 35040 49140 ) S ;
+    - _209_ sg13g2_and2_1 + PLACED ( 52800 26460 ) FS ;
+    - _210_ sg13g2_nor2_1 + PLACED ( 43680 34020 ) FS ;
+    - _211_ sg13g2_a21oi_1 + PLACED ( 37440 49140 ) FS ;
+    - _212_ sg13g2_nand3_1 + PLACED ( 54240 45360 ) N ;
+    - _213_ sg13g2_o21ai_1 + PLACED ( 57600 52920 ) N ;
+    - _214_ sg13g2_a21oi_1 + PLACED ( 60000 52920 ) N ;
+    - _215_ sg13g2_a22oi_1 + PLACED ( 37440 60480 ) FN ;
+    - _216_ sg13g2_nand2_1 + PLACED ( 28800 68040 ) N ;
+    - _217_ sg13g2_xor2_1 + PLACED ( 36960 64260 ) FS ;
+    - _218_ sg13g2_nor2b_1 + PLACED ( 58080 49140 ) S ;
+    - _219_ sg13g2_nand3_1 + PLACED ( 32640 45360 ) N ;
+    - _220_ sg13g2_nand2_1 + PLACED ( 40320 52920 ) N ;
+    - _221_ sg13g2_a221oi_1 + PLACED ( 40800 56700 ) FS ;
+    - _222_ sg13g2_o21ai_1 + PLACED ( 38400 56700 ) FS ;
+    - _223_ sg13g2_a21oi_1 + PLACED ( 44160 60480 ) FN ;
+    - _224_ sg13g2_nor2_1 + PLACED ( 48960 37800 ) FN ;
+    - _225_ sg13g2_a22oi_1 + PLACED ( 43680 37800 ) FN ;
+    - _226_ sg13g2_nor2b_1 + PLACED ( 46560 37800 ) FN ;
+    - _227_ sg13g2_a22oi_1 + PLACED ( 46560 49140 ) FS ;
+    - _228_ sg13g2_nand2b_1 + PLACED ( 49920 56700 ) FS ;
+    - _229_ sg13g2_a21oi_1 + PLACED ( 40800 41580 ) S ;
+    - _230_ sg13g2_nand2_1 + PLACED ( 41280 34020 ) FS ;
+    - _231_ sg13g2_a21oi_1 + PLACED ( 43680 45360 ) FN ;
+    - _232_ sg13g2_nor3_1 + PLACED ( 46080 41580 ) S ;
+    - _233_ sg13g2_a21oi_1 + PLACED ( 47520 56700 ) S ;
+    - _234_ sg13g2_nor3_1 + PLACED ( 40320 60480 ) N ;
+    - _235_ sg13g2_nor3_1 + PLACED ( 40800 64260 ) FS ;
+    - _236_ sg13g2_xnor2_1 + PLACED ( 49440 60480 ) N ;
+    - _237_ sg13g2_nand2b_1 + PLACED ( 49440 45360 ) N ;
+    - _238_ sg13g2_nor2b_1 + PLACED ( 48480 41580 ) FS ;
+    - _239_ sg13g2_o21ai_1 + PLACED ( 50880 41580 ) FS ;
+    - _240_ sg13g2_o21ai_1 + PLACED ( 55680 49140 ) FS ;
+    - _241_ sg13g2_o21ai_1 + PLACED ( 29760 41580 ) S ;
+    - _242_ sg13g2_a21o_1 + PLACED ( 30720 49140 ) S ;
+    - _243_ sg13g2_a22oi_1 + PLACED ( 52800 49140 ) FS ;
+    - _244_ sg13g2_nand3_1 + PLACED ( 51840 45360 ) FN ;
+    - _245_ sg13g2_nor3_1 + PLACED ( 35520 45360 ) N ;
+    - _246_ sg13g2_o21ai_1 + PLACED ( 41280 45360 ) N ;
+    - _247_ sg13g2_o21ai_1 + PLACED ( 42720 49140 ) FS ;
+    - _248_ sg13g2_a221oi_1 + PLACED ( 46560 52920 ) N ;
+    - _249_ sg13g2_mux2_1 + PLACED ( 50400 52920 ) N ;
+    - _250_ sg13g2_o21ai_1 + PLACED ( 55200 52920 ) N ;
+    - _251_ sg13g2_nand2_1 + PLACED ( 43200 41580 ) S ;
+    - _252_ sg13g2_nor2_1 + PLACED ( 36000 26460 ) FS ;
+    - _253_ sg13g2_nor3_1 + PLACED ( 56640 41580 ) FS ;
+    - _254_ sg13g2_and3_1 + PLACED ( 49920 34020 ) FS ;
+    - _255_ sg13g2_nor3_1 + PLACED ( 58560 30240 ) FN ;
+    - _256_ sg13g2_a21oi_1 + PLACED ( 54240 37800 ) FN ;
+    - _257_ sg13g2_a21oi_1 + PLACED ( 59040 45360 ) FN ;
+    - _258_ sg13g2_a21oi_1 + PLACED ( 54240 34020 ) S ;
+    - _259_ sg13g2_a21oi_1 + PLACED ( 36480 34020 ) S ;
+    - _260_ sg13g2_nand3b_1 + PLACED ( 50880 37800 ) N ;
+    - _261_ sg13g2_nand2_1 + PLACED ( 60960 30240 ) FN ;
+    - _262_ sg13g2_a21oi_1 + PLACED ( 31680 34020 ) S ;
+    - _263_ sg13g2_nor2_1 + PLACED ( 24960 30240 ) N ;
+    - _264_ sg13g2_nand2b_1 + PLACED ( 50400 30240 ) N ;
+    - _265_ sg13g2_a21oi_1 + PLACED ( 50400 26460 ) FS ;
+    - _266_ sg13g2_a21oi_1 + PLACED ( 48000 26460 ) S ;
+    - _267_ sg13g2_o21ai_1 + PLACED ( 38880 34020 ) S ;
+    - _268_ sg13g2_a21o_1 + PLACED ( 45600 34020 ) S ;
+    - _269_ sg13g2_and2_1 + PLACED ( 48000 30240 ) N ;
+    - _270_ sg13g2_a21oi_1 + PLACED ( 52800 30240 ) FN ;
+    - _271_ sg13g2_o21ai_1 + PLACED ( 56640 37800 ) N ;
+    - _272_ sg13g2_xnor2_1 + PLACED ( 8160 41580 ) S ;
+    - _273_ sg13g2_xor2_1 + PLACED ( 11520 30240 ) FN ;
+    - _274_ sg13g2_xor2_1 + PLACED ( 13920 26460 ) FS ;
+    - _275_ sg13g2_xor2_1 + PLACED ( 21600 15120 ) N ;
+    - _276_ sg13g2_inv_1 + PLACED ( 10080 37800 ) FN ;
+    - _277_ sg13g2_inv_1 + PLACED ( 7200 34020 ) S ;
+    - _278_ sg13g2_inv_1 + PLACED ( 15360 22680 ) N ;
+    - _279_ sg13g2_inv_1 + PLACED ( 12480 15120 ) N ;
+    - _280_ sg13g2_inv_1 + PLACED ( 29760 22680 ) N ;
+    - _281_ sg13g2_inv_1 + PLACED ( 61440 26460 ) FS ;
+    - _282_ sg13g2_inv_1 + PLACED ( 48480 64260 ) FS ;
+    - _283_ sg13g2_inv_1 + PLACED ( 8640 60480 ) FN ;
+    - _284_ sg13g2_dfrbpq_2 + PLACED ( 9600 49140 ) FS ;
+    - _285_ sg13g2_dfrbpq_1 + PLACED ( 5760 45360 ) N ;
+    - _286_ sg13g2_dfrbpq_1 + PLACED ( 8640 34020 ) FS ;
+    - _287_ sg13g2_dfrbpq_1 + PLACED ( 16800 22680 ) N ;
+    - _288_ sg13g2_dfrbpq_1 + PLACED ( 23040 18900 ) FS ;
+    - _289_ sg13g2_dfrbpq_2 + PLACED ( 45600 18900 ) FS ;
+    - _290_ sg13g2_dfrbpq_1 + PLACED ( 48960 15120 ) FN ;
+    - _291_ sg13g2_dfrbpq_1 + PLACED ( 49920 64260 ) FS ;
+    - _292_ sg13g2_dfrbpq_1 + PLACED ( 10080 60480 ) N ;
+    - clkbuf_0_clk sg13g2_buf_8 + SOURCE TIMING + PLACED ( 34560 41580 ) S ;
+    - clkbuf_1_0__f_clk sg13g2_buf_8 + SOURCE TIMING + PLACED ( 35040 22680 ) N ;
+    - clkbuf_1_1__f_clk sg13g2_buf_8 + SOURCE TIMING + PLACED ( 27360 52920 ) FN ;
+    - clkload0 sg13g2_inv_1 + SOURCE TIMING + PLACED ( 27840 56700 ) FS ;
+    - fanout22 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 18240 30240 ) FN ;
+    - fanout51 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 56640 34020 ) FS ;
+    - fanout52 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 20160 41580 ) FS ;
+    - fanout53 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 17760 41580 ) FS ;
+    - fanout54 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 38400 18900 ) S ;
+    - fanout55 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 50400 22680 ) N ;
+    - fanout56 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 55200 26460 ) S ;
+    - fanout57 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 56640 22680 ) N ;
+    - fanout58 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 29760 15120 ) FN ;
+    - fanout59 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 56160 30240 ) FN ;
+    - fanout60 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 31200 30240 ) N ;
+    - fanout61 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 36000 15120 ) N ;
+    - fanout62 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 38880 30240 ) N ;
+    - fanout63 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 28800 26460 ) FS ;
+    - fanout64 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 30720 64260 ) FS ;
+    - fanout65 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 26400 26460 ) FS ;
+    - fanout66 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 24480 37800 ) N ;
+    - fanout67 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 22560 64260 ) FS ;
+    - fanout68 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 21600 34020 ) FS ;
+    - fanout69 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 27360 60480 ) N ;
+    - fanout70 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 18720 45360 ) N ;
+    - fanout71 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 21120 52920 ) FN ;
+    - fanout72 sg13g2_buf_8 + SOURCE TIMING + PLACED ( 21600 56700 ) S ;
+    - input1 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 13920 15120 ) FN ;
+    - output10 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 19680 15120 ) N ;
+    - output11 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 17760 15120 ) N ;
+    - output12 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 15840 15120 ) N ;
+    - output13 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 50880 68040 ) N ;
+    - output14 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 59040 60480 ) N ;
+    - output15 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 60960 60480 ) N ;
+    - output16 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 60960 56700 ) FS ;
+    - output17 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 60960 49140 ) FS ;
+    - output18 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 60960 41580 ) FS ;
+    - output19 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 59040 41580 ) FS ;
+    - output2 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 60480 68040 ) FN ;
+    - output20 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 59040 56700 ) FS ;
+    - output21 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 53280 56700 ) FS ;
+    - output3 sg13g2_buf_2 + SOURCE TIMING + PLACED ( 58080 68040 ) FN ;
+    - output4 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 48960 68040 ) N ;
+    - output5 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 57120 56700 ) FS ;
+    - output6 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 59040 18900 ) FS ;
+    - output7 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 46080 15120 ) N ;
+    - output8 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 60960 18900 ) FS ;
+    - output9 sg13g2_buf_1 + SOURCE TIMING + PLACED ( 27840 15120 ) N ;
+END COMPONENTS
+PINS 24 ;
+    - DVDD + NET DVDD + SPECIAL + DIRECTION INOUT + USE POWER
+      + PORT
+        + LAYER Metal5 ( -43560 -1100 ) ( 43560 1100 )
+        + LAYER Metal4 ( -16060 -28600 ) ( -13860 58100 )
+        + LAYER Metal4 ( 33560 -21600 ) ( 36560 51100 )
+        + LAYER Metal5 ( -36560 48100 ) ( 36560 51100 )
+        + LAYER Metal5 ( -36560 -21600 ) ( 36560 -18600 )
+        + LAYER Metal4 ( -36560 -21600 ) ( -33560 51100 )
+        + FIXED ( 34320 28720 ) N ;
+    - DVSS + NET DVSS + SPECIAL + DIRECTION INOUT + USE GROUND
+      + PORT
+        + LAYER Metal5 ( -43560 -1100 ) ( 43560 1100 )
+        + LAYER Metal4 ( -9860 -34800 ) ( -7660 51900 )
+        + LAYER Metal4 ( 40560 -34800 ) ( 43560 51900 )
+        + LAYER Metal5 ( -43560 48900 ) ( 43560 51900 )
+        + LAYER Metal5 ( -43560 -34800 ) ( 43560 -31800 )
+        + LAYER Metal4 ( -43560 -34800 ) ( -40560 51900 )
+        + FIXED ( 34320 34920 ) N ;
+    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal2 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 51360 200 ) N ;
+    - rst + NET rst + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal2 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 16800 200 ) N ;
+    - sign + NET sign + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 79380 ) N ;
+    - signB + NET signB + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 83580 ) N ;
+    - sine_out[0] + NET sine_out[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 75180 ) N ;
+    - sine_out[10] + NET sine_out[10] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 33180 ) N ;
+    - sine_out[11] + NET sine_out[11] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 28980 ) N ;
+    - sine_out[12] + NET sine_out[12] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 24780 ) N ;
+    - sine_out[13] + NET sine_out[13] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 20580 ) N ;
+    - sine_out[14] + NET sine_out[14] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 16380 ) N ;
+    - sine_out[15] + NET sine_out[15] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 12180 ) N ;
+    - sine_out[16] + NET sine_out[16] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 7980 ) N ;
+    - sine_out[17] + NET sine_out[17] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 3780 ) N ;
+    - sine_out[1] + NET sine_out[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 70980 ) N ;
+    - sine_out[2] + NET sine_out[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 66780 ) N ;
+    - sine_out[3] + NET sine_out[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 62580 ) N ;
+    - sine_out[4] + NET sine_out[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 58380 ) N ;
+    - sine_out[5] + NET sine_out[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 54180 ) N ;
+    - sine_out[6] + NET sine_out[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 49980 ) N ;
+    - sine_out[7] + NET sine_out[7] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 45780 ) N ;
+    - sine_out[8] + NET sine_out[8] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 41580 ) N ;
+    - sine_out[9] + NET sine_out[9] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal3 ( -200 -200 ) ( 200 200 )
+        + PLACED ( 68685 37380 ) N ;
+END PINS
+SPECIALNETS 2 ;
+    - DVDD ( PIN DVDD ) ( * VDD ) + USE POWER
+      + ROUTED Metal1 440 + SHAPE FOLLOWPIN ( 5760 71820 ) ( 62880 71820 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 64260 ) ( 62880 64260 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 56700 ) ( 62880 56700 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 49140 ) ( 62880 49140 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 41580 ) ( 62880 41580 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 34020 ) ( 62880 34020 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 26460 ) ( 62880 26460 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 18900 ) ( 62880 18900 )
+      NEW Metal5 2200 + SHAPE STRIPE ( -9240 28720 ) ( 77880 28720 )
+      NEW Metal4 2200 + SHAPE STRIPE ( 19360 120 ) ( 19360 86820 )
+      NEW Metal4 3000 + SHAPE RING ( 69380 7120 ) ( 69380 79820 )
+      NEW Metal5 3000 + SHAPE RING ( -2240 78320 ) ( 70880 78320 )
+      NEW Metal5 3000 + SHAPE RING ( -2240 8620 ) ( 70880 8620 )
+      NEW Metal4 3000 + SHAPE RING ( -740 7120 ) ( -740 79820 )
+      NEW Metal4 0 + SHAPE RING ( 69380 78320 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 69380 28720 ) via4_5_3000_2200_4_6_480_480
+      NEW Metal4 0 + SHAPE RING ( 69380 8620 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 19360 78320 ) via4_5_2200_3000_6_4_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 19360 28720 ) via4_5_2200_2200_4_4_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 19360 8620 ) via4_5_2200_3000_6_4_480_480
+      NEW Metal4 0 + SHAPE RING ( -740 78320 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( -740 28720 ) via4_5_3000_2200_4_6_480_480
+      NEW Metal4 0 + SHAPE RING ( -740 8620 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 71820 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 71820 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 71820 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 64260 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 64260 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 64260 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 56700 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 56700 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 56700 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 49140 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 49140 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 49140 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 41580 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 41580 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 41580 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 34020 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 34020 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 34020 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 26460 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 26460 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 26460 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 19360 18900 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 19360 18900 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 19360 18900 ) via1_2_2200_440_1_5_410_410 ;
+    - DVSS ( PIN DVSS ) ( * VSS ) + USE GROUND
+      + ROUTED Metal1 440 + SHAPE FOLLOWPIN ( 5760 68040 ) ( 62880 68040 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 60480 ) ( 62880 60480 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 52920 ) ( 62880 52920 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 45360 ) ( 62880 45360 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 37800 ) ( 62880 37800 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 30240 ) ( 62880 30240 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 22680 ) ( 62880 22680 )
+      NEW Metal1 440 + SHAPE FOLLOWPIN ( 5760 15120 ) ( 62880 15120 )
+      NEW Metal5 2200 + SHAPE STRIPE ( -9240 34920 ) ( 77880 34920 )
+      NEW Metal4 2200 + SHAPE STRIPE ( 25560 120 ) ( 25560 86820 )
+      NEW Metal4 3000 + SHAPE RING ( 76380 120 ) ( 76380 86820 )
+      NEW Metal5 3000 + SHAPE RING ( -9240 85320 ) ( 77880 85320 )
+      NEW Metal5 3000 + SHAPE RING ( -9240 1620 ) ( 77880 1620 )
+      NEW Metal4 3000 + SHAPE RING ( -7740 120 ) ( -7740 86820 )
+      NEW Metal4 0 + SHAPE RING ( 76380 85320 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 76380 34920 ) via4_5_3000_2200_4_6_480_480
+      NEW Metal4 0 + SHAPE RING ( 76380 1620 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 25560 85320 ) via4_5_2200_3000_6_4_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 25560 34920 ) via4_5_2200_2200_4_4_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( 25560 1620 ) via4_5_2200_3000_6_4_480_480
+      NEW Metal4 0 + SHAPE RING ( -7740 85320 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal4 0 + SHAPE STRIPE ( -7740 34920 ) via4_5_3000_2200_4_6_480_480
+      NEW Metal4 0 + SHAPE RING ( -7740 1620 ) via4_5_3000_3000_6_6_480_480
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 68040 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 68040 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 68040 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 60480 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 60480 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 60480 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 52920 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 52920 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 52920 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 45360 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 45360 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 45360 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 37800 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 37800 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 37800 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 30240 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 30240 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 30240 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 22680 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 22680 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 22680 ) via1_2_2200_440_1_5_410_410
+      NEW Metal3 0 + SHAPE STRIPE ( 25560 15120 ) via3_4_2200_440_1_5_410_410
+      NEW Metal2 0 + SHAPE STRIPE ( 25560 15120 ) via2_3_2200_440_1_5_410_410
+      NEW Metal1 0 + SHAPE STRIPE ( 25560 15120 ) via1_2_2200_440_1_5_410_410 ;
+END SPECIALNETS
+NETS 214 ;
+    - CTRL.P0 ( _292_ D ) ( _168_ Y ) + USE SIGNAL ;
+    - CTRL.P1 ( _291_ D ) ( _159_ Y ) + USE SIGNAL ;
+    - CTRL.S0 ( fanout53 A ) ( fanout52 A ) ( _292_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.Cout0 ( fanout72 A ) ( fanout71 A ) ( _157_ C ) ( _191_ A1 ) ( _284_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_1.A ( fanout70 A ) ( _285_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_1.S ( _285_ D ) ( _272_ Y ) + USE SIGNAL ;
+    - DPATH.SUM.fa_2.A ( fanout68 A ) ( _286_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_2.S ( _286_ D ) ( _273_ X ) + USE SIGNAL ;
+    - DPATH.SUM.fa_3.A ( fanout65 A ) ( _287_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_3.S ( _287_ D ) ( _274_ X ) + USE SIGNAL ;
+    - DPATH.SUM.fa_4.A ( fanout61 A ) ( _288_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_4.S ( _288_ D ) ( _275_ X ) + USE SIGNAL ;
+    - DPATH.SUM.fa_5.A ( fanout57 A ) ( fanout56 A ) ( _289_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_5.S ( _289_ D ) ( _149_ X ) + USE SIGNAL ;
+    - DPATH.SUM.fa_6.A ( fanout55 A ) ( _290_ Q ) + USE SIGNAL ;
+    - DPATH.SUM.fa_6.S ( _290_ D ) ( _152_ Y ) + USE SIGNAL ;
+    - DPATH.SUM.ha_0.S ( _284_ D ) ( _205_ A ) ( _173_ A ) ( _142_ A1 ) ( _133_ Y ) + USE SIGNAL ;
+    - _000_ ( _284_ RESET_B ) ( _134_ Y ) + USE SIGNAL ;
+    - _001_ ( _285_ RESET_B ) ( _276_ Y ) + USE SIGNAL ;
+    - _002_ ( _286_ RESET_B ) ( _277_ Y ) + USE SIGNAL ;
+    - _003_ ( _287_ RESET_B ) ( _278_ Y ) + USE SIGNAL ;
+    - _004_ ( _288_ RESET_B ) ( _279_ Y ) + USE SIGNAL ;
+    - _005_ ( _289_ RESET_B ) ( _280_ Y ) + USE SIGNAL ;
+    - _006_ ( _290_ RESET_B ) ( _281_ Y ) + USE SIGNAL ;
+    - _007_ ( _291_ RESET_B ) ( _282_ Y ) + USE SIGNAL ;
+    - _008_ ( _292_ RESET_B ) ( _283_ Y ) + USE SIGNAL ;
+    - _009_ ( _196_ C ) ( _180_ Y ) + USE SIGNAL ;
+    - _010_ ( _217_ A ) ( _182_ B ) ( _181_ Y ) + USE SIGNAL ;
+    - _011_ ( _199_ A1 ) ( _188_ B1 ) ( _182_ X ) + USE SIGNAL ;
+    - _012_ ( _243_ A1 ) ( _189_ A ) ( _183_ Y ) + USE SIGNAL ;
+    - _013_ ( _245_ B ) ( _222_ A1 ) ( _184_ Y ) + USE SIGNAL ;
+    - _014_ ( _235_ A ) ( _186_ B ) ( _185_ Y ) + USE SIGNAL ;
+    - _015_ ( _200_ A ) ( _188_ A1 ) ( _186_ Y ) + USE SIGNAL ;
+    - _016_ ( _227_ B2 ) ( _188_ A2 ) ( _187_ Y ) + USE SIGNAL ;
+    - _017_ ( _189_ B ) ( _188_ Y ) + USE SIGNAL ;
+    - _018_ ( _214_ A1 ) ( _189_ Y ) + USE SIGNAL ;
+    - _019_ ( _216_ B ) ( _191_ B1 ) ( _190_ Y ) + USE SIGNAL ;
+    - _020_ ( _221_ A1 ) ( _192_ B1 ) ( _191_ Y ) + USE SIGNAL ;
+    - _021_ ( _215_ A2 ) ( _195_ B ) ( _192_ Y ) + USE SIGNAL ;
+    - _022_ ( _251_ A ) ( _246_ B1 ) ( _231_ A1 ) ( _203_ B ) ( _194_ B ) ( _193_ Y ) + USE SIGNAL ;
+    - _023_ ( _245_ C ) ( _195_ C ) ( _194_ Y ) + USE SIGNAL ;
+    - _024_ ( _196_ D ) ( _195_ Y ) + USE SIGNAL ;
+    - _025_ ( _214_ A2 ) ( _196_ Y ) + USE SIGNAL ;
+    - _026_ ( _220_ A ) ( _200_ B ) ( _198_ B ) ( _197_ X ) + USE SIGNAL ;
+    - _027_ ( _215_ B1 ) ( _199_ A2 ) ( _198_ Y ) + USE SIGNAL ;
+    - _028_ ( _202_ B ) ( _199_ Y ) + USE SIGNAL ;
+    - _029_ ( _201_ A2 ) ( _200_ Y ) + USE SIGNAL ;
+    - _030_ ( _202_ A_N ) ( _201_ Y ) + USE SIGNAL ;
+    - _031_ ( _213_ A2 ) ( _202_ Y ) + USE SIGNAL ;
+    - _032_ ( _237_ B ) ( _227_ A2 ) ( _204_ C ) ( _203_ Y ) + USE SIGNAL ;
+    - _033_ ( _212_ A ) ( _204_ Y ) + USE SIGNAL ;
+    - _034_ ( _244_ B ) ( _208_ A2 ) ( _205_ Y ) + USE SIGNAL ;
+    - _035_ ( _235_ B ) ( _207_ B1 ) ( _206_ X ) + USE SIGNAL ;
+    - _036_ ( _230_ B ) ( _208_ B1 ) ( _207_ Y ) + USE SIGNAL ;
+    - _037_ ( _211_ B1 ) ( _208_ Y ) + USE SIGNAL ;
+    - _038_ ( _271_ B1 ) ( _270_ B1 ) ( _212_ B ) ( _209_ X ) + USE SIGNAL ;
+    - _039_ ( _251_ B ) ( _211_ A2 ) ( _210_ Y ) + USE SIGNAL ;
+    - _040_ ( _212_ C ) ( _211_ Y ) + USE SIGNAL ;
+    - _041_ ( _213_ B1 ) ( _212_ Y ) + USE SIGNAL ;
+    - _042_ ( _214_ B1 ) ( _213_ Y ) + USE SIGNAL ;
+    - _043_ ( _222_ A2 ) ( _215_ Y ) + USE SIGNAL ;
+    - _044_ ( _217_ B ) ( _216_ Y ) + USE SIGNAL ;
+    - _045_ ( _223_ A2 ) ( _217_ X ) + USE SIGNAL ;
+    - _046_ ( _248_ B2 ) ( _228_ B ) ( _221_ A2 ) ( _218_ Y ) + USE SIGNAL ;
+    - _047_ ( _247_ A2 ) ( _241_ B1 ) ( _220_ B ) ( _219_ Y ) + USE SIGNAL ;
+    - _048_ ( _221_ B1 ) ( _220_ Y ) + USE SIGNAL ;
+    - _049_ ( _222_ B1 ) ( _221_ Y ) + USE SIGNAL ;
+    - _050_ ( _223_ B1 ) ( _222_ Y ) + USE SIGNAL ;
+    - _051_ ( _233_ B1 ) ( _223_ Y ) + USE SIGNAL ;
+    - _052_ ( _227_ B1 ) ( _225_ B2 ) ( _224_ Y ) + USE SIGNAL ;
+    - _053_ ( _226_ A ) ( _225_ Y ) + USE SIGNAL ;
+    - _054_ ( _232_ B ) ( _226_ Y ) + USE SIGNAL ;
+    - _055_ ( _228_ A_N ) ( _227_ Y ) + USE SIGNAL ;
+    - _056_ ( _233_ A1 ) ( _228_ Y ) + USE SIGNAL ;
+    - _057_ ( _231_ A2 ) ( _229_ Y ) + USE SIGNAL ;
+    - _058_ ( _231_ B1 ) ( _230_ Y ) + USE SIGNAL ;
+    - _059_ ( _232_ C ) ( _231_ Y ) + USE SIGNAL ;
+    - _060_ ( _233_ A2 ) ( _232_ Y ) + USE SIGNAL ;
+    - _061_ ( _235_ C ) ( _234_ Y ) + USE SIGNAL ;
+    - _062_ ( _236_ B ) ( _235_ Y ) + USE SIGNAL ;
+    - _063_ ( _250_ A2 ) ( _236_ Y ) + USE SIGNAL ;
+    - _064_ ( _244_ C ) ( _240_ B1 ) ( _237_ Y ) + USE SIGNAL ;
+    - _065_ ( _257_ A2 ) ( _253_ C ) ( _239_ B1 ) ( _238_ Y ) + USE SIGNAL ;
+    - _066_ ( _260_ C ) ( _240_ A2 ) ( _239_ Y ) + USE SIGNAL ;
+    - _067_ ( _243_ A2 ) ( _240_ Y ) + USE SIGNAL ;
+    - _068_ ( _242_ B1 ) ( _241_ Y ) + USE SIGNAL ;
+    - _069_ ( _243_ B1 ) ( _242_ X ) + USE SIGNAL ;
+    - _070_ ( _249_ A0 ) ( _243_ Y ) + USE SIGNAL ;
+    - _071_ ( _248_ A2 ) ( _244_ Y ) + USE SIGNAL ;
+    - _072_ ( _248_ C1 ) ( _245_ Y ) + USE SIGNAL ;
+    - _073_ ( _247_ B1 ) ( _246_ Y ) + USE SIGNAL ;
+    - _074_ ( _248_ B1 ) ( _247_ Y ) + USE SIGNAL ;
+    - _075_ ( _249_ A1 ) ( _248_ Y ) + USE SIGNAL ;
+    - _076_ ( _250_ B1 ) ( _249_ X ) + USE SIGNAL ;
+    - _077_ ( _267_ A2 ) ( _259_ A2 ) ( _252_ B ) ( _251_ Y ) + USE SIGNAL ;
+    - _078_ ( _258_ A2 ) ( _255_ C ) ( _254_ X ) + USE SIGNAL ;
+    - _079_ ( _261_ B ) ( _260_ Y ) + USE SIGNAL ;
+    - _080_ ( _263_ B ) ( _262_ Y ) + USE SIGNAL ;
+    - _081_ ( _270_ A1 ) ( _265_ A2 ) ( _264_ Y ) + USE SIGNAL ;
+    - _082_ ( _270_ A2 ) ( _269_ X ) + USE SIGNAL ;
+    - _083_ ( _268_ B1 ) ( _260_ B ) ( _232_ A ) ( _128_ Y ) + USE SIGNAL ;
+    - _084_ ( _229_ A1 ) ( _219_ A ) ( _194_ A ) ( _175_ A ) ( _130_ Y ) + USE SIGNAL ;
+    - _085_ ( _247_ A1 ) ( _234_ B ) ( _162_ A ) ( _131_ Y ) + USE SIGNAL ;
+    - _086_ ( _211_ A1 ) ( _162_ B ) ( _157_ B ) ( _132_ Y ) + USE SIGNAL ;
+    - _087_ ( _150_ B1 ) ( _135_ Y ) + USE SIGNAL ;
+    - _088_ ( _150_ A1 ) ( _149_ A ) ( _136_ Y ) + USE SIGNAL ;
+    - _089_ ( _148_ B1 ) ( _137_ X ) + USE SIGNAL ;
+    - _090_ ( _146_ B1 ) ( _138_ Y ) + USE SIGNAL ;
+    - _091_ ( _144_ B1 ) ( _139_ X ) + USE SIGNAL ;
+    - _092_ ( _142_ B1 ) ( _140_ Y ) + USE SIGNAL ;
+    - _093_ ( _272_ B ) ( _142_ A2 ) ( _141_ Y ) + USE SIGNAL ;
+    - _094_ ( _273_ A ) ( _144_ A1 ) ( _142_ Y ) + USE SIGNAL ;
+    - _095_ ( _273_ B ) ( _144_ A2 ) ( _143_ X ) + USE SIGNAL ;
+    - _096_ ( _274_ A ) ( _146_ A1 ) ( _144_ Y ) + USE SIGNAL ;
+    - _097_ ( _274_ B ) ( _146_ A2 ) ( _145_ Y ) + USE SIGNAL ;
+    - _098_ ( _275_ A ) ( _148_ A1 ) ( _146_ Y ) + USE SIGNAL ;
+    - _099_ ( _275_ B ) ( _148_ A2 ) ( _147_ X ) + USE SIGNAL ;
+    - _100_ ( _150_ A2 ) ( _149_ B ) ( _148_ Y ) + USE SIGNAL ;
+    - _101_ ( _152_ A ) ( _150_ Y ) + USE SIGNAL ;
+    - _102_ ( _152_ B ) ( _151_ Y ) + USE SIGNAL ;
+    - _103_ ( fanout51 A ) ( _255_ B ) ( _153_ X ) + USE SIGNAL ;
+    - _104_ ( _268_ A1 ) ( _248_ A1 ) ( _226_ B_N ) ( _221_ B2 ) ( _154_ Y ) + USE SIGNAL ;
+    - _105_ ( _262_ A1 ) ( _245_ A ) ( _157_ D ) ( _155_ Y ) + USE SIGNAL ;
+    - _106_ ( _271_ A2 ) ( _256_ A2 ) ( _241_ A1 ) ( _207_ A2 ) ( _156_ X ) + USE SIGNAL ;
+    - _107_ ( _158_ C ) ( _157_ Y ) + USE SIGNAL ;
+    - _108_ ( _168_ A ) ( _159_ B ) ( _158_ Y ) + USE SIGNAL ;
+    - _109_ ( _266_ A1 ) ( _265_ A1 ) ( _243_ B2 ) ( _223_ A1 ) ( _160_ X ) + USE SIGNAL ;
+    - _110_ ( _262_ B1 ) ( _195_ A ) ( _166_ B ) ( _161_ Y ) + USE SIGNAL ;
+    - _111_ ( _254_ C ) ( _240_ A1 ) ( _169_ B ) ( _164_ B ) ( _162_ Y ) + USE SIGNAL ;
+    - _112_ ( _244_ A ) ( _215_ B2 ) ( _163_ Y ) + USE SIGNAL ;
+    - _113_ ( _268_ A2 ) ( _179_ B ) ( _166_ C ) ( _165_ A ) ( _164_ Y ) + USE SIGNAL ;
+    - _114_ ( _266_ A2 ) ( _165_ Y ) + USE SIGNAL ;
+    - _115_ ( _196_ B ) ( _167_ A2 ) ( _166_ Y ) + USE SIGNAL ;
+    - _116_ ( _168_ B ) ( _167_ Y ) + USE SIGNAL ;
+    - _117_ ( _264_ B ) ( _169_ Y ) + USE SIGNAL ;
+    - _118_ ( _246_ A2 ) ( _238_ A ) ( _224_ B ) ( _205_ B ) ( _203_ A_N ) ( _192_ A2 ) ( _181_ A2 )
+      ( _170_ Y ) + USE SIGNAL ;
+    - _119_ ( _242_ A2 ) ( _191_ A2 ) ( _173_ B ) ( _171_ Y ) + USE SIGNAL ;
+    - _120_ ( _262_ A2 ) ( _241_ A2 ) ( _174_ A ) ( _172_ Y ) + USE SIGNAL ;
+    - _121_ ( _174_ B ) ( _173_ Y ) + USE SIGNAL ;
+    - _122_ ( _225_ A2 ) ( _175_ B ) ( _174_ Y ) + USE SIGNAL ;
+    - _123_ ( _180_ A1 ) ( _175_ Y ) + USE SIGNAL ;
+    - _124_ ( _180_ A2 ) ( _176_ Y ) + USE SIGNAL ;
+    - _125_ ( _181_ B1 ) ( _177_ Y ) + USE SIGNAL ;
+    - _126_ ( _234_ C ) ( _225_ B1 ) ( _187_ B ) ( _180_ B1 ) ( _178_ X ) + USE SIGNAL ;
+    - _127_ ( _180_ B2 ) ( _179_ X ) + USE SIGNAL ;
+    - clk ( PIN clk ) ( clkbuf_0_clk A ) + USE CLOCK ;
+    - clknet_0_clk ( clkbuf_1_1__f_clk A ) ( clkbuf_1_0__f_clk A ) ( clkbuf_0_clk X ) + USE CLOCK ;
+    - clknet_1_0__leaf_clk ( _286_ CLK ) ( _287_ CLK ) ( _288_ CLK ) ( _289_ CLK ) ( _290_ CLK ) ( clkbuf_1_0__f_clk X ) + USE CLOCK ;
+    - clknet_1_1__leaf_clk ( clkload0 A ) ( _284_ CLK ) ( _285_ CLK ) ( _291_ CLK ) ( _292_ CLK ) ( clkbuf_1_1__f_clk X ) + USE CLOCK ;
+    - net1 ( fanout22 A ) ( input1 X ) ( _283_ A ) + USE SIGNAL ;
+    - net10 ( output10 A ) ( _268_ X ) + USE SIGNAL ;
+    - net11 ( output11 A ) ( _270_ Y ) + USE SIGNAL ;
+    - net12 ( output12 A ) ( _271_ Y ) + USE SIGNAL ;
+    - net13 ( output13 A ) ( _233_ Y ) + USE SIGNAL ;
+    - net14 ( output14 A ) ( _250_ Y ) + USE SIGNAL ;
+    - net15 ( output15 A ) ( _252_ Y ) + USE SIGNAL ;
+    - net16 ( output16 A ) ( _253_ Y ) + USE SIGNAL ;
+    - net17 ( output17 A ) ( _255_ Y ) + USE SIGNAL ;
+    - net18 ( output18 A ) ( _256_ Y ) + USE SIGNAL ;
+    - net19 ( output19 A ) ( _257_ Y ) + USE SIGNAL ;
+    - net2 ( output2 A ) ( _291_ Q ) ( _129_ A ) + USE SIGNAL ;
+    - net20 ( output20 A ) ( _258_ Y ) + USE SIGNAL ;
+    - net21 ( output21 A ) ( _259_ Y ) + USE SIGNAL ;
+    - net22 ( fanout22 X ) ( _282_ A ) ( _276_ A ) ( _134_ A ) ( _281_ A ) ( _280_ A ) ( _279_ A )
+      ( _278_ A ) ( _277_ A ) + USE SIGNAL ;
+    - net3 ( output3 A ) ( _159_ A ) ( _129_ Y ) + USE SIGNAL ;
+    - net4 ( output4 A ) ( _214_ Y ) + USE SIGNAL ;
+    - net5 ( output5 A ) ( _261_ Y ) + USE SIGNAL ;
+    - net51 ( fanout51 X ) ( _253_ B ) ( _252_ A ) ( _250_ A1 ) ( _158_ B ) ( _257_ B1 ) ( _261_ A )
+      ( _258_ B1 ) ( _256_ B1 ) + USE SIGNAL ;
+    - net52 ( fanout52 X ) ( _140_ A ) ( _138_ A ) ( _135_ A ) ( _151_ A ) ( _147_ A ) ( _145_ A )
+      ( _137_ A ) ( _136_ A ) + USE SIGNAL ;
+    - net53 ( fanout53 X ) ( _143_ A ) ( _139_ A ) ( _141_ A ) ( _167_ B1 ) ( _157_ A ) + USE SIGNAL ;
+    - net54 ( fanout54 X ) ( _267_ B1 ) ( _266_ B1 ) ( _265_ B1 ) ( _263_ A ) ( _209_ B ) ( _259_ B1 )
+      ( _128_ A ) ( _151_ B ) + USE SIGNAL ;
+    - net55 ( fanout55 X ) ( _249_ S ) ( _221_ C1 ) ( _201_ B1 ) ( _196_ A ) ( _167_ A1 ) ( _153_ B )
+      ( _269_ B ) ( fanout54 A ) + USE SIGNAL ;
+    - net56 ( fanout56 X ) ( _161_ A ) ( _267_ A1 ) ( _209_ A ) ( _160_ A ) ( _259_ A1 ) ( _154_ A )
+      ( _135_ B ) ( _136_ B ) + USE SIGNAL ;
+    - net57 ( fanout57 X ) ( _218_ A ) ( _183_ B_N ) ( _180_ C1 ) ( _230_ A ) ( _184_ B ) ( _213_ A1 )
+      ( _153_ A ) + USE SIGNAL ;
+    - net58 ( fanout58 X ) ( _260_ A_N ) ( _160_ B ) ( _154_ B ) ( _269_ A ) ( _271_ A1 ) ( _179_ A )
+      ( _147_ B ) ( _137_ B ) + USE SIGNAL ;
+    - net59 ( fanout59 X ) ( _218_ B_N ) ( _255_ A ) ( _183_ A ) ( _253_ A ) ( _204_ A_N ) ( _258_ A1 )
+      ( _257_ A1 ) ( _256_ A1 ) + USE SIGNAL ;
+    - net6 ( output6 A ) ( _263_ Y ) + USE SIGNAL ;
+    - net60 ( fanout60 X ) ( fanout59 A ) ( _229_ B1 ) ( _207_ A1 ) ( _206_ A ) ( _176_ B1 ) ( _234_ A )
+      ( _201_ A1 ) ( _199_ B1 ) + USE SIGNAL ;
+    - net61 ( fanout61 X ) ( _184_ A_N ) ( _158_ A ) ( fanout60 A ) ( _161_ B ) ( _210_ A ) ( fanout58 A ) + USE SIGNAL ;
+    - net62 ( fanout62 X ) ( _246_ A1 ) ( _224_ A ) ( _208_ A1 ) ( _204_ B ) ( _130_ A ) ( _264_ A_N )
+      ( _164_ A ) ( _210_ B ) + USE SIGNAL ;
+    - net63 ( fanout63 X ) ( _225_ A1 ) ( _254_ A ) ( _156_ A ) ( fanout62 A ) ( _155_ A ) ( _176_ A1 )
+      ( _138_ B ) ( _145_ B ) + USE SIGNAL ;
+    - net64 ( fanout64 X ) ( _186_ A ) ( _236_ A ) ( _182_ A ) ( _238_ B_N ) ( _227_ A1 ) ( _215_ A1 )
+      ( _242_ A1 ) ( _237_ A_N ) + USE SIGNAL ;
+    - net65 ( fanout65 X ) ( fanout64 A ) ( _198_ A ) ( _216_ A ) ( fanout63 A ) + USE SIGNAL ;
+    - net66 ( fanout66 X ) ( _131_ A ) ( _239_ A1 ) ( _163_ A ) ( _187_ A ) ( _155_ B ) ( _229_ A2 )
+      ( _193_ B1 ) ( _156_ B ) + USE SIGNAL ;
+    - net67 ( fanout67 X ) ( _190_ A ) ( _185_ A ) ( _181_ B2 ) ( _170_ A ) + USE SIGNAL ;
+    - net68 ( fanout68 X ) ( fanout66 A ) ( fanout67 A ) ( _143_ B ) ( _139_ B ) ( _171_ A ) ( _197_ A ) + USE SIGNAL ;
+    - net69 ( fanout69 X ) ( _170_ B ) ( _219_ B ) ( _193_ A1 ) ( _163_ B ) ( _132_ A ) ( _185_ B_N )
+      ( _206_ B ) ( _172_ A ) + USE SIGNAL ;
+    - net7 ( output7 A ) ( _265_ Y ) + USE SIGNAL ;
+    - net70 ( fanout70 X ) ( _176_ A2 ) ( fanout69 A ) ( _178_ A ) ( _177_ A ) ( _171_ B ) ( _141_ B )
+      ( _140_ B ) + USE SIGNAL ;
+    - net71 ( fanout71 X ) ( _181_ A1 ) ( _254_ B ) ( _239_ A2 ) ( _192_ A1 ) ( _193_ A2 ) ( _172_ B )
+      ( _169_ A ) ( _166_ A ) + USE SIGNAL ;
+    - net72 ( fanout72 X ) ( _177_ B ) ( _206_ C ) ( _197_ B ) ( _190_ B ) ( _178_ B ) ( _219_ C )
+      ( _133_ A ) ( _272_ A ) + USE SIGNAL ;
+    - net8 ( output8 A ) ( _266_ Y ) + USE SIGNAL ;
+    - net9 ( output9 A ) ( _267_ Y ) + USE SIGNAL ;
+    - rst ( PIN rst ) ( input1 A ) + USE SIGNAL ;
+    - sign ( PIN sign ) ( output2 X ) + USE SIGNAL ;
+    - signB ( PIN signB ) ( output3 X ) + USE SIGNAL ;
+    - sine_out[0] ( PIN sine_out[0] ) ( output4 X ) + USE SIGNAL ;
+    - sine_out[10] ( PIN sine_out[10] ) ( output5 X ) + USE SIGNAL ;
+    - sine_out[11] ( PIN sine_out[11] ) ( output6 X ) + USE SIGNAL ;
+    - sine_out[12] ( PIN sine_out[12] ) ( output7 X ) + USE SIGNAL ;
+    - sine_out[13] ( PIN sine_out[13] ) ( output8 X ) + USE SIGNAL ;
+    - sine_out[14] ( PIN sine_out[14] ) ( output9 X ) + USE SIGNAL ;
+    - sine_out[15] ( PIN sine_out[15] ) ( output10 X ) + USE SIGNAL ;
+    - sine_out[16] ( PIN sine_out[16] ) ( output11 X ) + USE SIGNAL ;
+    - sine_out[17] ( PIN sine_out[17] ) ( output12 X ) + USE SIGNAL ;
+    - sine_out[1] ( PIN sine_out[1] ) ( output13 X ) + USE SIGNAL ;
+    - sine_out[2] ( PIN sine_out[2] ) ( output14 X ) + USE SIGNAL ;
+    - sine_out[3] ( PIN sine_out[3] ) ( output15 X ) + USE SIGNAL ;
+    - sine_out[4] ( PIN sine_out[4] ) ( output16 X ) + USE SIGNAL ;
+    - sine_out[5] ( PIN sine_out[5] ) ( output17 X ) + USE SIGNAL ;
+    - sine_out[6] ( PIN sine_out[6] ) ( output18 X ) + USE SIGNAL ;
+    - sine_out[7] ( PIN sine_out[7] ) ( output19 X ) + USE SIGNAL ;
+    - sine_out[8] ( PIN sine_out[8] ) ( output20 X ) + USE SIGNAL ;
+    - sine_out[9] ( PIN sine_out[9] ) ( output21 X ) + USE SIGNAL ;
+END NETS
+END DESIGN
