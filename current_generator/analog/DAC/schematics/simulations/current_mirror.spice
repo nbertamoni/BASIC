@@ -1,0 +1,248 @@
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror.sch
+**.subckt current_mirror AVDD AVSS EN ENB SEL IREF IOUT
+*.iopin AVDD
+*.iopin AVSS
+*.iopin EN
+*.iopin ENB
+*.iopin SEL
+*.iopin IREF
+*.iopin IOUT
+XM3 net15 EN AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+XM4 net16 EN AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+XM8 net1 SEL_IOUT net17 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM35 IREF ENB AVSS AVSS sg13_lv_nmos w=2u l=2u ng=1 m=2
+x3 IOUT net16 IREF AVSS current_mirror_nmos
+x4 IREF net15 IREF AVSS current_mirror_nmos
+XM2 net17 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM1 net41 SEL_IOUT net18 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM6 net18 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM5 net2 SEL_IOUT net19 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM7 net19 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM9 net3 SEL_IOUT net20 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM10 net20 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM11 net4 SEL_IOUT net21 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM12 net21 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM13 net5 SEL_IOUT net22 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM14 net22 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM15 net6 SEL_IOUT net23 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM16 net23 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM17 net7 SEL_IOUT net24 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM18 net24 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM19 net8 SEL_IOUT net25 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM20 net25 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM21 net9 SEL_IOUT net26 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM22 net26 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM23 net10 SEL_IOUT net27 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM24 net27 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM25 net11 SEL_IOUT net28 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM26 net28 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM27 net12 SEL_IOUT net29 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM28 net29 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM29 net13 SEL_IOUT net30 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM30 net30 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM31 net14 SEL_IOUT net31 AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+XM32 net31 SEL_IOUT AVSS AVSS sg13_lv_nmos w=1u l=6u ng=1 m=1
+x20 SELB SEL_IOUT AVDD AVSS inverter
+x21 AVDD AVSS EN SEL SELB nand
+XM33 IOUT IREF net32 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM34 net32 IREF net40 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM36 net40 IREF net39 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM37 net39 IREF net33 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM38 net33 IREF net35 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM39 net35 IREF net34 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM40 net34 IREF net37 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM41 net37 IREF net36 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM42 net36 IREF net38 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM43 net38 IREF net41 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM44 IOUT IREF net42 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM45 net42 IREF net50 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM46 net50 IREF net49 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM47 net49 IREF net43 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM48 net43 IREF net45 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM49 net45 IREF net44 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM50 net44 IREF net47 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM51 net47 IREF net46 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM52 net46 IREF net48 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM53 net48 IREF net1 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM54 IOUT IREF net51 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM55 net51 IREF net59 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM56 net59 IREF net58 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM57 net58 IREF net52 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM58 net52 IREF net54 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM59 net54 IREF net53 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM60 net53 IREF net56 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM61 net56 IREF net55 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM62 net55 IREF net57 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM63 net57 IREF net2 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM64 IOUT IREF net60 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM65 net60 IREF net68 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM66 net68 IREF net67 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM67 net67 IREF net61 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM68 net61 IREF net63 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM69 net63 IREF net62 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM70 net62 IREF net65 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM71 net65 IREF net64 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM72 net64 IREF net66 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM73 net66 IREF net3 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM74 IOUT IREF net69 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM75 net69 IREF net77 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM76 net77 IREF net76 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM77 net76 IREF net70 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM78 net70 IREF net72 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM79 net72 IREF net71 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM80 net71 IREF net74 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM81 net74 IREF net73 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM82 net73 IREF net75 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM83 net75 IREF net4 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM84 IOUT IREF net78 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM85 net78 IREF net86 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM86 net86 IREF net85 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM87 net85 IREF net79 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM88 net79 IREF net81 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM89 net81 IREF net80 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM90 net80 IREF net83 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM91 net83 IREF net82 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM92 net82 IREF net84 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM93 net84 IREF net5 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM94 IOUT IREF net87 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM95 net87 IREF net95 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM96 net95 IREF net94 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM97 net94 IREF net88 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM98 net88 IREF net90 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM99 net90 IREF net89 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM100 net89 IREF net92 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM101 net92 IREF net91 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM102 net91 IREF net93 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM103 net93 IREF net6 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM104 IOUT IREF net96 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM105 net96 IREF net104 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM106 net104 IREF net103 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM107 net103 IREF net97 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM108 net97 IREF net99 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM109 net99 IREF net98 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM110 net98 IREF net101 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM111 net101 IREF net100 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM112 net100 IREF net102 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM113 net102 IREF net7 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM114 IOUT IREF net105 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM115 net105 IREF net113 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM116 net113 IREF net112 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM117 net112 IREF net106 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM118 net106 IREF net108 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM119 net108 IREF net107 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM120 net107 IREF net110 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM121 net110 IREF net109 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM122 net109 IREF net111 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM123 net111 IREF net8 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM124 IOUT IREF net114 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM125 net114 IREF net122 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM126 net122 IREF net121 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM127 net121 IREF net115 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM128 net115 IREF net117 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM129 net117 IREF net116 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM130 net116 IREF net119 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM131 net119 IREF net118 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM132 net118 IREF net120 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM133 net120 IREF net9 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM134 IOUT IREF net123 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM135 net123 IREF net131 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM136 net131 IREF net130 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM137 net130 IREF net124 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM138 net124 IREF net126 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM139 net126 IREF net125 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM140 net125 IREF net128 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM141 net128 IREF net127 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM142 net127 IREF net129 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM143 net129 IREF net10 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM144 IOUT IREF net132 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM145 net132 IREF net140 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM146 net140 IREF net139 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM147 net139 IREF net133 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM148 net133 IREF net135 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM149 net135 IREF net134 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM150 net134 IREF net137 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM151 net137 IREF net136 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM152 net136 IREF net138 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM153 net138 IREF net11 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM154 IOUT IREF net141 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM155 net141 IREF net149 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM156 net149 IREF net148 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM157 net148 IREF net142 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM158 net142 IREF net144 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM159 net144 IREF net143 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM160 net143 IREF net146 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM161 net146 IREF net145 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM162 net145 IREF net147 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM163 net147 IREF net12 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM164 IOUT IREF net150 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM165 net150 IREF net158 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM166 net158 IREF net157 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM167 net157 IREF net151 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM168 net151 IREF net153 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM169 net153 IREF net152 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM170 net152 IREF net155 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM171 net155 IREF net154 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM172 net154 IREF net156 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM173 net156 IREF net13 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM174 IOUT IREF net159 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM175 net159 IREF net167 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM176 net167 IREF net166 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM177 net166 IREF net160 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM178 net160 IREF net162 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM179 net162 IREF net161 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM180 net161 IREF net164 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM181 net164 IREF net163 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM182 net163 IREF net165 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM183 net165 IREF net14 AVSS sg13_lv_nmos w=2u l=2u ng=1 m=1
+**.ends
+
+* expanding   symbol:  current_mirror_nmos.sym # of pins=4
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror_nmos.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/current_mirror_nmos.sch
+.subckt current_mirror_nmos D S G B
+*.iopin D
+*.iopin S
+*.iopin G
+*.iopin B
+XM2 D G net1 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM5 net1 G net9 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM6 net9 G net8 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM9 net8 G net2 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM11 net2 G net4 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM13 net4 G net3 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM15 net3 G net6 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM17 net6 G net5 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM19 net5 G net7 B sg13_lv_nmos w=2u l=2u ng=1 m=1
+XM1 net7 G S B sg13_lv_nmos w=2u l=2u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/inverter.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/inverter.sch
+.subckt inverter A Y VDD VSS
+*.opin Y
+*.ipin A
+*.iopin VDD
+*.iopin VSS
+XMN0 Y A VSS VSS sg13_lv_nmos w=740.00n l=130.00n ng=1 m=1
+XMP0 Y A VDD VDD sg13_lv_pmos w=1.12u l=130.00n ng=1 m=1
+.ends
+
+
+* expanding   symbol:  nand.sym # of pins=5
+** sym_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/nand.sym
+** sch_path: /headless/BASIC/BASIC/current_generator/analog/DAC/schematics/nand.sch
+.subckt nand VDD VSS A B Y
+*.opin Y
+*.ipin A
+*.iopin VDD
+*.iopin VSS
+*.ipin B
+XMN0 net1 B VSS VSS sg13_lv_nmos w=1.44u l=130.00n ng=2 m=1
+XMP0 Y B VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2 m=1
+XMN1 Y A net1 VSS sg13_lv_nmos w=1.44u l=130.00n ng=2 m=1
+XMP1 Y A VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2 m=1
+.ends
+
+.end
