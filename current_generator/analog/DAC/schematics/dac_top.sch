@@ -14,35 +14,18 @@ N 600 -700 640 -700 {lab=en_b}
 N 730 -1120 770 -1120 {lab=en_bb}
 N 1070 -1120 1110 -1120 {lab=AVSS}
 N 920 -1040 920 -1000 {lab=AVSS}
-N 1450 -280 1490 -280 {lab=en}
-N 1570 -280 1640 -280 {lab=en_b}
-N 1720 -280 1760 -280 {lab=en_bb}
 N 680 -1140 770 -1140 {lab=VBIAS}
 N 680 -1140 680 -1000 {lab=VBIAS}
 N 680 -1000 850 -1000 {lab=VBIAS}
 N 850 -1040 850 -1000 {lab=VBIAS}
-N 1100 -370 1160 -370 {lab=sign}
-N 1100 -350 1160 -350 {lab=sign_b}
-N 950 -280 950 -250 {lab=AVSS}
-N 950 -480 950 -440 {lab=AVDD}
-N 750 -370 800 -370 {lab=i_sign}
-N 750 -350 800 -350 {lab=i_signb}
 N 510 -810 730 -810 {lab=IBIAS}
 N 510 -970 510 -810 {lab=IBIAS}
 N 850 -1000 850 -810 {lab=VBIAS}
-N 1540 -550 1600 -550 {lab=sign}
-N 1540 -530 1600 -530 {lab=sign_b}
-N 1900 -560 1940 -560 {lab=CC_P}
-N 1900 -540 1940 -540 {lab=CC_N}
-N 1750 -470 1750 -440 {lab=AVSS}
-N 1560 -570 1600 -570 {lab=ISUM}
-N 1560 -590 1560 -570 {lab=ISUM}
-N 1460 -590 1560 -590 {lab=ISUM}
 N 940 -1630 990 -1630 {lab=AVDD}
 N 940 -1600 990 -1600 {lab=AVSS}
 N 940 -1540 990 -1540 {lab=DATA[17:0]}
 N 940 -1570 990 -1570 {lab=en}
-N 940 -1510 990 -1510 {lab=IBIAS}
+N 940 -1510 990 -1510 {lab=IREF}
 N 940 -1480 990 -1480 {lab=SEL}
 N 940 -1450 990 -1450 {lab=i_sign}
 N 940 -1370 990 -1370 {lab=CC_P}
@@ -156,12 +139,20 @@ N 5530 -460 5580 -460 {lab=DATA[17]}
 N 5380 -380 5380 -340 {lab=AVSS}
 N 5310 -380 5310 -340 {lab=ISUM}
 N 940 -1410 990 -1410 {lab=i_signb}
-N 1680 -250 1680 -220 {lab=AVSS}
-N 1530 -250 1530 -220 {lab=AVSS}
-N 1530 -350 1530 -310 {lab=AVDD}
-N 1680 -350 1680 -310 {lab=AVDD}
 N 5140 -780 5230 -780 {lab=VBIAS}
 N 5140 -480 5230 -480 {lab=VBIAS}
+N 1310 -530 1310 -490 {lab=AVDD}
+N 1310 -210 1310 -170 {lab=AVSS}
+N 1120 -390 1160 -390 {lab=i_sign}
+N 1120 -370 1160 -370 {lab=i_signb}
+N 1120 -350 1160 -350 {lab=en}
+N 1120 -330 1160 -330 {lab=IREF}
+N 1120 -310 1160 -310 {lab=ISUM}
+N 1460 -390 1500 -390 {lab=CC_P}
+N 1460 -370 1500 -370 {lab=CC_N}
+N 1460 -350 1500 -350 {lab=IBIAS}
+N 1460 -330 1500 -330 {lab=en_b}
+N 1460 -310 1500 -310 {lab=en_bb}
 C {current_mirror.sym} 790 -720 0 0 {name=x8}
 C {lab_wire.sym} 790 -830 0 0 {name=p12 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 770 -1000 0 0 {name=p13 sig_type=std_logic lab=VBIAS}
@@ -173,30 +164,13 @@ C {lab_wire.sym} 920 -1010 0 0 {name=p18 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 920 -1230 0 0 {name=p19 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 760 -1120 0 0 {name=p21 sig_type=std_logic lab=en_bb}
 C {lab_wire.sym} 1090 -1120 0 1 {name=p28 sig_type=std_logic lab=AVSS}
-C {lab_wire.sym} 1460 -280 0 0 {name=p44 sig_type=std_logic lab=en}
-C {lab_wire.sym} 1620 -280 0 0 {name=p45 sig_type=std_logic lab=en_b}
 C {lab_wire.sym} 510 -950 0 0 {name=p24 sig_type=std_logic lab=IBIAS}
-C {lab_wire.sym} 1750 -280 0 1 {name=p50 sig_type=std_logic lab=en_bb}
-C {non_overlap.sym} 950 -360 0 0 {name=x6}
-C {lab_wire.sym} 1150 -370 0 1 {name=p30 sig_type=std_logic lab=sign}
-C {lab_wire.sym} 1150 -350 0 1 {name=p31 sig_type=std_logic lab=sign_b}
-C {lab_wire.sym} 950 -260 0 0 {name=p32 sig_type=std_logic lab=AVSS}
-C {lab_wire.sym} 950 -460 0 0 {name=p33 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 770 -350 0 0 {name=p34 sig_type=std_logic lab=i_signb}
-C {lab_wire.sym} 770 -370 0 0 {name=p35 sig_type=std_logic lab=i_sign}
-C {lab_wire.sym} 1930 -560 0 1 {name=p68 sig_type=std_logic lab=CC_P}
-C {dsw.sym} 1750 -550 0 0 {name=x9}
-C {lab_wire.sym} 1930 -540 0 1 {name=p107 sig_type=std_logic lab=CC_N}
-C {lab_wire.sym} 1750 -450 0 0 {name=p108 sig_type=std_logic lab=AVSS}
-C {lab_wire.sym} 1550 -550 0 0 {name=p109 sig_type=std_logic lab=sign}
-C {lab_wire.sym} 1550 -530 0 0 {name=p110 sig_type=std_logic lab=sign_b}
-C {lab_wire.sym} 1510 -590 0 0 {name=p113 sig_type=std_logic lab=ISUM}
 C {dac.sym} 920 -1120 0 0 {name=x1[7:0]}
 C {iopin.sym} 940 -1630 2 0 {name=p721 lab=AVDD}
 C {iopin.sym} 940 -1600 2 0 {name=p722 lab=AVSS}
 C {iopin.sym} 940 -1570 2 0 {name=p724 lab=en}
 C {iopin.sym} 940 -1540 2 0 {name=p727 lab=DATA[17:0]}
-C {iopin.sym} 940 -1510 2 0 {name=p1 lab=IBIAS}
+C {iopin.sym} 940 -1510 2 0 {name=p1 lab=IREF}
 C {iopin.sym} 940 -1480 2 0 {name=p2 lab=SEL}
 C {iopin.sym} 940 -1450 2 0 {name=p3 lab=i_sign}
 C {iopin.sym} 940 -1370 2 0 {name=p6 lab=CC_P}
@@ -317,12 +291,6 @@ C {lab_wire.sym} 5220 -480 0 0 {name=p155 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 5380 -350 0 1 {name=p156 sig_type=std_logic lab=AVSS}
 C {lab_wire.sym} 5310 -360 0 0 {name=p157 sig_type=std_logic lab=ISUM}
 C {iopin.sym} 940 -1410 2 0 {name=p4 lab=i_signb}
-C {inverter.sym} 1520 -280 0 0 {name=x1}
-C {inverter.sym} 1670 -280 0 0 {name=x2}
-C {lab_wire.sym} 1680 -230 0 0 {name=p5 sig_type=std_logic lab=AVSS}
-C {lab_wire.sym} 1530 -230 0 0 {name=p8 sig_type=std_logic lab=AVSS}
-C {lab_wire.sym} 1530 -330 0 0 {name=p10 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 1680 -330 0 0 {name=p20 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 2850 -1050 0 1 {name=p22 sig_type=std_logic lab=DATA[0]}
 C {lab_wire.sym} 2850 -780 0 1 {name=p23 sig_type=std_logic lab=DATA[1]}
 C {lab_wire.sym} 2850 -510 0 1 {name=p26 sig_type=std_logic lab=DATA[2]}
@@ -341,3 +309,16 @@ C {lab_wire.sym} 4900 -180 0 1 {name=p66 sig_type=std_logic lab=DATA[14]}
 C {lab_wire.sym} 5570 -1040 0 1 {name=p67 sig_type=std_logic lab=DATA[15]}
 C {lab_wire.sym} 5560 -760 0 1 {name=p69 sig_type=std_logic lab=DATA[16]}
 C {lab_wire.sym} 5560 -460 0 1 {name=p75 sig_type=std_logic lab=DATA[17]}
+C {sub_top_gold.sym} 1310 -350 0 0 {name=x1}
+C {lab_wire.sym} 1310 -510 0 0 {name=p5 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 1310 -180 0 0 {name=p8 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 1140 -390 0 0 {name=p10 sig_type=std_logic lab=i_sign}
+C {lab_wire.sym} 1140 -370 0 0 {name=p20 sig_type=std_logic lab=i_signb}
+C {lab_wire.sym} 1140 -350 0 0 {name=p30 sig_type=std_logic lab=en}
+C {lab_wire.sym} 1140 -330 0 0 {name=p31 sig_type=std_logic lab=IREF}
+C {lab_wire.sym} 1140 -310 0 0 {name=p32 sig_type=std_logic lab=ISUM}
+C {lab_wire.sym} 1480 -390 0 1 {name=p33 sig_type=std_logic lab=CC_P}
+C {lab_wire.sym} 1480 -370 0 1 {name=p34 sig_type=std_logic lab=CC_N}
+C {lab_wire.sym} 1480 -350 0 1 {name=p35 sig_type=std_logic lab=IBIAS}
+C {lab_wire.sym} 1480 -330 0 1 {name=p44 sig_type=std_logic lab=en_b}
+C {lab_wire.sym} 1480 -310 0 1 {name=p45 sig_type=std_logic lab=en_bb}
