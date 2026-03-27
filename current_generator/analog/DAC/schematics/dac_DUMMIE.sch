@@ -4,21 +4,11 @@ K {}
 V {}
 S {}
 E {}
-N 790 -610 840 -610 {lab=AVDD}
-N 790 -580 840 -580 {lab=AVSS}
-N 690 -240 690 -200 {lab=AVDD}
-N 690 -170 730 -170 {lab=AVDD}
-N 690 -140 690 -90 {lab=AVDD}
-N 610 -170 650 -170 {lab=AVDD}
-N 370 -160 490 -160 {lab=AVDD}
-N 250 -160 330 -160 {lab=AVDD}
-N 370 -130 370 -20 {lab=AVDD}
-N 70 -370 190 -370 {lab=AVDD}
-N 270 -370 370 -370 {lab=AVDD}
-N 230 -420 230 -400 {lab=AVDD}
-N 230 -340 230 -310 {lab=AVSS}
-N 220 -310 230 -310 {lab=AVSS}
-N 370 -220 370 -190 {lab=AVDD}
+N 480 -530 530 -530 {lab=AVDD}
+N 480 -500 530 -500 {lab=AVSS}
+N 660 -210 660 -170 {lab=AVDD}
+N 660 -140 700 -140 {lab=AVDD}
+N 660 -110 660 -60 {lab=AVDD}
 N 630 -450 630 -410 {lab=AVDD}
 N 550 -450 630 -450 {lab=AVDD}
 N 550 -450 550 -380 {lab=AVDD}
@@ -29,43 +19,78 @@ N 710 -380 710 -310 {lab=AVDD}
 N 630 -450 710 -450 {lab=AVDD}
 N 630 -380 710 -380 {lab=AVDD}
 N 710 -450 710 -380 {lab=AVDD}
-C {iopin.sym} 790 -610 2 0 {name=p22 lab=AVDD}
-C {iopin.sym} 790 -580 2 0 {name=p23 lab=AVSS}
-C {sg13g2_pr/sg13_lv_pmos.sym} 350 -160 0 0 {name=M4
-l=3u
-w=0.72u
+N 300 -430 300 -410 {lab=AVSS}
+N 300 -430 340 -430 {lab=AVSS}
+N 300 -450 300 -430 {lab=AVSS}
+N 260 -430 260 -380 {lab=AVDD}
+N 300 -530 300 -510 {lab=AVDD}
+N 310 -530 310 -480 {lab=AVDD}
+N 310 -380 310 -330 {lab=AVSS}
+N 300 -350 300 -330 {lab=AVSS}
+N 300 -530 310 -530 {lab=AVDD}
+N 300 -480 310 -480 {lab=AVDD}
+N 260 -480 260 -430 {lab=AVDD}
+N 300 -380 310 -380 {lab=AVSS}
+N 300 -330 310 -330 {lab=AVSS}
+N 190 -530 300 -530 {lab=AVDD}
+N 190 -330 300 -330 {lab=AVSS}
+N 200 -430 260 -430 {lab=AVDD}
+N 270 -180 390 -180 {lab=AVDD}
+N 150 -180 230 -180 {lab=AVDD}
+N 270 -150 270 -40 {lab=AVDD}
+N 270 -240 270 -210 {lab=AVDD}
+N 580 -140 620 -140 {lab=AVDD}
+C {iopin.sym} 480 -530 2 0 {name=p22 lab=AVDD}
+C {iopin.sym} 480 -500 2 0 {name=p23 lab=AVSS}
+C {lab_wire.sym} 660 -190 1 0 {name=p16 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 680 -140 2 0 {name=p17 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 660 -70 1 0 {name=p2 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 570 -450 2 0 {name=p15 sig_type=std_logic lab=AVDD}
+C {sg13g2_pr/sg13_lv_nmos.sym} 280 -380 0 0 {name=MN0
+l=130.00n
+w=740.00n
 ng=1
-m=4
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 670 -170 0 0 {name=M5
-l=3u
-w=0.720u
+m=1
+model=sg13_lv_nmos
+spiceprefix=M}
+C {sg13g2_pr/sg13_lv_pmos.sym} 280 -480 0 0 {name=MP0
+l=130.00n
+w=1.12u
 ng=1
-m=4
+m=1
 model=sg13_lv_pmos
-spiceprefix=X
+spiceprefix=M
 }
-C {lab_wire.sym} 690 -220 1 0 {name=p16 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 710 -170 2 0 {name=p17 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 230 -420 1 0 {name=p21 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 220 -310 0 0 {name=p28 sig_type=std_logic lab=AVSS}
-C {inverter.sym} 220 -370 0 0 {name=x1}
-C {lab_wire.sym} 610 -170 2 0 {name=p1 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 690 -100 1 0 {name=p2 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 70 -370 0 0 {name=p3 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 490 -160 2 0 {name=p5 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 250 -160 2 0 {name=p4 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 370 -20 2 0 {name=p6 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 310 -370 2 0 {name=p7 sig_type=std_logic lab=AVDD}
-C {lab_wire.sym} 370 -220 2 0 {name=p8 sig_type=std_logic lab=AVDD}
-C {sg13g2_pr/sg13_lv_pmos.sym} 610 -380 0 0 {name=M3
+C {lab_wire.sym} 190 -530 2 0 {name=p3 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 190 -330 2 0 {name=p7 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 200 -430 2 0 {name=p9 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 340 -430 2 0 {name=p10 sig_type=std_logic lab=AVSS}
+C {sg13g2_pr/sg13_lv_pmos.sym} 610 -380 0 0 {name=MP1[1..8]
 l=1.5u
 w=0.72u
 ng=1
-m=8
+m=1
 model=sg13_lv_pmos
-spiceprefix=X
+spiceprefix=M
 }
-C {lab_wire.sym} 570 -450 2 0 {name=p15 sig_type=std_logic lab=AVDD}
+C {sg13g2_pr/sg13_lv_pmos.sym} 640 -140 0 0 {name=MP5[1..4]
+l=3u
+w=0.72u
+ng=1
+m=1
+model=sg13_lv_pmos
+spiceprefix=M
+}
+C {lab_wire.sym} 390 -180 2 0 {name=p11 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 150 -180 2 0 {name=p12 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 270 -40 2 0 {name=p13 sig_type=std_logic lab=AVDD}
+C {lab_wire.sym} 270 -240 2 0 {name=p14 sig_type=std_logic lab=AVDD}
+C {sg13g2_pr/sg13_lv_pmos.sym} 250 -180 0 0 {name=MP2[1..4]
+l=3u
+w=0.72u
+ng=1
+m=1
+model=sg13_lv_pmos
+spiceprefix=M
+}
+C {lab_wire.sym} 580 -140 2 0 {name=p1 sig_type=std_logic lab=AVDD}
