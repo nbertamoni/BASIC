@@ -26,7 +26,7 @@ w=740.00n
 ng=1
 m=1
 model=sg13_lv_nmos
-spiceprefix=X
+spiceprefix=M
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 0 -50 0 0 {name=MP0
 l=130.00n
@@ -34,7 +34,7 @@ w=1.12u
 ng=1
 m=1
 model=sg13_lv_pmos
-spiceprefix=X
+spiceprefix=M
 }
 C {opin.sym} 60 0 0 0 {name=p1 lab=Y}
 C {ipin.sym} -60 0 0 0 {name=p2 lab=A}
