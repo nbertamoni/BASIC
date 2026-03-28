@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 N 790 -850 790 -810 {lab=AVDD}
 N 920 -1240 920 -1200 {lab=AVDD}
@@ -30,8 +29,6 @@ N 940 -1480 990 -1480 {lab=SEL}
 N 940 -1450 990 -1450 {lab=i_sign}
 N 940 -1370 990 -1370 {lab=CC_P}
 N 940 -1340 990 -1340 {lab=CC_N}
-N 680 -1200 680 -1140 {lab=VBIAS}
-N 680 -1300 680 -1260 {lab=AVDD}
 N 2670 -1170 2670 -1130 {lab=AVDD}
 N 2480 -1050 2520 -1050 {lab=en_bb}
 N 2820 -1050 2870 -1050 {lab=DATA[0]}
@@ -153,6 +150,8 @@ N 1460 -370 1500 -370 {lab=CC_N}
 N 1460 -350 1500 -350 {lab=IBIAS}
 N 1460 -330 1500 -330 {lab=en_b}
 N 1460 -310 1500 -310 {lab=en_bb}
+N 2090 -190 2150 -190 {lab=AVDD}
+N 2090 -170 2220 -170 {lab=AVSS}
 C {current_mirror.sym} 790 -720 0 0 {name=x8}
 C {lab_wire.sym} 790 -830 0 0 {name=p12 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 770 -1000 0 0 {name=p13 sig_type=std_logic lab=VBIAS}
@@ -174,13 +173,6 @@ C {iopin.sym} 940 -1480 2 0 {name=p2 lab=SEL}
 C {iopin.sym} 940 -1450 2 0 {name=p3 lab=i_sign}
 C {iopin.sym} 940 -1370 2 0 {name=p6 lab=CC_P}
 C {iopin.sym} 940 -1340 2 0 {name=p7 lab=CC_N}
-C {sg13g2_pr/cap_cmim.sym} 680 -1230 0 0 {name=C1
-model=cap_cmim
-w=18e-6
-l=18e-6
-m=80
-spiceprefix=X}
-C {lab_wire.sym} 680 -1290 0 0 {name=p25 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 2670 -1160 0 0 {name=p9 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 2510 -1050 0 0 {name=p11 sig_type=std_logic lab=en_bb}
 C {dac_gold.sym} 2670 -1050 0 0 {name=xb0}
@@ -322,3 +314,7 @@ C {lab_wire.sym} 1480 -350 0 1 {name=p35 sig_type=std_logic lab=IBIAS}
 C {lab_wire.sym} 1480 -330 0 1 {name=p44 sig_type=std_logic lab=en_b}
 C {lab_wire.sym} 1480 -310 0 1 {name=p45 sig_type=std_logic lab=en_bb}
 C {dac_gold.sym} 920 -1120 0 0 {name=x1[7:0]}
+C {dac_DUMMIE.sym} 1940 -180 0 0 {name=x1[1..57]}
+C {lab_wire.sym} 2210 -170 0 1 {name=p50 sig_type=std_logic lab=AVSS}
+C {lab_wire.sym} 2140 -190 0 1 {name=p68 sig_type=std_logic lab=AVDD
+}
