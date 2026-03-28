@@ -60,10 +60,10 @@ C {lab_wire.sym} 810 -440 3 0 {name=p12 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 450 -420 3 0 {name=p13 sig_type=std_logic lab=VS_cm}
 C {lab_wire.sym} 750 -490 0 0 {name=p14 sig_type=std_logic lab=enb}
 C {sg13g2_pr/sg13_lv_pmos.sym} 880 -290 0 0 {name=M3
-l=3u
+l=1.5u
 w=0.72u
 ng=1
-m=4
+m=8
 model=sg13_lv_pmos
 spiceprefix=X
 }

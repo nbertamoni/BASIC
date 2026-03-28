@@ -1,8 +1,9 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 420 -300 420 -280 {lab=VOM}
 N 720 -300 720 -280 {lab=VOP}
@@ -22,35 +23,35 @@ N 420 -300 480 -300 {lab=VOM}
 N 420 -330 420 -300 {lab=VOM}
 N 660 -300 720 -300 {lab=VOP}
 N 720 -330 720 -300 {lab=VOP}
-C {sg13g2_pr/sg13_lv_nmos.sym} 400 -360 0 0 {name=M1[1..2]
+C {sg13g2_pr/sg13_lv_nmos.sym} 400 -360 0 0 {name=M1
 l=0.13u
 w=3u
 ng=1
-m=1
+m=2
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 400 -250 0 0 {name=M2[1..2]
+C {sg13g2_pr/sg13_lv_nmos.sym} 400 -250 0 0 {name=M2
 l=0.13u
 w=3u
 ng=1
-m=1
+m=2
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 740 -360 0 1 {name=M3[1..2]
+C {sg13g2_pr/sg13_lv_nmos.sym} 740 -360 0 1 {name=M3
 l=0.13u
 w=3u
 ng=1
-m=1
+m=2
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 740 -250 0 1 {name=M4[1..2]
+C {sg13g2_pr/sg13_lv_nmos.sym} 740 -250 0 1 {name=M4
 l=0.13u
 w=3u
 ng=1
-m=1
+m=2
 model=sg13_lv_nmos
 spiceprefix=X
 }
