@@ -1,0 +1,948 @@
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= nom_slow_1p08V_125C Corner ===================================
+
+Startpoint: _295_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sign (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _295_/CLK (sg13g2_dfrbpq_1)
+     3    0.036938    0.197422    0.426602    0.426602 v _295_/Q (sg13g2_dfrbpq_1)
+                                                         sign (net)
+                      0.197422    0.000000    0.426602 v sign (out)
+                                              0.426602   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.426602   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.276602   slack (MET)
+
+
+Startpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[17] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+    15    0.037778    0.201629    0.429722    0.429722 v _293_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_5.A (net)
+                      0.201629    0.000000    0.429722 v _277_/A (sg13g2_nand3_1)
+     1    0.010000    0.096172    0.150396    0.580118 ^ _277_/Y (sg13g2_nand3_1)
+                                                         sine_out[17] (net)
+                      0.096172    0.000000    0.580118 ^ sine_out[17] (out)
+                                              0.580118   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.580118   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.430118   slack (MET)
+
+
+Startpoint: _295_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _295_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _295_/CLK (sg13g2_dfrbpq_1)
+     3    0.036938    0.197422    0.426602    0.426602 v _295_/Q (sg13g2_dfrbpq_1)
+                                                         sign (net)
+                      0.197422    0.000000    0.426602 v _163_/A (sg13g2_xnor2_1)
+     1    0.001355    0.041418    0.144520    0.571123 v _163_/Y (sg13g2_xnor2_1)
+                                                         CTRL.P1 (net)
+                      0.041418    0.000000    0.571123 v _295_/D (sg13g2_dfrbpq_1)
+                                              0.571123   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _295_/CLK (sg13g2_dfrbpq_1)
+                                 -0.034633    0.115367   library hold time
+                                              0.115367   data required time
+---------------------------------------------------------------------------------------------
+                                              0.115367   data required time
+                                             -0.571123   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.455756   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[14] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _273_/A (sg13g2_nand2_1)
+     1    0.010000    0.089342    0.158195    0.631159 ^ _273_/Y (sg13g2_nand2_1)
+                                                         sine_out[14] (net)
+                      0.089342    0.000000    0.631159 ^ sine_out[14] (out)
+                                              0.631159   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.631159   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.481159   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[15] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _274_/A (sg13g2_nand2_1)
+     1    0.010000    0.088719    0.158195    0.631159 ^ _274_/Y (sg13g2_nand2_1)
+                                                         sine_out[15] (net)
+                      0.088719    0.000000    0.631159 ^ sine_out[15] (out)
+                                              0.631159   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.631159   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.481159   slack (MET)
+
+
+Startpoint: _288_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _289_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _288_/CLK (sg13g2_dfrbpq_1)
+    15    0.042965    0.227124    0.448875    0.448875 v _288_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.Cout0 (net)
+                      0.227124    0.000000    0.448875 v _279_/A (sg13g2_xnor2_1)
+     1    0.001355    0.041285    0.152612    0.601487 v _279_/Y (sg13g2_xnor2_1)
+                                                         DPATH.SUM.fa_1.S (net)
+                      0.041285    0.000000    0.601487 v _289_/D (sg13g2_dfrbpq_1)
+                                              0.601487   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _289_/CLK (sg13g2_dfrbpq_1)
+                                 -0.034580    0.115420   library hold time
+                                              0.115420   data required time
+---------------------------------------------------------------------------------------------
+                                              0.115420   data required time
+                                             -0.601487   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.486067   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[16] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _275_/B1 (sg13g2_o21ai_1)
+     1    0.010000    0.131574    0.174461    0.647425 ^ _275_/Y (sg13g2_o21ai_1)
+                                                         sine_out[16] (net)
+                      0.131574    0.000000    0.647425 ^ sine_out[16] (out)
+                                              0.647425   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.647425   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.497425   slack (MET)
+
+
+Startpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[12] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+    15    0.037778    0.201629    0.429722    0.429722 v _293_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_5.A (net)
+                      0.201629    0.000000    0.429722 v _271_/A1 (sg13g2_a21oi_1)
+     1    0.010000    0.154392    0.221676    0.651398 ^ _271_/Y (sg13g2_a21oi_1)
+                                                         sine_out[12] (net)
+                      0.154392    0.000000    0.651398 ^ sine_out[12] (out)
+                                              0.651398   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.651398   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.501398   slack (MET)
+
+
+Startpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[9] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+    15    0.037778    0.201629    0.429722    0.429722 v _293_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_5.A (net)
+                      0.201629    0.000000    0.429722 v _265_/A1 (sg13g2_a21oi_1)
+     1    0.010000    0.154392    0.221676    0.651398 ^ _265_/Y (sg13g2_a21oi_1)
+                                                         sine_out[9] (net)
+                      0.154392    0.000000    0.651398 ^ sine_out[9] (out)
+                                              0.651398   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.651398   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.501398   slack (MET)
+
+
+Startpoint: _295_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: signB (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _295_/CLK (sg13g2_dfrbpq_1)
+     3    0.036938    0.197422    0.426602    0.426602 v _295_/Q (sg13g2_dfrbpq_1)
+                                                         sign (net)
+                      0.197422    0.000000    0.426602 v _133_/A (sg13g2_inv_1)
+     1    0.030000    0.216573    0.256742    0.683344 ^ _133_/Y (sg13g2_inv_1)
+                                                         signB (net)
+                      0.216573    0.000000    0.683344 ^ signB (out)
+                                              0.683344   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.683344   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.533344   slack (MET)
+
+
+Startpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[6] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+    18    0.044381    0.234044    0.454096    0.454096 v _292_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_4.A (net)
+                      0.234044    0.000000    0.454096 v _262_/A1 (sg13g2_a21oi_1)
+     1    0.010000    0.122197    0.231084    0.685179 ^ _262_/Y (sg13g2_a21oi_1)
+                                                         sine_out[6] (net)
+                      0.122197    0.000000    0.685179 ^ sine_out[6] (out)
+                                              0.685179   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.685179   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.535179   slack (MET)
+
+
+Startpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[7] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+    18    0.044381    0.234044    0.454096    0.454096 v _292_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_4.A (net)
+                      0.234044    0.000000    0.454096 v _263_/A1 (sg13g2_a21oi_1)
+     1    0.010000    0.122197    0.231084    0.685179 ^ _263_/Y (sg13g2_a21oi_1)
+                                                         sine_out[7] (net)
+                      0.122197    0.000000    0.685179 ^ sine_out[7] (out)
+                                              0.685179   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.685179   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.535179   slack (MET)
+
+
+Startpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[8] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+    18    0.044381    0.234044    0.454096    0.454096 v _292_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_4.A (net)
+                      0.234044    0.000000    0.454096 v _264_/A1 (sg13g2_a21oi_1)
+     1    0.010000    0.122197    0.231084    0.685179 ^ _264_/Y (sg13g2_a21oi_1)
+                                                         sine_out[8] (net)
+                      0.122197    0.000000    0.685179 ^ sine_out[8] (out)
+                                              0.685179   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.685179   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.535179   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[11] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _269_/A (sg13g2_nor2_1)
+     1    0.010000    0.157044    0.225598    0.698562 ^ _269_/Y (sg13g2_nor2_1)
+                                                         sine_out[11] (net)
+                      0.157044    0.000000    0.698562 ^ sine_out[11] (out)
+                                              0.698562   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.698562   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.548562   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[13] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _272_/A (sg13g2_nor2_1)
+     1    0.010000    0.157860    0.225598    0.698562 ^ _272_/Y (sg13g2_nor2_1)
+                                                         sine_out[13] (net)
+                      0.157860    0.000000    0.698562 ^ sine_out[13] (out)
+                                              0.698562   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.698562   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.548562   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[3] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _256_/A (sg13g2_nor2_1)
+     1    0.010000    0.160479    0.225598    0.698562 ^ _256_/Y (sg13g2_nor2_1)
+                                                         sine_out[3] (net)
+                      0.160479    0.000000    0.698562 ^ sine_out[3] (out)
+                                              0.698562   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.698562   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.548562   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[4] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.051316    0.331996    0.510802    0.510802 ^ _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.331996    0.000000    0.510802 ^ _258_/A (sg13g2_nor3_1)
+     1    0.010000    0.081559    0.204579    0.715381 v _258_/Y (sg13g2_nor3_1)
+                                                         sine_out[4] (net)
+                      0.081559    0.000000    0.715381 v sine_out[4] (out)
+                                              0.715381   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.715381   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.565381   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[5] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.051316    0.331996    0.510802    0.510802 ^ _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.331996    0.000000    0.510802 ^ _260_/A (sg13g2_nor3_1)
+     1    0.010000    0.076375    0.204579    0.715381 v _260_/Y (sg13g2_nor3_1)
+                                                         sine_out[5] (net)
+                      0.076375    0.000000    0.715381 v sine_out[5] (out)
+                                              0.715381   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.715381   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.565381   slack (MET)
+
+
+Startpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+    15    0.037778    0.201629    0.429722    0.429722 v _293_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_5.A (net)
+                      0.201629    0.000000    0.429722 v _150_/B (sg13g2_xnor2_1)
+     2    0.006927    0.093581    0.174496    0.604218 v _150_/Y (sg13g2_xnor2_1)
+                                                         _102_ (net)
+                      0.093581    0.000000    0.604218 v _151_/B (sg13g2_xor2_1)
+     1    0.001355    0.036444    0.095128    0.699346 v _151_/X (sg13g2_xor2_1)
+                                                         DPATH.SUM.fa_5.S (net)
+                      0.036444    0.000000    0.699346 v _293_/D (sg13g2_dfrbpq_1)
+                                              0.699346   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+                                 -0.032629    0.117371   library hold time
+                                              0.117371   data required time
+---------------------------------------------------------------------------------------------
+                                              0.117371   data required time
+                                             -0.699346   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.581975   slack (MET)
+
+
+Startpoint: _296_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _296_/CLK (sg13g2_dfrbpq_1)
+    13    0.042996    0.227276    0.448990    0.448990 v _296_/Q (sg13g2_dfrbpq_1)
+                                                         CTRL.S0 (net)
+                      0.227276    0.000000    0.448990 v _153_/A (sg13g2_xnor2_1)
+     1    0.004140    0.069372    0.175252    0.624242 v _153_/Y (sg13g2_xnor2_1)
+                                                         _104_ (net)
+                      0.069372    0.000000    0.624242 v _154_/B (sg13g2_xnor2_1)
+     1    0.001355    0.040357    0.087259    0.711502 v _154_/Y (sg13g2_xnor2_1)
+                                                         DPATH.SUM.fa_6.S (net)
+                      0.040357    0.000000    0.711502 v _294_/D (sg13g2_dfrbpq_1)
+                                              0.711502   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+                                 -0.034206    0.115794   library hold time
+                                              0.115794   data required time
+---------------------------------------------------------------------------------------------
+                                              0.115794   data required time
+                                             -0.711502   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.595708   slack (MET)
+
+
+Startpoint: _293_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[2] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _293_/CLK (sg13g2_dfrbpq_1)
+    15    0.037778    0.201629    0.429722    0.429722 v _293_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_5.A (net)
+                      0.201629    0.000000    0.429722 v _245_/A1 (sg13g2_o21ai_1)
+     1    0.002700    0.042938    0.183045    0.612767 ^ _245_/Y (sg13g2_o21ai_1)
+                                                         _070_ (net)
+                      0.042938    0.000000    0.612767 ^ _253_/A2 (sg13g2_o21ai_1)
+     1    0.010000    0.115577    0.132970    0.745736 v _253_/Y (sg13g2_o21ai_1)
+                                                         sine_out[2] (net)
+                      0.115577    0.000000    0.745736 v sine_out[2] (out)
+                                              0.745736   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.745736   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.595736   slack (MET)
+
+
+Startpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+    18    0.044381    0.234044    0.454096    0.454096 v _292_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_4.A (net)
+                      0.234044    0.000000    0.454096 v _146_/B (sg13g2_xor2_1)
+     2    0.006727    0.064811    0.183939    0.638035 v _146_/X (sg13g2_xor2_1)
+                                                         _099_ (net)
+                      0.064811    0.000000    0.638035 v _147_/B (sg13g2_xor2_1)
+     1    0.001355    0.036568    0.082205    0.720240 v _147_/X (sg13g2_xor2_1)
+                                                         DPATH.SUM.fa_4.S (net)
+                      0.036568    0.000000    0.720240 v _292_/D (sg13g2_dfrbpq_1)
+                                              0.720240   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+                                 -0.032679    0.117321   library hold time
+                                              0.117321   data required time
+---------------------------------------------------------------------------------------------
+                                              0.117321   data required time
+                                             -0.720240   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.602919   slack (MET)
+
+
+Startpoint: _296_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _290_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _296_/CLK (sg13g2_dfrbpq_1)
+    13    0.042996    0.227276    0.448990    0.448990 v _296_/Q (sg13g2_dfrbpq_1)
+                                                         CTRL.S0 (net)
+                      0.227276    0.000000    0.448990 v _139_/A (sg13g2_xor2_1)
+     2    0.006727    0.064811    0.190270    0.639260 v _139_/X (sg13g2_xor2_1)
+                                                         _093_ (net)
+                      0.064811    0.000000    0.639260 v _278_/B (sg13g2_xor2_1)
+     1    0.001355    0.036568    0.082205    0.721465 v _278_/X (sg13g2_xor2_1)
+                                                         DPATH.SUM.fa_2.S (net)
+                      0.036568    0.000000    0.721465 v _290_/D (sg13g2_dfrbpq_1)
+                                              0.721465   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _290_/CLK (sg13g2_dfrbpq_1)
+                                 -0.032679    0.117321   library hold time
+                                              0.117321   data required time
+---------------------------------------------------------------------------------------------
+                                              0.117321   data required time
+                                             -0.721465   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.604144   slack (MET)
+
+
+Startpoint: _296_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _296_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _296_/CLK (sg13g2_dfrbpq_1)
+    13    0.042996    0.227276    0.448990    0.448990 v _296_/Q (sg13g2_dfrbpq_1)
+                                                         CTRL.S0 (net)
+                      0.227276    0.000000    0.448990 v _170_/B1 (sg13g2_a21o_1)
+     1    0.002190    0.038693    0.186101    0.635091 v _170_/X (sg13g2_a21o_1)
+                                                         _119_ (net)
+                      0.038693    0.000000    0.635091 v _171_/B (sg13g2_and2_1)
+     1    0.001355    0.026486    0.103414    0.738506 v _171_/X (sg13g2_and2_1)
+                                                         CTRL.P0 (net)
+                      0.026486    0.000000    0.738506 v _296_/D (sg13g2_dfrbpq_1)
+                                              0.738506   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _296_/CLK (sg13g2_dfrbpq_1)
+                                 -0.028615    0.121385   library hold time
+                                              0.121385   data required time
+---------------------------------------------------------------------------------------------
+                                              0.121385   data required time
+                                             -0.738506   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.617121   slack (MET)
+
+
+Startpoint: _292_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[10] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _292_/CLK (sg13g2_dfrbpq_1)
+    18    0.044381    0.234044    0.454096    0.454096 v _292_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_4.A (net)
+                      0.234044    0.000000    0.454096 v _257_/A (sg13g2_nor2_1)
+     1    0.002681    0.086999    0.142844    0.596940 ^ _257_/Y (sg13g2_nor2_1)
+                                                         _080_ (net)
+                      0.086999    0.000000    0.596940 ^ _266_/B1 (sg13g2_o21ai_1)
+     1    0.002499    0.056536    0.080429    0.677368 v _266_/Y (sg13g2_o21ai_1)
+                                                         _083_ (net)
+                      0.056536    0.000000    0.677368 v _267_/B (sg13g2_nand2_1)
+     1    0.010000    0.084866    0.095072    0.772441 ^ _267_/Y (sg13g2_nand2_1)
+                                                         sine_out[10] (net)
+                      0.084866    0.000000    0.772441 ^ sine_out[10] (out)
+                                              0.772441   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.772441   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.622441   slack (MET)
+
+
+Startpoint: _296_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _291_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _296_/CLK (sg13g2_dfrbpq_1)
+    13    0.042996    0.227276    0.448990    0.448990 v _296_/Q (sg13g2_dfrbpq_1)
+                                                         CTRL.S0 (net)
+                      0.227276    0.000000    0.448990 v _142_/A (sg13g2_xnor2_1)
+     2    0.006927    0.093581    0.197865    0.646855 v _142_/Y (sg13g2_xnor2_1)
+                                                         _096_ (net)
+                      0.093581    0.000000    0.646855 v _143_/B (sg13g2_xor2_1)
+     1    0.001355    0.036444    0.095128    0.741983 v _143_/X (sg13g2_xor2_1)
+                                                         DPATH.SUM.fa_3.S (net)
+                      0.036444    0.000000    0.741983 v _291_/D (sg13g2_dfrbpq_1)
+                                              0.741983   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _291_/CLK (sg13g2_dfrbpq_1)
+                                 -0.032629    0.117371   library hold time
+                                              0.117371   data required time
+---------------------------------------------------------------------------------------------
+                                              0.117371   data required time
+                                             -0.741983   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.624612   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _214_/A (sg13g2_nand3_1)
+     1    0.002271    0.044629    0.112288    0.585252 ^ _214_/Y (sg13g2_nand3_1)
+                                                         _041_ (net)
+                      0.044629    0.000000    0.585252 ^ _215_/B1 (sg13g2_a21oi_1)
+     1    0.002428    0.029300    0.045760    0.631012 v _215_/Y (sg13g2_a21oi_1)
+                                                         _042_ (net)
+                      0.029300    0.000000    0.631012 v _216_/B2 (sg13g2_a22oi_1)
+     1    0.010000    0.166649    0.147703    0.778715 ^ _216_/Y (sg13g2_a22oi_1)
+                                                         sine_out[0] (net)
+                      0.166649    0.000000    0.778715 ^ sine_out[0] (out)
+                                              0.778715   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.778715   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.628715   slack (MET)
+
+
+Startpoint: _294_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: sine_out[1] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _294_/CLK (sg13g2_dfrbpq_1)
+    20    0.049498    0.259057    0.472964    0.472964 v _294_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.fa_6.A (net)
+                      0.259057    0.000000    0.472964 v _130_/A (sg13g2_inv_1)
+     3    0.008064    0.106111    0.137432    0.610396 ^ _130_/Y (sg13g2_inv_1)
+                                                         _087_ (net)
+                      0.106111    0.000000    0.610396 ^ _235_/A1 (sg13g2_o21ai_1)
+     1    0.010000    0.116249    0.173515    0.783911 v _235_/Y (sg13g2_o21ai_1)
+                                                         sine_out[1] (net)
+                      0.116249    0.000000    0.783911 v sine_out[1] (out)
+                                              0.783911   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                  0.000000    0.150000   output external delay
+                                              0.150000   data required time
+---------------------------------------------------------------------------------------------
+                                              0.150000   data required time
+                                             -0.783911   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.633911   slack (MET)
+
+
+Startpoint: _288_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _288_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.100000    0.000000    0.000000 ^ _288_/CLK (sg13g2_dfrbpq_1)
+    15    0.043653    0.284575    0.477588    0.477588 ^ _288_/Q (sg13g2_dfrbpq_1)
+                                                         DPATH.SUM.Cout0 (net)
+                      0.284575    0.000000    0.477588 ^ _132_/A (sg13g2_inv_1)
+     8    0.021264    0.167349    0.239157    0.716745 v _132_/Y (sg13g2_inv_1)
+                                                         DPATH.SUM.ha_0.S (net)
+                      0.167349    0.000000    0.716745 v _288_/D (sg13g2_dfrbpq_1)
+                                              0.716745   data arrival time
+
+                      0.100000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  0.150000    0.150000   clock uncertainty
+                                  0.000000    0.150000   clock reconvergence pessimism
+                                              0.150000 ^ _288_/CLK (sg13g2_dfrbpq_1)
+                                 -0.085388    0.064612   library hold time
+                                              0.064612   data required time
+---------------------------------------------------------------------------------------------
+                                              0.064612   data required time
+                                             -0.716745   data arrival time
+---------------------------------------------------------------------------------------------
+                                              0.652133   slack (MET)
+
+
+

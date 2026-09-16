@@ -1,56 +1,48 @@
 ########################################################################
-# DigitalSine.sdc  (IHP SG13G2, VDDD=1.2V, 5ns clock)
-# - Single clock domain
-# - Async reset (per RTL always @(posedge clk, posedge rst))
+# DigitalSine.sdc
+# Prototype block-level timing for IHP SG13G2
+# 5 ns clock, single clock domain, asynchronous reset
 ########################################################################
 
 #----------------------------
-# Clock
+# Clock definition
 #----------------------------
 create_clock -name clk -period 5.000 -waveform {0.000 2.500} [get_ports clk]
-
-# Use a realistic uncertainty
 set_clock_uncertainty 0.150 [get_clocks clk]
-
-# ??
 set_clock_transition 0.10 [get_clocks clk]
 
 #----------------------------
-# reset is ASYNCHRONOUS
+# Reset is asynchronous
 #----------------------------
-set_false_path -from [get_ports rst] -to [all_registers]
-set_false_path -to   [get_ports rst]
-
-#----------------------------
-# Define data port collections
-#----------------------------
-set DATA_IN  [all_inputs]
-set DATA_OUT [all_outputs]
+# Keep reset as a false path from the source port and do not constrain it as data.
+set_false_path -from [get_ports rst]
 
 #----------------------------
-# IO timing budgets (placeholder interface timing)
+# Data ports
 #----------------------------
-# Apply to all inputs first
-set_input_delay  -max 1.0 -clock [get_clocks clk] [all_inputs]
-set_input_delay  -min 0.0 -clock [get_clocks clk] [all_inputs]
+# For this block, the only real external inputs are the clock and async reset.
+# No user-data input delay is applied here; we constrain the real outputs only.
 
-# neutralize clock/reset so they are not treated as data inputs
-set_input_delay  -max 0.0 -clock [get_clocks clk] [get_ports clk]
-set_input_delay  -min 0.0 -clock [get_clocks clk] [get_ports clk]
-set_input_delay  -max 0.0 -clock [get_clocks clk] [get_ports rst]
-set_input_delay  -min 0.0 -clock [get_clocks clk] [get_ports rst]
+#----------------------------
+# Output timing (prototype placeholder)
+#----------------------------
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports sign]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports sign]
 
-# Outputs
-set_output_delay -max 1.0 -clock [get_clocks clk] [all_outputs]
-set_output_delay -min 0.0 -clock [get_clocks clk] [all_outputs]
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports signB]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports signB]
 
-#how to include the actual IO cells here ?
-#set_driving_cell [all_inputs] sg13g2_IOPadIn
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports {sine_out[*]}]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports {sine_out[*]}]
 
-#output load mosfet gates
-# 50 fF analog input load per output pin
-set_load 0.08 $DATA_OUT
-
+#----------------------------
+# Output loads
+#----------------------------
+# These are rough prototype estimates; replace with final pad/load data
+# when integrating into a full chip or padframe.
+set_load 0.03 [get_ports sign]
+set_load 0.03 [get_ports signB]
+set_load 0.01 [get_ports {sine_out[*]}]
 
 ########################################################################
 # End
