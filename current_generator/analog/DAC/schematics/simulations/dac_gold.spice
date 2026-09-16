@@ -1,0 +1,18 @@
+** sch_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/dac_gold.sch
+.subckt dac_gold AVDD AVSS VBIAS enb DATA ISUM
+*.PININFO AVDD:B AVSS:B VBIAS:B enb:B DATA:B ISUM:B
+MM1 ISUM VBIAS VS_cm AVDD sg13_lv_pmos w=0.72u l=3u ng=1 m=4
+MM2 VBIAS enb AVDD AVDD sg13_lv_pmos w=0.72u l=3u ng=1 m=4
+MM3 AVDD AVDD AVDD AVDD sg13_lv_pmos w=0.72u l=1.5u ng=1 m=8
+x20 DATA VS_cm AVDD AVSS inverter
+.ends
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/inverter.sym
+** sch_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/inverter.sch
+.subckt inverter A Y VDD VSS
+*.PININFO Y:O A:I VDD:B VSS:B
+MMN0 Y A VSS VSS sg13_lv_nmos w=740.00n l=130.00n ng=1
+MMP0 Y A VDD VDD sg13_lv_pmos w=1.12u l=130.00n ng=1
+.ends
+

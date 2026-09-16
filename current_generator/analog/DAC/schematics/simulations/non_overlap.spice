@@ -1,0 +1,30 @@
+** sch_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/non_overlap.sch
+.subckt non_overlap AVDD AVSS i_sign i_signb sign signb a b
+*.PININFO AVDD:B AVSS:B i_sign:B i_signb:B sign:B signb:B a:B b:B
+x5 AVDD AVSS i_sign b net2 nand
+x6 net2 sign AVDD AVSS inverter
+x3 AVDD AVSS i_signb a net1 nand
+x1 net1 signb AVDD AVSS inverter
+.ends
+
+* expanding   symbol:  nand.sym # of pins=5
+** sym_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/nand.sym
+** sch_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/nand.sch
+.subckt nand VDD VSS A B Y
+*.PININFO Y:O A:I VDD:B VSS:B B:I
+MMN0 net1 B VSS VSS sg13_lv_nmos w=1.44u l=130.00n ng=2
+MMP0 Y B VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2
+MMN1 Y A net1 VSS sg13_lv_nmos w=1.44u l=130.00n ng=2
+MMP1 Y A VDD VDD sg13_lv_pmos w=2.24u l=130.00n ng=2
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/inverter.sym
+** sch_path: /home/designer/shared/BASIC/current_generator/analog/DAC/schematics/inverter.sch
+.subckt inverter A Y VDD VSS
+*.PININFO Y:O A:I VDD:B VSS:B
+MMN0 Y A VSS VSS sg13_lv_nmos w=740.00n l=130.00n ng=1
+MMP0 Y A VDD VDD sg13_lv_pmos w=1.12u l=130.00n ng=1
+.ends
+

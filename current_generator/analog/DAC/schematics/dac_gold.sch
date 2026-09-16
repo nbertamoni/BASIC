@@ -1,15 +1,16 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 P 4 1 -430 -740 {}
 N 450 -510 450 -330 {lab=VS_cm}
 N 810 -560 810 -520 {lab=AVDD}
 N 810 -490 850 -490 {lab=AVDD}
 N 810 -460 810 -410 {lab=VBIAS}
-N 730 -490 770 -490 {lab=enb}
+N 730 -490 770 -490 {lab=en}
 N 900 -360 900 -320 {lab=AVDD}
 N 820 -360 900 -360 {lab=AVDD}
 N 820 -360 820 -290 {lab=AVDD}
@@ -58,7 +59,7 @@ C {lab_wire.sym} 810 -540 1 0 {name=p10 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 830 -490 2 0 {name=p11 sig_type=std_logic lab=AVDD}
 C {lab_wire.sym} 810 -440 3 0 {name=p12 sig_type=std_logic lab=VBIAS}
 C {lab_wire.sym} 450 -420 3 0 {name=p13 sig_type=std_logic lab=VS_cm}
-C {lab_wire.sym} 750 -490 0 0 {name=p14 sig_type=std_logic lab=enb}
+C {lab_wire.sym} 750 -490 0 0 {name=p14 sig_type=std_logic lab=en}
 C {sg13g2_pr/sg13_lv_pmos.sym} 880 -290 0 0 {name=M3
 l=1.5u
 w=0.72u
@@ -71,7 +72,7 @@ C {lab_wire.sym} 840 -360 2 0 {name=p15 sig_type=std_logic lab=AVDD}
 C {iopin.sym} 1030 -890 2 0 {name=p22 lab=AVDD}
 C {iopin.sym} 1030 -860 2 0 {name=p23 lab=AVSS}
 C {iopin.sym} 1030 -830 2 0 {name=p24 lab=VBIAS}
-C {iopin.sym} 1030 -800 2 0 {name=p25 lab=enb}
+C {iopin.sym} 1030 -800 2 0 {name=p25 lab=en}
 C {iopin.sym} 1030 -770 2 0 {name=p26 lab=DATA}
 C {iopin.sym} 1030 -740 2 0 {name=p27 lab=ISUM}
 C {inverter.sym} 280 -510 0 0 {name=x20}
