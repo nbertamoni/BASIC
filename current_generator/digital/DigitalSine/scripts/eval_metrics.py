@@ -17,6 +17,8 @@ import argparse
 import csv
 import json
 import math
+import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
 import yaml
@@ -141,6 +143,18 @@ DIRECTION: Dict[str, str] = {
     "ir_drop_avg": "lower",
 }
 
+SUMMARY_COLUMNS: List[str] = [
+    "design",
+    "score_norm",
+    "setup_wns",
+    "hold_wns",
+    "flow_warnings",
+    "drc_errors_route",
+    "core_area",
+    "wirelength",
+    "p_total",
+]
+
 
 def load_json(path: Path) -> Dict[str, Any]:
     with path.open("r", encoding="utf-8") as f:
@@ -246,26 +260,118 @@ def read_yaml_manifest(yaml_path: Path) -> List[Tuple[str, Path]]:
     return out
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("metrics", nargs="*", help="Paths to metrics.json files (ignored if --yaml is used)")
-    ap.add_argument("--yaml", dest="yaml_manifest", default=None, help="YAML manifest listing designs + metrics paths")
-    ap.add_argument("--out", default="metrics_compare.csv", help="Output CSV filename")
-    ap.add_argument("--meta", default="metrics_directions.csv", help="Output metric direction CSV filename")
-    args = ap.parse_args()
+def format_metric_value(value: Any) -> str:
+    if value is None:
+        return "-"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        v = float(value)
+        if abs(v) >= 1000:
+            return f"{v:,.0f}"
+        if abs(v) >= 10:
+            return f"{v:,.2f}"
+        if abs(v) >= 1:
+            return f"{v:,.3f}"
+        if abs(v) >= 0.01:
+            return f"{v:,.4f}"
+        return f"{v:,.6f}"
+    return str(value)
+
+
+def print_summary_table(rows: List[Dict[str, Any]]) -> None:
+    ranked = sorted(
+        [r for r in rows if r.get("score_norm") is not None],
+        key=lambda r: r["score_norm"],
+        reverse=True,
+    )
+    if not ranked:
+        print("No scored runs available.")
+        return
+
+    columns = SUMMARY_COLUMNS
+    widths = {col: max(len(col), max((len(format_metric_value(r.get(col))) for r in ranked), default=0)) for col in columns}
+
+    header = " | ".join(col.ljust(widths[col]) for col in columns)
+    sep = "-+-".join("-" * widths[col] for col in columns)
+    print(header)
+    print(sep)
+    for r in ranked:
+        line = " | ".join(format_metric_value(r.get(col)).rjust(widths[col]) if col != "design" else str(r.get(col, "-")).ljust(widths[col]) for col in columns)
+        print(line)
+
+
+def discover_completed_run_metrics(runs_root: Path) -> List[Tuple[str, Path]]:
+    """
+    Auto-discover completed LibreLane runs under a runs/ directory.
+    Each run is expected to contain a final/metrics.json file.
+    A run is considered complete if that file exists and can be parsed.
+    """
+    if not runs_root.exists():
+        return []
 
     entries: List[Tuple[str, Path]] = []
+    for run_dir in sorted(runs_root.iterdir(), key=lambda p: p.name):
+        if not run_dir.is_dir():
+            continue
+        metrics_path = run_dir / "final" / "metrics.json"
+        if metrics_path.exists():
+            try:
+                load_json(metrics_path)
+            except Exception:
+                continue
+            entries.append((run_dir.name, metrics_path))
+    return entries
 
-    if args.yaml_manifest:
-        ypath = Path(args.yaml_manifest)
-        print("Reading yaml")
-        if not ypath.exists():
-            raise SystemExit(f"YAML file not found: {ypath}")
-        entries = read_yaml_manifest(ypath)
-    else:
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("metrics", nargs="*", help="Paths to metrics.json files (ignored if --yaml or auto-discovery is used)")
+    ap.add_argument("--yaml", dest="yaml_manifest", default=None, help="YAML manifest listing designs + metrics paths")
+    ap.add_argument("--runs-dir", default="runs", help="Directory containing LibreLane run folders (default: ./runs)")
+    ap.add_argument("--out", default="metrics_compare.csv", help="Output CSV filename")
+    ap.add_argument("--meta", default="metrics_directions.csv", help="Output metric direction CSV filename")
+    ap.add_argument("--watch", action="store_true", help="Keep checking the runs directory and print the summary table periodically")
+    ap.add_argument("--watch-interval", type=float, default=10.0, help="Seconds between run scans when --watch is enabled")
+    args = ap.parse_args()
+
+    def evaluate_entries(entries: List[Tuple[str, Path]]) -> List[Dict[str, Any]]:
+        rows: List[Dict[str, Any]] = []
+        for design_name, metrics_path in entries:
+            if not metrics_path.exists():
+                raise SystemExit(f"File not found: {metrics_path}")
+
+            data = load_json(metrics_path)
+            row: Dict[str, Any] = {
+                "design": design_name,
+                "metrics_path": str(metrics_path),
+            }
+
+            for col, key in IMPORTANT_METRICS.items():
+                row[col] = get_metric(data, key)
+
+            rows.append(row)
+
+        metric_cols = list(IMPORTANT_METRICS.keys())
+        rows = normalize_scores(rows, metric_cols)
+        return rows
+
+    def find_entries() -> List[Tuple[str, Path]]:
+        if args.yaml_manifest:
+            ypath = Path(args.yaml_manifest)
+            print("Reading yaml")
+            if not ypath.exists():
+                raise SystemExit(f"YAML file not found: {ypath}")
+            return read_yaml_manifest(ypath)
+
+        runs_root = Path(args.runs_dir)
+        discovered = discover_completed_run_metrics(runs_root)
+        if discovered:
+            return discovered
+
         paths: List[Path] = [Path(p) for p in args.metrics if p.strip()]
         if not paths:
-            print("Enter metrics.json paths (blank line to finish):")
+            print("No completed run folders found under ./runs; enter metrics.json paths (blank line to finish):")
             while True:
                 s = input("> ").strip()
                 if not s:
@@ -273,74 +379,61 @@ def main() -> None:
                 paths.append(Path(s))
 
         if not paths:
-            raise SystemExit("No metrics.json files provided.")
+            raise SystemExit(
+                "No completed metrics files found. Provide explicit metrics.json files or create a valid runs/ directory."
+            )
 
-        # Use derived name from path
-        entries = [(design_name_from_path(p), p) for p in paths]
+        return [(design_name_from_path(p), p) for p in paths]
 
-    # Load all designs
-    rows: List[Dict[str, Any]] = []
-    for design_name, metrics_path in entries:
-        if not metrics_path.exists():
-            raise SystemExit(f"File not found: {metrics_path}")
+    while True:
+        entries = find_entries()
+        rows = evaluate_entries(entries)
+        metric_cols = list(IMPORTANT_METRICS.keys())
+        cols = ["design", "metrics_path"] + metric_cols
+        cols.append("score_norm")
 
-        data = load_json(metrics_path)
-        row: Dict[str, Any] = {
-            "design": design_name,
-            "metrics_path": str(metrics_path),
-        }
+        with open(args.out, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=cols)
+            w.writeheader()
+            for r in rows:
+                w.writerow({k: r.get(k) for k in cols})
 
-        for col, key in IMPORTANT_METRICS.items():
-            row[col] = get_metric(data, key)
+        with open(args.meta, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=["metric", "json_key", "direction", "why_it_matters"])
+            w.writeheader()
+            for col, key in IMPORTANT_METRICS.items():
+                direction = DIRECTION.get(col, "lower")
+                why = {
+                    "lower": "Lower is better (errors/area/power/wirelength/IR drop).",
+                    "higher": "Higher is better (slack closer to +, TNS closer to 0).",
+                    "abs_lower": "Closer to 0 is better (skew magnitude).",
+                }.get(direction, "")
+                w.writerow({
+                    "metric": col,
+                    "json_key": key,
+                    "direction": direction,
+                    "why_it_matters": why,
+                })
 
-        rows.append(row)
+        ranked = sorted(
+            [r for r in rows if r.get("score_norm") is not None],
+            key=lambda r: r["score_norm"],
+            reverse=True,
+        )
+        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Wrote: {args.out}")
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Wrote: {args.meta}")
+        if ranked:
+            print("\nMost important results per run (higher score_norm is better):")
+            print_summary_table(rows)
+            print("\nRanking:")
+            for i, r in enumerate(ranked, 1):
+                print(f"{i:2d}. {r['design']}: score_norm={r['score_norm']}")
+        else:
+            print("\nNo numeric metrics found to score.")
 
-    metric_cols = list(IMPORTANT_METRICS.keys())
-    cols = ["design", "metrics_path"] + metric_cols
-
-    # Add a normalized score column for quick ranking
-    rows = normalize_scores(rows, metric_cols)
-    cols.append("score_norm")
-
-    # Write main CSV
-    with open(args.out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols)
-        w.writeheader()
-        for r in rows:
-            w.writerow({k: r.get(k) for k in cols})
-
-    # Write direction metadata CSV
-    with open(args.meta, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["metric", "json_key", "direction", "why_it_matters"])
-        w.writeheader()
-        for col, key in IMPORTANT_METRICS.items():
-            direction = DIRECTION.get(col, "lower")
-            why = {
-                "lower": "Lower is better (errors/area/power/wirelength/IR drop).",
-                "higher": "Higher is better (slack closer to +, TNS closer to 0).",
-                "abs_lower": "Closer to 0 is better (skew magnitude).",
-            }.get(direction, "")
-            w.writerow({
-                "metric": col,
-                "json_key": key,
-                "direction": direction,
-                "why_it_matters": why,
-            })
-
-    # Print ranking
-    ranked = sorted(
-        [r for r in rows if r.get("score_norm") is not None],
-        key=lambda r: r["score_norm"],
-        reverse=True
-    )
-    print(f"Wrote: {args.out}")
-    print(f"Wrote: {args.meta}")
-    if ranked:
-        print("\nRanking (higher score_norm is better):")
-        for i, r in enumerate(ranked, 1):
-            print(f"{i:2d}. {r['design']}: score_norm={r['score_norm']}")
-    else:
-        print("\nNo numeric metrics found to score.")
+        if not args.watch:
+            break
+        time.sleep(args.watch_interval)
 
 
 if __name__ == "__main__":
