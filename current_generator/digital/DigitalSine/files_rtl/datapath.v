@@ -5,7 +5,7 @@ module datapath (
 	input	dir,
 	output	max,
 	output	zero,
-	output	[17:0] sine_out
+	output	[17:0] DATA
 );
 	// Internal signals
 	wire [6:0]	adder_in;
@@ -43,6 +43,6 @@ module datapath (
 	// Zero logic
 	assign zero = ~reg_out[6] & ~reg_out[5] & ~reg_out[4] & ~reg_out[3] & ~reg_out[2] & ~reg_out[1] & reg_out[0];
 
-	assign sine_out = ~decoder_out;
+	assign DATA = ~decoder_out;
 
 endmodule

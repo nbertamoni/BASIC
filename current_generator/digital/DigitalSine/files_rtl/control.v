@@ -5,8 +5,8 @@ module control (
 	input	max,
 	input	zero,
 	output	dir,
-	output	sign,
-	output	signB
+	output	o_sign,
+	output	o_signB
 );
 
 	wire S0, S1, P0, P1;
@@ -37,7 +37,7 @@ module control (
 
 	// Output signals
 	assign dir = S0;
-	assign sign = S1;
-	assign signB = notS1;
+	assign o_sign = S1;
+	assign o_signB = notS1;
 
 endmodule

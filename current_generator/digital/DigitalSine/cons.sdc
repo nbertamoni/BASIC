@@ -26,23 +26,23 @@ set_false_path -from [get_ports rst]
 #----------------------------
 # Output timing (prototype placeholder)
 #----------------------------
-set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports sign]
-set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports sign]
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports o_sign]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports o_sign]
 
-set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports signB]
-set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports signB]
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports o_signB]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports o_signB]
 
-set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports {sine_out[*]}]
-set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports {sine_out[*]}]
+set_output_delay -max 1.00 -clock [get_clocks clk] [get_ports {DATA[*]}]
+set_output_delay -min 0.00 -clock [get_clocks clk] [get_ports {DATA[*]}]
 
 #----------------------------
 # Output loads
 #----------------------------
 # These are rough prototype estimates; replace with final pad/load data
 # when integrating into a full chip or padframe.
-set_load 0.03 [get_ports sign]
-set_load 0.03 [get_ports signB]
-set_load 0.01 [get_ports {sine_out[*]}]
+set_load 0.03 [get_ports o_sign]
+set_load 0.03 [get_ports o_signB]
+set_load 0.01 [get_ports {DATA[*]}]
 
 ########################################################################
 # End

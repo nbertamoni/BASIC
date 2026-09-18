@@ -2,9 +2,9 @@
 module DigitalSine (
 	input	rst,
 	input	clk,
-	output	sign,
-	output	signB,
-	output	[17:0]	sine_out
+	output	o_sign,
+	output	o_signB,
+	output	[17:0]	DATA
 );
 				
 	wire	 max, zero, dir;
@@ -15,7 +15,7 @@ module DigitalSine (
 		.dir(dir),
 		.max(max),
 		.zero(zero),
-		.sine_out(sine_out)
+		.DATA(DATA)
 	);
 
 	control	CTRL(
@@ -24,8 +24,8 @@ module DigitalSine (
 		.max(max),
 		.zero(zero),
 		.dir(dir),
-		.sign(sign),
-		.signB(signB)
+		.o_sign(o_sign),
+		.o_signB(o_signB)
 	);
 
 endmodule
